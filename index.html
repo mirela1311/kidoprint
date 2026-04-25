@@ -912,9 +912,14 @@
   }
 
   function selectCat(el) {
+    const catKey = el.dataset.cat;
+    if (catKey === 'coloriage' && selAge === '2-4') {
+      window.location.href = 'coloriage-2-4.html';
+      return;
+    }
     document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
     el.classList.add('active');
-    const c = cats[el.dataset.cat];
+    const c = cats[catKey];
     const n = c.countByAge[selAge] ?? c.countByAge['tous'];
     document.getElementById('modalHeader').style.background = c.gradient;
     document.getElementById('modalSvg').innerHTML = el.querySelector('svg').innerHTML;

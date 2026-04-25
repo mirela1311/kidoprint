@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coloriages 2–4 ans — KidoPrint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    body { background-color: #f8fafc; }
+    .nav-shadow { box-shadow: 0 4px 30px rgba(124,58,237,0.15); }
+    .fiche-card { transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s ease; }
+    .fiche-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.13); }
+    .paper-bg {
+      background-color: #fff;
+      background-image:
+        linear-gradient(#e5e7eb 1px, transparent 1px),
+        linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+      background-size: 20px 20px;
+      background-position: -1px -1px;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #a78bfa; border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="bg-white nav-shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center shadow-sm">
+          <span class="text-xl">🎨</span>
+        </div>
+        <span class="text-xl font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-500">
+        <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+        <a href="tarifs.html" class="hover:text-violet-600 transition-colors">Tarifs</a>
+        <a href="#" class="hover:text-violet-600 transition-colors">À propos</a>
+        <a href="contact.html" class="hover:text-violet-600 transition-colors font-semibold text-violet-500">Nous contacter</a>
+      </div>
+      <button class="hidden sm:block text-sm font-medium text-gray-500 hover:text-violet-600 transition-colors px-3 py-1.5">Connexion</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="bg-white border-b border-gray-100 px-6 py-8">
+  <div class="max-w-6xl mx-auto">
+    <!-- Breadcrumb -->
+    <div class="flex items-center gap-2 text-sm text-gray-400 font-medium mb-5">
+      <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+      <span>›</span>
+      <span class="text-gray-600">Coloriage</span>
+      <span>›</span>
+      <span class="text-violet-600 font-semibold">2 – 4 ans</span>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-2 text-sm font-semibold text-violet-600 hover:text-violet-800 bg-violet-50 hover:bg-violet-100 px-4 py-2 rounded-xl transition-colors">
+          ← Retour
+        </a>
+        <div>
+          <h1 class="text-2xl font-black text-gray-800">Coloriages — 2 à 4 ans</h1>
+          <p class="text-gray-400 text-sm font-medium mt-0.5">15 coloriages simples, traits épais, faciles à colorier</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="bg-green-50 text-green-600 text-xs font-bold px-3 py-1.5 rounded-full">🍼 2 – 4 ans</div>
+        <div class="bg-violet-50 text-violet-600 text-xs font-bold px-3 py-1.5 rounded-full">🎨 Coloriage</div>
+        <div class="bg-gray-100 text-gray-500 text-xs font-semibold px-3 py-1.5 rounded-full">15 fiches</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRILLE DES COLORIAGES -->
+<section class="py-10 px-6">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+
+    <!-- ── FICHE 1 : Le Canard (Gratuit) ── -->
+    <div class="fiche-card bg-white rounded-2xl overflow-hidden" style="box-shadow: 0 4px 20px rgba(0,0,0,0.08)">
+      <div class="paper-bg flex items-center justify-center py-8 px-6 border-b border-gray-100" style="min-height:280px">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" class="max-h-60 w-auto">
+          <!-- corps -->
+          <ellipse cx="128" cy="155" rx="76" ry="52" fill="white" stroke="#1f2937" stroke-width="4.5"/>
+          <!-- tête -->
+          <circle cx="68" cy="96" r="40" fill="white" stroke="#1f2937" stroke-width="4.5"/>
+          <!-- cou -->
+          <path d="M52,133 Q78,150 104,148" fill="none" stroke="#1f2937" stroke-width="4"/>
+          <!-- bec -->
+          <path d="M30,96 L6,88 L6,106 Z" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <!-- narine -->
+          <circle cx="14" cy="97" r="2.5" fill="#1f2937"/>
+          <!-- oeil -->
+          <circle cx="55" cy="85" r="8" fill="#1f2937"/>
+          <circle cx="53" cy="83" r="3" fill="white"/>
+          <!-- aile -->
+          <ellipse cx="132" cy="148" rx="44" ry="27" fill="none" stroke="#1f2937" stroke-width="3.5"/>
+          <path d="M96,142 Q132,132 168,142" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <!-- queue -->
+          <path d="M202,140 Q218,118 212,96" fill="none" stroke="#1f2937" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- pattes -->
+          <line x1="104" y1="205" x2="96" y2="218" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <path d="M96,218 L82,222 M96,218 L96,224 M96,218 L110,222" stroke="#1f2937" stroke-width="3.5" stroke-linecap="round"/>
+          <line x1="144" y1="207" x2="136" y2="218" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <path d="M136,218 L122,222 M136,218 L136,224 M136,218 L150,222" stroke="#1f2937" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-black text-gray-800 text-base">Le Canard</h3>
+          <span class="text-xs font-bold text-green-500 bg-green-50 px-2.5 py-1 rounded-full">Gratuit</span>
+        </div>
+        <p class="text-xs text-gray-400 font-medium mb-4">Traits épais · Formes simples · 2–4 ans</p>
+        <div class="flex gap-2">
+          <button class="flex-1 bg-violet-600 hover:bg-violet-700 text-white font-bold py-2.5 rounded-xl text-sm transition-colors flex items-center justify-center gap-1.5" style="box-shadow:0 4px 14px rgba(124,58,237,0.3)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Télécharger
+          </button>
+          <button class="w-11 h-11 border-2 border-gray-200 rounded-xl flex items-center justify-center text-gray-400 hover:border-violet-400 hover:text-violet-600 transition-colors" title="Imprimer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17H17.01M5 17H5.01M7 17H17M7 7h10v4H7V7zM5 11h14a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FICHE 2 : Le Soleil (Gratuit) ── -->
+    <div class="fiche-card bg-white rounded-2xl overflow-hidden" style="box-shadow: 0 4px 20px rgba(0,0,0,0.08)">
+      <div class="paper-bg flex items-center justify-center py-8 px-6 border-b border-gray-100" style="min-height:280px">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" class="max-h-60 w-auto">
+          <!-- rayons -->
+          <line x1="110" y1="8" x2="110" y2="30" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <line x1="110" y1="190" x2="110" y2="212" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <line x1="8" y1="110" x2="30" y2="110" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <line x1="190" y1="110" x2="212" y2="110" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <line x1="28" y1="28" x2="44" y2="44" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <line x1="192" y1="28" x2="176" y2="44" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <line x1="28" y1="192" x2="44" y2="176" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <line x1="192" y1="192" x2="176" y2="176" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <!-- cercle -->
+          <circle cx="110" cy="110" r="72" fill="white" stroke="#1f2937" stroke-width="4.5"/>
+          <!-- yeux -->
+          <circle cx="86" cy="96" r="9" fill="#1f2937"/>
+          <circle cx="84" cy="94" r="3.5" fill="white"/>
+          <circle cx="134" cy="96" r="9" fill="#1f2937"/>
+          <circle cx="132" cy="94" r="3.5" fill="white"/>
+          <!-- sourire -->
+          <path d="M78,130 Q110,155 142,130" fill="none" stroke="#1f2937" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- joues rondes -->
+          <circle cx="74" cy="118" r="11" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <circle cx="146" cy="118" r="11" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-black text-gray-800 text-base">Le Soleil</h3>
+          <span class="text-xs font-bold text-green-500 bg-green-50 px-2.5 py-1 rounded-full">Gratuit</span>
+        </div>
+        <p class="text-xs text-gray-400 font-medium mb-4">Traits épais · Formes simples · 2–4 ans</p>
+        <div class="flex gap-2">
+          <button class="flex-1 bg-violet-600 hover:bg-violet-700 text-white font-bold py-2.5 rounded-xl text-sm transition-colors flex items-center justify-center gap-1.5" style="box-shadow:0 4px 14px rgba(124,58,237,0.3)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Télécharger
+          </button>
+          <button class="w-11 h-11 border-2 border-gray-200 rounded-xl flex items-center justify-center text-gray-400 hover:border-violet-400 hover:text-violet-600 transition-colors" title="Imprimer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17H17.01M5 17H5.01M7 17H17M7 7h10v4H7V7zM5 11h14a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FICHE 3 : Le Poisson (Gratuit) ── -->
+    <div class="fiche-card bg-white rounded-2xl overflow-hidden" style="box-shadow: 0 4px 20px rgba(0,0,0,0.08)">
+      <div class="paper-bg flex items-center justify-center py-8 px-6 border-b border-gray-100" style="min-height:280px">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" class="max-h-60 w-auto">
+          <!-- corps -->
+          <ellipse cx="98" cy="115" rx="74" ry="52" fill="white" stroke="#1f2937" stroke-width="4.5"/>
+          <!-- queue -->
+          <path d="M170,115 L208,80 L208,150 Z" fill="white" stroke="#1f2937" stroke-width="4"/>
+          <!-- oeil -->
+          <circle cx="50" cy="100" r="13" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <circle cx="50" cy="100" r="5.5" fill="#1f2937"/>
+          <circle cx="48" cy="98" r="2" fill="white"/>
+          <!-- bouche -->
+          <path d="M26,112 Q20,120 26,128" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- écailles -->
+          <path d="M78,76 Q93,66 108,76" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <path d="M108,76 Q123,66 138,76" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <path d="M64,96 Q79,86 94,96" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <path d="M94,96 Q109,86 124,96" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <path d="M124,96 Q139,86 154,96" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <path d="M78,116 Q93,106 108,116" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <path d="M108,116 Q123,106 138,116" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <path d="M138,116 Q153,106 166,116" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <!-- nageoire dorsale -->
+          <path d="M78,65 Q100,30 132,62" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <!-- nageoire ventrale -->
+          <path d="M88,165 Q100,190 120,163" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <!-- bulles -->
+          <circle cx="16" cy="72" r="6" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <circle cx="8" cy="54" r="4" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <circle cx="24" cy="38" r="8" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-black text-gray-800 text-base">Le Poisson</h3>
+          <span class="text-xs font-bold text-green-500 bg-green-50 px-2.5 py-1 rounded-full">Gratuit</span>
+        </div>
+        <p class="text-xs text-gray-400 font-medium mb-4">Traits épais · Formes simples · 2–4 ans</p>
+        <div class="flex gap-2">
+          <button class="flex-1 bg-violet-600 hover:bg-violet-700 text-white font-bold py-2.5 rounded-xl text-sm transition-colors flex items-center justify-center gap-1.5" style="box-shadow:0 4px 14px rgba(124,58,237,0.3)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Télécharger
+          </button>
+          <button class="w-11 h-11 border-2 border-gray-200 rounded-xl flex items-center justify-center text-gray-400 hover:border-violet-400 hover:text-violet-600 transition-colors" title="Imprimer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17H17.01M5 17H5.01M7 17H17M7 7h10v4H7V7zM5 11h14a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FICHE 4 : Le Chat (Premium) ── -->
+    <div class="fiche-card bg-white rounded-2xl overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(0,0,0,0.08)">
+      <div class="paper-bg flex items-center justify-center py-8 px-6 border-b border-gray-100 relative" style="min-height:280px">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" class="max-h-60 w-auto">
+          <!-- tête ronde -->
+          <circle cx="110" cy="122" r="86" fill="white" stroke="#1f2937" stroke-width="4.5"/>
+          <!-- oreilles pointues -->
+          <polygon points="36,66 22,16 70,48" fill="white" stroke="#1f2937" stroke-width="4"/>
+          <polygon points="184,66 198,16 150,48" fill="white" stroke="#1f2937" stroke-width="4"/>
+          <polygon points="38,64 28,28 66,50" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <polygon points="182,64 192,28 154,50" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <!-- yeux en amande -->
+          <ellipse cx="78" cy="112" rx="20" ry="22" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <ellipse cx="78" cy="112" rx="9" ry="15" fill="#1f2937"/>
+          <circle cx="75" cy="107" r="4" fill="white"/>
+          <ellipse cx="142" cy="112" rx="20" ry="22" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <ellipse cx="142" cy="112" rx="9" ry="15" fill="#1f2937"/>
+          <circle cx="139" cy="107" r="4" fill="white"/>
+          <!-- nez triangle -->
+          <polygon points="110,138 102,148 118,148" fill="#1f2937"/>
+          <!-- bouche -->
+          <path d="M102,148 Q92,160 82,156" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linecap="round"/>
+          <path d="M118,148 Q128,160 138,156" fill="none" stroke="#1f2937" stroke-width="3.5" stroke-linecap="round"/>
+          <!-- moustaches -->
+          <line x1="20" y1="138" x2="94" y2="148" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="20" y1="152" x2="94" y2="152" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="20" y1="166" x2="94" y2="158" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="200" y1="138" x2="126" y2="148" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="200" y1="152" x2="126" y2="152" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="200" y1="166" x2="126" y2="158" stroke="#1f2937" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- sourcils -->
+          <path d="M58,92 Q78,80 98,90" fill="none" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+          <path d="M122,90 Q142,80 162,92" fill="none" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="absolute inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center">
+          <div class="text-center">
+            <div class="bg-violet-600 text-white rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-lg mb-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10a2 2 0 110 4 2 2 0 010-4z"/></svg>
+              <span class="text-sm font-bold">Accès Premium</span>
+            </div>
+            <a href="tarifs.html" class="text-xs text-violet-600 font-semibold underline">Voir les abonnements</a>
+          </div>
+        </div>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-black text-gray-800 text-base">Le Chat</h3>
+          <span class="text-xs font-bold text-violet-500 bg-violet-50 px-2.5 py-1 rounded-full">Premium</span>
+        </div>
+        <p class="text-xs text-gray-400 font-medium mb-4">Traits épais · Formes simples · 2–4 ans</p>
+        <a href="tarifs.html" class="block w-full bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white font-bold py-2.5 rounded-xl text-sm transition-all text-center" style="box-shadow:0 4px 14px rgba(124,58,237,0.3)">
+          Débloquer avec Premium
+        </a>
+      </div>
+    </div>
+
+    <!-- ── FICHE 5 : Le Papillon (Gratuit) ── -->
+    <div class="fiche-card bg-white rounded-2xl overflow-hidden" style="box-shadow: 0 4px 20px rgba(0,0,0,0.08)">
+      <div class="paper-bg flex items-center justify-center py-8 px-6 border-b border-gray-100" style="min-height:280px">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" class="max-h-60 w-auto">
+          <!-- ailes supérieures -->
+          <path d="M110,112 Q72,62 32,42 Q10,36 12,66 Q14,92 62,112 Z" fill="white" stroke="#1f2937" stroke-width="4"/>
+          <path d="M110,112 Q148,62 188,42 Q210,36 208,66 Q206,92 158,112 Z" fill="white" stroke="#1f2937" stroke-width="4"/>
+          <!-- ailes inférieures -->
+          <path d="M110,118 Q76,145 42,164 Q20,178 30,198 Q50,214 86,188 Q109,168 110,118 Z" fill="white" stroke="#1f2937" stroke-width="4"/>
+          <path d="M110,118 Q144,145 178,164 Q200,178 190,198 Q170,214 134,188 Q111,168 110,118 Z" fill="white" stroke="#1f2937" stroke-width="4"/>
+          <!-- motifs ailes supérieures -->
+          <circle cx="66" cy="78" r="16" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <circle cx="154" cy="78" r="16" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <circle cx="44" cy="92" r="8" fill="none" stroke="#1f2937" stroke-width="2"/>
+          <circle cx="176" cy="92" r="8" fill="none" stroke="#1f2937" stroke-width="2"/>
+          <!-- motifs ailes inférieures -->
+          <circle cx="72" cy="162" r="11" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <circle cx="148" cy="162" r="11" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <!-- corps -->
+          <ellipse cx="110" cy="115" rx="10" ry="50" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <!-- tête -->
+          <circle cx="110" cy="65" r="12" fill="white" stroke="#1f2937" stroke-width="3"/>
+          <!-- antennes -->
+          <path d="M104,55 Q88,28 78,18" fill="none" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="78" cy="18" r="6" fill="white" stroke="#1f2937" stroke-width="2.5"/>
+          <path d="M116,55 Q132,28 142,18" fill="none" stroke="#1f2937" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="142" cy="18" r="6" fill="white" stroke="#1f2937" stroke-width="2.5"/>
+          <!-- yeux -->
+          <circle cx="106" cy="64" r="3" fill="#1f2937"/>
+          <circle cx="114" cy="64" r="3" fill="#1f2937"/>
+        </svg>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-black text-gray-800 text-base">Le Papillon</h3>
+          <span class="text-xs font-bold text-green-500 bg-green-50 px-2.5 py-1 rounded-full">Gratuit</span>
+        </div>
+        <p class="text-xs text-gray-400 font-medium mb-4">Traits épais · Formes simples · 2–4 ans</p>
+        <div class="flex gap-2">
+          <button class="flex-1 bg-violet-600 hover:bg-violet-700 text-white font-bold py-2.5 rounded-xl text-sm transition-colors flex items-center justify-center gap-1.5" style="box-shadow:0 4px 14px rgba(124,58,237,0.3)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            Télécharger
+          </button>
+          <button class="w-11 h-11 border-2 border-gray-200 rounded-xl flex items-center justify-center text-gray-400 hover:border-violet-400 hover:text-violet-600 transition-colors" title="Imprimer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17H17.01M5 17H5.01M7 17H17M7 7h10v4H7V7zM5 11h14a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FICHE 6 : L'Éléphant (Premium) ── -->
+    <div class="fiche-card bg-white rounded-2xl overflow-hidden relative" style="box-shadow: 0 4px 20px rgba(0,0,0,0.08)">
+      <div class="paper-bg flex items-center justify-center py-8 px-6 border-b border-gray-100 relative" style="min-height:280px">
+        <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg" class="max-h-60 w-auto">
+          <!-- corps -->
+          <ellipse cx="122" cy="148" rx="80" ry="60" fill="white" stroke="#1f2937" stroke-width="4.5"/>
+          <!-- grande oreille -->
+          <ellipse cx="44" cy="118" rx="40" ry="52" fill="white" stroke="#1f2937" stroke-width="4"/>
+          <ellipse cx="48" cy="118" rx="27" ry="37" fill="none" stroke="#1f2937" stroke-width="2.5"/>
+          <!-- tête -->
+          <circle cx="82" cy="90" r="50" fill="white" stroke="#1f2937" stroke-width="4.5"/>
+          <!-- trompe -->
+          <path d="M58,130 Q32,158 40,190 Q44,204 55,196 Q66,188 63,170 Q60,152 76,140" fill="white" stroke="#1f2937" stroke-width="4.5" stroke-linecap="round"/>
+          <!-- rides trompe -->
+          <path d="M45,160 Q52,158 58,163" fill="none" stroke="#1f2937" stroke-width="2"/>
+          <path d="M42,172 Q49,170 55,175" fill="none" stroke="#1f2937" stroke-width="2"/>
+          <!-- oeil -->
+          <circle cx="104" cy="76" r="11" fill="white" stroke="#1f2937" stroke-width="3"/>
+          <circle cx="104" cy="76" r="5" fill="#1f2937"/>
+          <circle cx="102" cy="74" r="2" fill="white"/>
+          <!-- pattes -->
+          <rect x="66" y="198" width="28" height="20" rx="12" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <rect x="100" y="200" width="28" height="18" rx="12" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <rect x="134" y="200" width="28" height="18" rx="12" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <rect x="165" y="196" width="28" height="22" rx="12" fill="white" stroke="#1f2937" stroke-width="3.5"/>
+          <!-- queue -->
+          <path d="M200,142 Q216,124 213,108" fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round"/>
+          <path d="M213,108 Q218,100 212,96 Q209,102 213,108" stroke="#1f2937" stroke-width="2.5" fill="none"/>
+        </svg>
+        <div class="absolute inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center">
+          <div class="text-center">
+            <div class="bg-violet-600 text-white rounded-xl px-4 py-2.5 flex items-center gap-2 shadow-lg mb-2">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10a2 2 0 110 4 2 2 0 010-4z"/></svg>
+              <span class="text-sm font-bold">Accès Premium</span>
+            </div>
+            <a href="tarifs.html" class="text-xs text-violet-600 font-semibold underline">Voir les abonnements</a>
+          </div>
+        </div>
+      </div>
+      <div class="p-5">
+        <div class="flex items-center justify-between mb-2">
+          <h3 class="font-black text-gray-800 text-base">L'Éléphant</h3>
+          <span class="text-xs font-bold text-violet-500 bg-violet-50 px-2.5 py-1 rounded-full">Premium</span>
+        </div>
+        <p class="text-xs text-gray-400 font-medium mb-4">Traits épais · Formes simples · 2–4 ans</p>
+        <a href="tarifs.html" class="block w-full bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white font-bold py-2.5 rounded-xl text-sm transition-all text-center" style="box-shadow:0 4px 14px rgba(124,58,237,0.3)">
+          Débloquer avec Premium
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA PREMIUM -->
+  <div class="max-w-6xl mx-auto mt-12">
+    <div class="bg-gradient-to-br from-violet-600 to-purple-700 rounded-2xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-white" style="box-shadow:0 16px 48px rgba(124,58,237,0.35)">
+      <div>
+        <p class="font-black text-xl mb-1">12 autres coloriages 2–4 ans disponibles</p>
+        <p class="text-violet-200 text-sm font-medium">Accès illimité à tous les coloriages avec l'abonnement Premium</p>
+      </div>
+      <a href="tarifs.html" class="flex-shrink-0 bg-white text-violet-700 font-black px-8 py-3.5 rounded-xl hover:bg-violet-50 transition-colors text-sm whitespace-nowrap">
+        Voir les tarifs →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-800 text-gray-400 py-10 px-6 mt-10">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-5">
+    <a href="index.html" class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-violet-600 rounded-xl flex items-center justify-center"><span class="text-lg">🎨</span></div>
+      <span class="text-white font-black text-lg">Kido<span class="text-violet-400">Print</span></span>
+    </a>
+    <div class="flex gap-6 text-sm font-medium flex-wrap justify-center">
+      <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+      <a href="#" class="hover:text-white transition-colors">Confidentialité</a>
+      <a href="#" class="hover:text-white transition-colors">CGU</a>
+      <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="text-xs text-gray-600">© 2024 KidoPrint. Tous droits réservés.</div>
+  </div>
+</footer>
+
+</body>
+</html>
