@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devis sur mesure — KidoPrint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    body { background-color: #ede9fe; background-image: radial-gradient(circle, #c4b5fd 1px, transparent 1px); background-size: 28px 28px; }
+    .nav-shadow { box-shadow: 0 4px 30px rgba(124,58,237,0.15); }
+    input:focus, textarea:focus, select:focus { outline: none; box-shadow: 0 0 0 3px rgba(167,139,250,0.35); }
+    .success-screen { display: none; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #a78bfa; border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="bg-white nav-shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center shadow-sm">
+          <span class="text-xl">🎨</span>
+        </div>
+        <span class="text-xl font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-500">
+        <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+        <a href="tarifs.html" class="hover:text-violet-600 transition-colors">Tarifs</a>
+        <a href="#" class="hover:text-violet-600 transition-colors">À propos</a>
+        <a href="contact.html" class="text-violet-600 font-semibold">Nous contacter</a>
+      </div>
+      <button class="hidden sm:block text-sm font-medium text-gray-500 hover:text-violet-600 transition-colors px-3 py-1.5">Connexion</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="py-16 px-6 text-center">
+  <div class="max-w-2xl mx-auto">
+    <div class="inline-flex items-center gap-2 bg-violet-100 text-violet-600 rounded-full px-4 py-1.5 mb-5 text-sm font-semibold">
+      📋 Réponse sous 24h garantie
+    </div>
+    <h1 class="text-4xl md:text-5xl font-black text-gray-800 mb-4 leading-tight">
+      Demandez votre <span class="text-violet-600">devis sur mesure</span>
+    </h1>
+    <p class="text-gray-500 font-medium text-base leading-relaxed">
+      École, crèche, association, collectivité… Vous avez un besoin spécifique ?<br/>
+      Décrivez votre projet et nous vous répondons sous 24h.
+    </p>
+  </div>
+</section>
+
+<!-- CONTENU PRINCIPAL -->
+<section class="pb-20 px-6">
+  <div class="max-w-5xl mx-auto grid lg:grid-cols-3 gap-8 items-start">
+
+    <!-- INFOS LATÉRALES -->
+    <div class="lg:col-span-1 space-y-5">
+
+      <div class="bg-white rounded-2xl p-6" style="box-shadow: 0 4px 24px rgba(124,58,237,0.08)">
+        <h3 class="font-black text-gray-800 mb-4 text-sm uppercase tracking-wider">Pourquoi nous contacter ?</h3>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <div class="w-9 h-9 bg-violet-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-lg">🏫</span>
+            </div>
+            <div>
+              <p class="font-bold text-gray-700 text-sm">Établissements scolaires</p>
+              <p class="text-xs text-gray-400 font-medium mt-0.5">Tarif groupe, comptes multi-enseignants, facturation établissement</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-9 h-9 bg-pink-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-lg">🍼</span>
+            </div>
+            <div>
+              <p class="font-bold text-gray-700 text-sm">Crèches & haltes-garderies</p>
+              <p class="text-xs text-gray-400 font-medium mt-0.5">Fiches adaptées 0-3 ans, abonnement structure</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-9 h-9 bg-amber-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-lg">🤝</span>
+            </div>
+            <div>
+              <p class="font-bold text-gray-700 text-sm">Associations & collectivités</p>
+              <p class="text-xs text-gray-400 font-medium mt-0.5">Tarif associatif, usage non commercial autorisé</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-9 h-9 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+              <span class="text-lg">💡</span>
+            </div>
+            <div>
+              <p class="font-bold text-gray-700 text-sm">Besoin spécifique</p>
+              <p class="text-xs text-gray-400 font-medium mt-0.5">Fiches personnalisées, contenu sur commande</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-gradient-to-br from-violet-600 to-purple-700 rounded-2xl p-6 text-white" style="box-shadow: 0 8px 32px rgba(124,58,237,0.3)">
+        <h3 class="font-black mb-3 text-sm">Notre engagement</h3>
+        <ul class="space-y-2.5 text-sm font-medium text-white/90">
+          <li class="flex items-center gap-2"><span class="text-green-300 font-bold">✓</span> Réponse sous 24h ouvrées</li>
+          <li class="flex items-center gap-2"><span class="text-green-300 font-bold">✓</span> Devis gratuit et sans engagement</li>
+          <li class="flex items-center gap-2"><span class="text-green-300 font-bold">✓</span> Accompagnement personnalisé</li>
+          <li class="flex items-center gap-2"><span class="text-green-300 font-bold">✓</span> Facture officielle fournie</li>
+        </ul>
+        <div class="mt-5 pt-5 border-t border-white/20">
+          <p class="text-xs text-violet-200 font-medium">Vous pouvez aussi nous écrire directement à</p>
+          <p class="font-bold text-white text-sm mt-1">contact@kidoprint.fr</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FORMULAIRE -->
+    <div class="lg:col-span-2">
+
+      <!-- Formulaire -->
+      <div id="formContainer" class="bg-white rounded-2xl p-8" style="box-shadow: 0 8px 40px rgba(124,58,237,0.1)">
+        <h2 class="text-xl font-black text-gray-800 mb-6">Votre demande</h2>
+
+        <form id="devisForm" onsubmit="submitForm(event)" class="space-y-5">
+
+          <!-- Prénom / Nom -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Prénom <span class="text-red-400">*</span></label>
+              <input type="text" name="prenom" required placeholder="Marie"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium transition-shadow"/>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Nom <span class="text-red-400">*</span></label>
+              <input type="text" name="nom" required placeholder="Dupont"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium transition-shadow"/>
+            </div>
+          </div>
+
+          <!-- Email / Téléphone -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Email <span class="text-red-400">*</span></label>
+              <input type="email" name="email" required placeholder="marie@ecole.fr"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium transition-shadow"/>
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Téléphone</label>
+              <input type="tel" name="telephone" placeholder="06 12 34 56 78"
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium transition-shadow"/>
+            </div>
+          </div>
+
+          <!-- Établissement -->
+          <div>
+            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Établissement <span class="text-red-400">*</span></label>
+            <input type="text" name="etablissement" required placeholder="École primaire Victor Hugo, Crèche Les Petits Pas…"
+              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium transition-shadow"/>
+          </div>
+
+          <!-- Type de structure -->
+          <div>
+            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Type de structure <span class="text-red-400">*</span></label>
+            <select name="type" required
+              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium transition-shadow bg-white text-gray-700">
+              <option value="" disabled selected>Choisissez…</option>
+              <option>École maternelle</option>
+              <option>École primaire</option>
+              <option>Collège / Lycée</option>
+              <option>Crèche / Halte-garderie</option>
+              <option>Association</option>
+              <option>Collectivité / Mairie</option>
+              <option>Orthophoniste / Thérapeute</option>
+              <option>Autre</option>
+            </select>
+          </div>
+
+          <!-- Nombre d'utilisateurs -->
+          <div>
+            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Nombre d'enseignants / utilisateurs</label>
+            <div class="flex flex-wrap gap-2">
+              <label class="flex items-center gap-2 border-2 border-gray-200 rounded-xl px-4 py-2.5 cursor-pointer hover:border-violet-400 transition-colors has-[:checked]:border-violet-600 has-[:checked]:bg-violet-50">
+                <input type="radio" name="utilisateurs" value="1-3" class="accent-violet-600"/> <span class="text-sm font-medium text-gray-700">1 – 3</span>
+              </label>
+              <label class="flex items-center gap-2 border-2 border-gray-200 rounded-xl px-4 py-2.5 cursor-pointer hover:border-violet-400 transition-colors has-[:checked]:border-violet-600 has-[:checked]:bg-violet-50">
+                <input type="radio" name="utilisateurs" value="4-10" class="accent-violet-600"/> <span class="text-sm font-medium text-gray-700">4 – 10</span>
+              </label>
+              <label class="flex items-center gap-2 border-2 border-gray-200 rounded-xl px-4 py-2.5 cursor-pointer hover:border-violet-400 transition-colors has-[:checked]:border-violet-600 has-[:checked]:bg-violet-50">
+                <input type="radio" name="utilisateurs" value="11-30" class="accent-violet-600"/> <span class="text-sm font-medium text-gray-700">11 – 30</span>
+              </label>
+              <label class="flex items-center gap-2 border-2 border-gray-200 rounded-xl px-4 py-2.5 cursor-pointer hover:border-violet-400 transition-colors has-[:checked]:border-violet-600 has-[:checked]:bg-violet-50">
+                <input type="radio" name="utilisateurs" value="30+" class="accent-violet-600"/> <span class="text-sm font-medium text-gray-700">30+</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Décrivez votre besoin <span class="text-red-400">*</span></label>
+            <textarea name="message" required rows="5"
+              placeholder="Décrivez votre projet, vos contraintes, les tranches d'âge concernées, le nombre d'enfants…"
+              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium transition-shadow resize-none"></textarea>
+          </div>
+
+          <!-- Budget indicatif -->
+          <div>
+            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Budget indicatif (optionnel)</label>
+            <select name="budget"
+              class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm font-medium transition-shadow bg-white text-gray-700">
+              <option value="" disabled selected>Choisissez…</option>
+              <option>Moins de 50€ / mois</option>
+              <option>50€ – 100€ / mois</option>
+              <option>100€ – 300€ / mois</option>
+              <option>Plus de 300€ / mois</option>
+              <option>Je ne sais pas encore</option>
+            </select>
+          </div>
+
+          <button type="submit"
+            class="w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-3.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2"
+            style="box-shadow: 0 6px 20px rgba(124,58,237,0.4)">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            Envoyer ma demande de devis
+          </button>
+
+          <p class="text-center text-xs text-gray-400 font-medium">Vos données sont traitées avec confidentialité. Aucun spam.</p>
+        </form>
+      </div>
+
+      <!-- Écran de confirmation -->
+      <div id="successScreen" class="success-screen bg-white rounded-2xl p-12 text-center" style="box-shadow: 0 8px 40px rgba(124,58,237,0.1)">
+        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h2 class="text-2xl font-black text-gray-800 mb-3">Demande envoyée !</h2>
+        <p class="text-gray-500 font-medium text-sm leading-relaxed mb-8">
+          Merci pour votre message. Notre équipe va analyser votre demande<br/>et vous répondra <strong class="text-violet-600">sous 24h ouvrées</strong>.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="index.html" class="bg-violet-600 hover:bg-violet-700 text-white font-bold px-8 py-3 rounded-xl transition-colors text-sm">
+            Retour à la bibliothèque
+          </a>
+          <a href="tarifs.html" class="border-2 border-violet-200 text-violet-600 font-bold px-8 py-3 rounded-xl hover:bg-violet-50 transition-colors text-sm">
+            Voir les tarifs
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-800 text-gray-400 py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-5">
+    <a href="index.html" class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-violet-600 rounded-xl flex items-center justify-center"><span class="text-lg">🎨</span></div>
+      <span class="text-white font-black text-lg">Kido<span class="text-violet-400">Print</span></span>
+    </a>
+    <div class="flex gap-6 text-sm font-medium flex-wrap justify-center">
+      <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+      <a href="#" class="hover:text-white transition-colors">Confidentialité</a>
+      <a href="#" class="hover:text-white transition-colors">CGU</a>
+      <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="text-xs text-gray-600">© 2024 KidoPrint. Tous droits réservés.</div>
+  </div>
+</footer>
+
+<script>
+  function submitForm(e) {
+    e.preventDefault();
+    document.getElementById('formContainer').style.display = 'none';
+    const success = document.getElementById('successScreen');
+    success.style.display = 'block';
+    window.scrollTo({ top: success.offsetTop - 100, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
