@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarifs — KidoPrint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    body { background-color: #ede9fe; background-image: radial-gradient(circle, #c4b5fd 1px, transparent 1px); background-size: 28px 28px; }
+    .nav-shadow { box-shadow: 0 4px 30px rgba(124,58,237,0.15); }
+    .pricing-card { transition: transform 0.22s ease, box-shadow 0.22s ease; }
+    .pricing-card:hover { transform: translateY(-8px); box-shadow: 0 24px 56px rgba(0,0,0,0.13); }
+    .pricing-premium:hover { transform: translateY(-10px); box-shadow: 0 32px 80px rgba(124,58,237,0.45); }
+    .faq-item { border-bottom: 1px solid #e5e7eb; }
+    .faq-item:last-child { border-bottom: none; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #a78bfa; border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="bg-white nav-shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center shadow-sm">
+          <span class="text-xl">🎨</span>
+        </div>
+        <span class="text-xl font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-500">
+        <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+        <a href="tarifs.html" class="text-violet-600 font-semibold">Tarifs</a>
+        <a href="#" class="hover:text-violet-600 transition-colors">À propos</a>
+        <a href="index.html#contact" class="hover:text-violet-600 transition-colors font-semibold text-violet-500">Nous contacter</a>
+      </div>
+      <button class="hidden sm:block text-sm font-medium text-gray-500 hover:text-violet-600 transition-colors px-3 py-1.5">Connexion</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO TARIFS -->
+<section class="py-16 px-6 text-center">
+  <div class="max-w-2xl mx-auto">
+    <div class="inline-flex items-center gap-2 bg-violet-100 text-violet-600 rounded-full px-4 py-1.5 mb-5 text-sm font-semibold">
+      💜 Sans engagement · Annulez quand vous voulez
+    </div>
+    <h1 class="text-4xl md:text-5xl font-black text-gray-800 mb-4 leading-tight">
+      Des tarifs simples et <span class="text-violet-600">transparents</span>
+    </h1>
+    <p class="text-gray-500 font-medium text-base leading-relaxed">
+      Commencez gratuitement. Passez à Premium quand vous en avez besoin.<br/>
+      Aucune surprise, aucun engagement.
+    </p>
+
+    <!-- Toggle mensuel / annuel -->
+    <div class="flex items-center justify-center gap-4 mt-8">
+      <span id="labelMensuel" class="text-sm font-semibold text-violet-600">Mensuel</span>
+      <button onclick="toggleBilling()" id="toggleBtn" class="relative w-14 h-7 bg-gray-200 rounded-full transition-colors duration-300 focus:outline-none">
+        <span id="toggleDot" class="absolute top-0.5 left-0.5 w-6 h-6 bg-white rounded-full shadow transition-transform duration-300"></span>
+      </button>
+      <span id="labelAnnuel" class="text-sm font-semibold text-gray-400">
+        Annuel
+        <span class="ml-1.5 bg-green-100 text-green-600 text-xs font-bold px-2 py-0.5 rounded-full">-20%</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- CARTES TARIFS -->
+<section class="pb-16 px-6">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 items-stretch">
+
+    <!-- Gratuit -->
+    <div class="pricing-card bg-white rounded-2xl border-2 border-gray-200 p-8 flex flex-col" style="box-shadow: 0 4px 24px rgba(0,0,0,0.07)">
+      <div>
+        <div class="w-12 h-12 bg-gray-100 rounded-2xl flex items-center justify-center mb-4 text-2xl">🆓</div>
+        <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Gratuit</div>
+        <div class="flex items-end gap-1 mb-1">
+          <span class="text-5xl font-black text-gray-800">0€</span>
+        </div>
+        <div class="text-sm text-gray-400 font-medium mb-6">Pour toujours</div>
+        <ul class="space-y-3 text-sm font-medium text-gray-600 mb-8">
+          <li class="flex items-start gap-2.5"><span class="text-green-500 font-bold mt-0.5">✓</span><span>3 téléchargements par catégorie</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-500 font-bold mt-0.5">✓</span><span>Accès à toutes les catégories</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-500 font-bold mt-0.5">✓</span><span>Qualité standard (72 dpi)</span></li>
+          <li class="flex items-start gap-2.5 text-gray-300"><span class="mt-0.5">✗</span><span>Favoris sauvegardés</span></li>
+          <li class="flex items-start gap-2.5 text-gray-300"><span class="mt-0.5">✗</span><span>Téléchargement par lot</span></li>
+          <li class="flex items-start gap-2.5 text-gray-300"><span class="mt-0.5">✗</span><span>Fiches exclusives mensuelles</span></li>
+        </ul>
+      </div>
+      <button class="mt-auto w-full border-2 border-gray-200 text-gray-600 font-bold py-3 rounded-xl hover:border-violet-400 hover:text-violet-600 transition-colors text-sm">
+        Commencer gratuitement
+      </button>
+    </div>
+
+    <!-- Premium (mis en avant) -->
+    <div class="pricing-card pricing-premium bg-gradient-to-br from-violet-600 to-purple-700 rounded-2xl p-8 flex flex-col relative" style="box-shadow: 0 8px 16px rgba(124,58,237,0.2), 0 24px 64px rgba(124,58,237,0.35)">
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-amber-400 text-white text-xs font-black px-5 py-1.5 rounded-full uppercase tracking-wider whitespace-nowrap shadow-lg">
+        ⭐ Le plus populaire
+      </div>
+      <div>
+        <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center mb-4 text-2xl">💎</div>
+        <div class="text-xs font-bold text-violet-200 uppercase tracking-wider mb-2">Premium</div>
+        <div class="flex items-end gap-1 mb-1">
+          <span id="pricePremium" class="text-5xl font-black text-white">5,99€</span>
+          <span id="periodePremium" class="text-violet-200 font-medium mb-2">/mois</span>
+        </div>
+        <div id="infoAnnuelPremium" class="hidden text-xs text-violet-200 font-medium mb-1">soit 57,50€/an (au lieu de 71,88€)</div>
+        <div class="text-sm text-violet-200 font-medium mb-6">Sans engagement</div>
+        <ul class="space-y-3 text-sm font-medium text-white/90 mb-8">
+          <li class="flex items-start gap-2.5"><span class="text-green-300 font-bold mt-0.5">✓</span><span>Téléchargements <strong>illimités</strong></span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-300 font-bold mt-0.5">✓</span><span>Accès à toutes les catégories</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-300 font-bold mt-0.5">✓</span><span>Qualité HD (300 dpi)</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-300 font-bold mt-0.5">✓</span><span>Favoris & collections personnelles</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-300 font-bold mt-0.5">✓</span><span>Téléchargement par lot (ZIP)</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-300 font-bold mt-0.5">✓</span><span>Fiches exclusives chaque mois</span></li>
+        </ul>
+      </div>
+      <button class="mt-auto w-full bg-white text-violet-700 font-bold py-3 rounded-xl hover:bg-violet-50 transition-colors text-sm shadow-md">
+        S'abonner maintenant
+      </button>
+      <p class="text-center text-violet-200 text-xs font-medium mt-3">Annulez en 1 clic, sans frais</p>
+    </div>
+
+    <!-- École -->
+    <div class="pricing-card bg-white rounded-2xl border-2 border-gray-200 p-8 flex flex-col" style="box-shadow: 0 4px 24px rgba(0,0,0,0.07)">
+      <div>
+        <div class="w-12 h-12 bg-violet-50 rounded-2xl flex items-center justify-center mb-4 text-2xl">🏫</div>
+        <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">École</div>
+        <div class="flex items-end gap-1 mb-1">
+          <span id="priceEcole" class="text-5xl font-black text-gray-800">29,99€</span>
+          <span id="periodeEcole" class="text-gray-400 font-medium mb-2">/mois</span>
+        </div>
+        <div id="infoAnnuelEcole" class="hidden text-xs text-gray-400 font-medium mb-1">soit 287,90€/an (au lieu de 359,88€)</div>
+        <div class="text-sm text-gray-400 font-medium mb-6">Facturation établissement</div>
+        <ul class="space-y-3 text-sm font-medium text-gray-600 mb-8">
+          <li class="flex items-start gap-2.5"><span class="text-green-500 font-bold mt-0.5">✓</span><span>Tout ce qui est inclus en Premium</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-500 font-bold mt-0.5">✓</span><span>10 comptes enseignants inclus</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-500 font-bold mt-0.5">✓</span><span>Impression en lot pour la classe</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-500 font-bold mt-0.5">✓</span><span>Usage en classe autorisé</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-500 font-bold mt-0.5">✓</span><span>Support prioritaire 7j/7</span></li>
+          <li class="flex items-start gap-2.5"><span class="text-green-500 font-bold mt-0.5">✓</span><span>Facture pour comptabilité</span></li>
+        </ul>
+      </div>
+      <button class="mt-auto w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-3 rounded-xl transition-colors text-sm" style="box-shadow: 0 4px 14px rgba(124,58,237,0.3)">
+        Demander un devis
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPARAISON DÉTAILLÉE -->
+<section class="py-16 px-6 bg-white">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-2xl font-black text-gray-800 text-center mb-2">Comparaison détaillée</h2>
+    <p class="text-gray-400 text-center text-sm font-medium mb-10">Tout ce qui est inclus dans chaque formule</p>
+
+    <div class="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-gray-50 border-b border-gray-100">
+            <th class="text-left px-6 py-4 font-bold text-gray-500 w-1/2">Fonctionnalité</th>
+            <th class="px-6 py-4 font-bold text-gray-500 text-center">Gratuit</th>
+            <th class="px-6 py-4 font-bold text-violet-600 text-center bg-violet-50">Premium</th>
+            <th class="px-6 py-4 font-bold text-gray-500 text-center">École</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-50">
+          <tr class="hover:bg-gray-50/50 transition-colors">
+            <td class="px-6 py-4 font-medium text-gray-700">Téléchargements</td>
+            <td class="px-6 py-4 text-center text-gray-500">3 / catégorie</td>
+            <td class="px-6 py-4 text-center font-bold text-violet-600 bg-violet-50/30">Illimités</td>
+            <td class="px-6 py-4 text-center font-bold text-gray-700">Illimités</td>
+          </tr>
+          <tr class="hover:bg-gray-50/50 transition-colors">
+            <td class="px-6 py-4 font-medium text-gray-700">Qualité des fiches</td>
+            <td class="px-6 py-4 text-center text-gray-500">Standard (72 dpi)</td>
+            <td class="px-6 py-4 text-center font-bold text-violet-600 bg-violet-50/30">HD (300 dpi)</td>
+            <td class="px-6 py-4 text-center font-bold text-gray-700">HD (300 dpi)</td>
+          </tr>
+          <tr class="hover:bg-gray-50/50 transition-colors">
+            <td class="px-6 py-4 font-medium text-gray-700">Accès aux catégories</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold">✓</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold bg-violet-50/30">✓</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold">✓</td>
+          </tr>
+          <tr class="hover:bg-gray-50/50 transition-colors">
+            <td class="px-6 py-4 font-medium text-gray-700">Favoris & collections</td>
+            <td class="px-6 py-4 text-center text-gray-300 font-bold">✗</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold bg-violet-50/30">✓</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold">✓</td>
+          </tr>
+          <tr class="hover:bg-gray-50/50 transition-colors">
+            <td class="px-6 py-4 font-medium text-gray-700">Téléchargement par lot (ZIP)</td>
+            <td class="px-6 py-4 text-center text-gray-300 font-bold">✗</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold bg-violet-50/30">✓</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold">✓</td>
+          </tr>
+          <tr class="hover:bg-gray-50/50 transition-colors">
+            <td class="px-6 py-4 font-medium text-gray-700">Fiches exclusives mensuelles</td>
+            <td class="px-6 py-4 text-center text-gray-300 font-bold">✗</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold bg-violet-50/30">✓</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold">✓</td>
+          </tr>
+          <tr class="hover:bg-gray-50/50 transition-colors">
+            <td class="px-6 py-4 font-medium text-gray-700">Comptes enseignants</td>
+            <td class="px-6 py-4 text-center text-gray-300 font-bold">✗</td>
+            <td class="px-6 py-4 text-center text-gray-300 font-bold bg-violet-50/30">✗</td>
+            <td class="px-6 py-4 text-center font-bold text-gray-700">Jusqu'à 10</td>
+          </tr>
+          <tr class="hover:bg-gray-50/50 transition-colors">
+            <td class="px-6 py-4 font-medium text-gray-700">Usage en classe autorisé</td>
+            <td class="px-6 py-4 text-center text-gray-300 font-bold">✗</td>
+            <td class="px-6 py-4 text-center text-gray-300 font-bold bg-violet-50/30">✗</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold">✓</td>
+          </tr>
+          <tr class="hover:bg-gray-50/50 transition-colors">
+            <td class="px-6 py-4 font-medium text-gray-700">Support</td>
+            <td class="px-6 py-4 text-center text-gray-500">Email</td>
+            <td class="px-6 py-4 text-center text-violet-600 font-bold bg-violet-50/30">Email prioritaire</td>
+            <td class="px-6 py-4 text-center font-bold text-gray-700">7j/7 prioritaire</td>
+          </tr>
+          <tr class="hover:bg-gray-50/50 transition-colors">
+            <td class="px-6 py-4 font-medium text-gray-700">Facture pour comptabilité</td>
+            <td class="px-6 py-4 text-center text-gray-300 font-bold">✗</td>
+            <td class="px-6 py-4 text-center text-gray-300 font-bold bg-violet-50/30">✗</td>
+            <td class="px-6 py-4 text-center text-green-500 font-bold">✓</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-16 px-6">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-2xl font-black text-gray-800 text-center mb-2">Questions fréquentes</h2>
+    <p class="text-gray-400 text-center text-sm font-medium mb-10">Tout ce que vous devez savoir</p>
+
+    <div class="bg-white rounded-2xl shadow-sm overflow-hidden" style="box-shadow: 0 4px 24px rgba(124,58,237,0.08)">
+
+      <div class="faq-item px-6 py-5">
+        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left gap-4">
+          <span class="font-semibold text-gray-800 text-sm">Puis-je annuler mon abonnement à tout moment ?</span>
+          <span class="text-violet-500 text-lg font-bold flex-shrink-0 faq-icon">+</span>
+        </button>
+        <p class="faq-answer hidden text-sm text-gray-500 font-medium mt-3 leading-relaxed">Oui, vous pouvez annuler votre abonnement à tout moment depuis votre espace personnel, sans frais ni pénalité. Vous conservez l'accès jusqu'à la fin de la période payée.</p>
+      </div>
+
+      <div class="faq-item px-6 py-5">
+        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left gap-4">
+          <span class="font-semibold text-gray-800 text-sm">Les fiches sont-elles vraiment imprimables à la maison ?</span>
+          <span class="text-violet-500 text-lg font-bold flex-shrink-0 faq-icon">+</span>
+        </button>
+        <p class="faq-answer hidden text-sm text-gray-500 font-medium mt-3 leading-relaxed">Absolument. Toutes nos fiches sont au format A4 et optimisées pour l'impression sur imprimante standard. Les fiches Premium sont en 300 dpi pour une qualité professionnelle.</p>
+      </div>
+
+      <div class="faq-item px-6 py-5">
+        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left gap-4">
+          <span class="font-semibold text-gray-800 text-sm">Combien de fiches sont disponibles au total ?</span>
+          <span class="text-violet-500 text-lg font-bold flex-shrink-0 faq-icon">+</span>
+        </button>
+        <p class="faq-answer hidden text-sm text-gray-500 font-medium mt-3 leading-relaxed">La bibliothèque compte actuellement plus de 200 fiches réparties en 7 catégories. De nouvelles fiches sont ajoutées chaque mois, en exclusivité pour les abonnés Premium.</p>
+      </div>
+
+      <div class="faq-item px-6 py-5">
+        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left gap-4">
+          <span class="font-semibold text-gray-800 text-sm">L'abonnement École couvre combien d'enseignants ?</span>
+          <span class="text-violet-500 text-lg font-bold flex-shrink-0 faq-icon">+</span>
+        </button>
+        <p class="faq-answer hidden text-sm text-gray-500 font-medium mt-3 leading-relaxed">L'abonnement École inclut jusqu'à 10 comptes enseignants. Si vous avez besoin de plus de comptes, contactez-nous pour un devis sur mesure.</p>
+      </div>
+
+      <div class="faq-item px-6 py-5">
+        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left gap-4">
+          <span class="font-semibold text-gray-800 text-sm">Quels moyens de paiement acceptez-vous ?</span>
+          <span class="text-violet-500 text-lg font-bold flex-shrink-0 faq-icon">+</span>
+        </button>
+        <p class="faq-answer hidden text-sm text-gray-500 font-medium mt-3 leading-relaxed">Nous acceptons les cartes bancaires (Visa, Mastercard, American Express) ainsi que PayPal. Les paiements sont sécurisés par Stripe.</p>
+      </div>
+
+      <div class="px-6 py-5">
+        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left gap-4">
+          <span class="font-semibold text-gray-800 text-sm">Y a-t-il un essai gratuit ?</span>
+          <span class="text-violet-500 text-lg font-bold flex-shrink-0 faq-icon">+</span>
+        </button>
+        <p class="faq-answer hidden text-sm text-gray-500 font-medium mt-3 leading-relaxed">Le plan Gratuit est disponible sans limite de temps et vous permet de télécharger 3 fiches par catégorie. C'est la meilleure façon de tester KidoPrint avant de s'abonner.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="py-16 px-6">
+  <div class="max-w-xl mx-auto text-center bg-gradient-to-br from-violet-600 to-purple-700 rounded-3xl p-12 text-white" style="box-shadow: 0 24px 64px rgba(124,58,237,0.4)">
+    <div class="text-4xl mb-4">🎨</div>
+    <h2 class="text-2xl font-black mb-3">Prêt à commencer ?</h2>
+    <p class="text-violet-200 font-medium text-sm mb-8 leading-relaxed">
+      Rejoignez des milliers de parents et d'enseignants qui utilisent KidoPrint chaque semaine.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="index.html" class="bg-white text-violet-700 font-bold px-8 py-3 rounded-xl hover:bg-violet-50 transition-colors text-sm">
+        Commencer gratuitement
+      </a>
+      <button class="border-2 border-white/40 text-white font-bold px-8 py-3 rounded-xl hover:bg-white/10 transition-colors text-sm">
+        S'abonner Premium
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-800 text-gray-400 py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-5">
+    <a href="index.html" class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-violet-600 rounded-xl flex items-center justify-center"><span class="text-lg">🎨</span></div>
+      <span class="text-white font-black text-lg">Kido<span class="text-violet-400">Print</span></span>
+    </a>
+    <div class="flex gap-6 text-sm font-medium flex-wrap justify-center">
+      <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+      <a href="#" class="hover:text-white transition-colors">Confidentialité</a>
+      <a href="#" class="hover:text-white transition-colors">CGU</a>
+      <a href="index.html#contact" class="hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="text-xs text-gray-600">© 2024 KidoPrint. Tous droits réservés.</div>
+  </div>
+</footer>
+
+<script>
+  let isAnnuel = false;
+
+  function toggleBilling() {
+    isAnnuel = !isAnnuel;
+    const btn = document.getElementById('toggleBtn');
+    const dot = document.getElementById('toggleDot');
+    const labelM = document.getElementById('labelMensuel');
+    const labelA = document.getElementById('labelAnnuel');
+
+    if (isAnnuel) {
+      btn.classList.replace('bg-gray-200', 'bg-violet-500');
+      dot.style.transform = 'translateX(28px)';
+      labelM.classList.replace('text-violet-600', 'text-gray-400');
+      labelA.classList.replace('text-gray-400', 'text-violet-600');
+      document.getElementById('pricePremium').textContent = '4,79€';
+      document.getElementById('periodePremium').textContent = '/mois';
+      document.getElementById('infoAnnuelPremium').classList.remove('hidden');
+      document.getElementById('priceEcole').textContent = '23,99€';
+      document.getElementById('periodeEcole').textContent = '/mois';
+      document.getElementById('infoAnnuelEcole').classList.remove('hidden');
+    } else {
+      btn.classList.replace('bg-violet-500', 'bg-gray-200');
+      dot.style.transform = 'translateX(0)';
+      labelM.classList.replace('text-gray-400', 'text-violet-600');
+      labelA.classList.replace('text-violet-600', 'text-gray-400');
+      document.getElementById('pricePremium').textContent = '5,99€';
+      document.getElementById('periodePremium').textContent = '/mois';
+      document.getElementById('infoAnnuelPremium').classList.add('hidden');
+      document.getElementById('priceEcole').textContent = '29,99€';
+      document.getElementById('periodeEcole').textContent = '/mois';
+      document.getElementById('infoAnnuelEcole').classList.add('hidden');
+    }
+  }
+
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const icon = btn.querySelector('.faq-icon');
+    const isOpen = !answer.classList.contains('hidden');
+    answer.classList.toggle('hidden', isOpen);
+    icon.textContent = isOpen ? '+' : '−';
+  }
+</script>
+</body>
+</html>
