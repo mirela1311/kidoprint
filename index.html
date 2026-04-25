@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KidoPrint — Activités imprimables pour enfants</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+
+    /* Fond avec motif de points subtil */
+    body {
+      background-color: #ede9fe;
+      background-image: radial-gradient(circle, #c4b5fd 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    /* ── HERO ── */
+    .hero-gradient {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 60px;
+    }
+
+    /* Blobs lumineux dans le hero */
+    .blob { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; }
+    .blob-1 { width: 400px; height: 400px; background: rgba(255,255,255,0.18); top: -160px; right: -100px; }
+    .blob-2 { width: 280px; height: 280px; background: rgba(251,191,36,0.25); bottom: -80px; left: -80px; }
+    .blob-3 { width: 200px; height: 200px; background: rgba(236,72,153,0.22); top: 35%; left: 20%; }
+
+    /* Formes géométriques flottantes */
+    @keyframes float {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%      { transform: translateY(-18px) rotate(10deg); }
+    }
+    .shape { position: absolute; pointer-events: none; opacity: 0.25; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15)); }
+    .shape-1 { top: 10%;  left: 5%;   animation: float 6s ease-in-out infinite; }
+    .shape-2 { top: 15%;  right: 6%;  animation: float 8s ease-in-out infinite 1s; }
+    .shape-3 { bottom: 12%; left: 15%; animation: float 7s ease-in-out infinite 2s; }
+    .shape-4 { bottom: 18%; right: 12%; animation: float 5s ease-in-out infinite 0.5s; }
+
+    /* ── NAVBAR ── */
+    .nav-shadow { box-shadow: 0 4px 30px rgba(124,58,237,0.15); }
+
+    /* ── SECTION PRINCIPALE qui remonte sur le hero ── */
+    .main-section {
+      background: white;
+      border-radius: 36px 36px 0 0;
+      margin-top: -36px;
+      position: relative;
+      z-index: 10;
+      box-shadow:
+        0 -12px 60px rgba(124,58,237,0.18),
+        0 -2px 0px rgba(255,255,255,0.8) inset;
+      padding-top: 40px;
+    }
+
+    /* ── CARTES CATÉGORIES ── */
+    .cat-card {
+      cursor: pointer;
+      border: 3px solid transparent;
+      box-shadow:
+        0 4px 6px rgba(0,0,0,0.04),
+        0 10px 24px rgba(0,0,0,0.10),
+        0 1px 0px rgba(255,255,255,0.9) inset;
+      transition: transform 0.28s cubic-bezier(.34,1.56,.64,1), box-shadow 0.25s ease, border-color 0.2s ease;
+    }
+    .cat-card:hover {
+      transform: translateY(-12px) scale(1.03);
+    }
+    .cat-card.active {
+      border-color: #7c3aed;
+      box-shadow: 0 12px 40px rgba(124,58,237,0.35), 0 0 0 4px #ede9fe;
+      transform: translateY(-8px) scale(1.02);
+    }
+
+    /* Ombres colorées au survol */
+    .cat-card[data-cat="coloriage"]:hover { box-shadow: 0 20px 50px rgba(72,187,120,0.5), 0 8px 16px rgba(0,0,0,0.08); }
+    .cat-card[data-cat="formes"]:hover    { box-shadow: 0 20px 50px rgba(248,113,113,0.5), 0 8px 16px rgba(0,0,0,0.08); }
+    .cat-card[data-cat="chiffres"]:hover  { box-shadow: 0 20px 50px rgba(59,130,246,0.5),  0 8px 16px rgba(0,0,0,0.08); }
+    .cat-card[data-cat="lettres"]:hover   { box-shadow: 0 20px 50px rgba(217,70,239,0.45), 0 8px 16px rgba(0,0,0,0.08); }
+    .cat-card[data-cat="logique"]:hover   { box-shadow: 0 20px 50px rgba(251,191,36,0.55), 0 8px 16px rgba(0,0,0,0.08); }
+    .cat-card[data-cat="jeux"]:hover      { box-shadow: 0 20px 50px rgba(124,58,237,0.5),  0 8px 16px rgba(0,0,0,0.08); }
+    .cat-card[data-cat="moment"]:hover    { box-shadow: 0 20px 50px rgba(253,168,85,0.5),  0 8px 16px rgba(0,0,0,0.08); }
+
+    /* ── BOUTONS ÂGE ── */
+    .age-btn {
+      border: 2px solid #e5e7eb;
+      background: white;
+      color: #4b5563;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 1px 0 rgba(255,255,255,0.9) inset;
+    }
+    .age-btn:hover  {
+      border-color: #c4b5fd;
+      color: #7c3aed;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(124,58,237,0.18);
+    }
+    .age-btn.active {
+      background: #7c3aed;
+      border-color: #7c3aed;
+      color: white;
+      box-shadow: 0 6px 20px rgba(124,58,237,0.45), 0 2px 4px rgba(0,0,0,0.1);
+      transform: translateY(-2px);
+    }
+
+    /* ── TARIFS ── */
+    .pricing-card {
+      box-shadow:
+        0 2px 4px rgba(0,0,0,0.04),
+        0 8px 24px rgba(0,0,0,0.08),
+        0 1px 0 rgba(255,255,255,0.9) inset;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+    }
+    .pricing-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(0,0,0,0.13);
+    }
+    .pricing-premium {
+      box-shadow:
+        0 8px 16px rgba(124,58,237,0.2),
+        0 24px 64px rgba(124,58,237,0.35),
+        0 1px 0 rgba(255,255,255,0.2) inset;
+    }
+    .pricing-premium:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 32px 80px rgba(124,58,237,0.45);
+    }
+
+    .modal-overlay { background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); }
+
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #a78bfa; border-radius: 10px; }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+<!-- NAVBAR -->
+<nav class="bg-white nav-shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center gap-2.5">
+        <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center shadow-sm">
+          <span class="text-xl">🎨</span>
+        </div>
+        <span class="text-xl font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+      </div>
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-500">
+        <a href="#" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+        <a href="#tarifs" class="hover:text-violet-600 transition-colors">Tarifs</a>
+        <a href="#" class="hover:text-violet-600 transition-colors">À propos</a>
+        <a href="#contact" class="hover:text-violet-600 transition-colors font-semibold text-violet-500">Nous contacter</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button class="hidden sm:block text-sm font-medium text-gray-500 hover:text-violet-600 transition-colors px-3 py-1.5">Connexion</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-gradient text-white py-16 px-6">
+  <!-- Blobs de fond -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <!-- Formes flottantes -->
+  <svg class="shape shape-1 w-16 h-16" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="white"/></svg>
+  <svg class="shape shape-2 w-12 h-12" viewBox="0 0 64 64"><rect x="8" y="8" width="48" height="48" rx="10" fill="white"/></svg>
+  <svg class="shape shape-3 w-14 h-14" viewBox="0 0 64 64"><polygon points="32,4 60,56 4,56" fill="white"/></svg>
+  <svg class="shape shape-4 w-10 h-10" viewBox="0 0 64 64"><polygon points="32,4 38,24 60,24 43,37 49,57 32,44 15,57 21,37 4,24 26,24" fill="white"/></svg>
+  <div class="max-w-3xl mx-auto text-center relative z-10">
+    <div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-1.5 mb-5 text-sm font-semibold">
+      ✨ 200 fiches imprimables disponibles
+    </div>
+    <h1 class="text-4xl md:text-5xl font-black mb-3 leading-tight">
+      La bibliothèque d'activités<br/>imprimables pour enfants
+    </h1>
+    <p class="text-base text-white/80 mb-7 font-medium max-w-xl mx-auto">
+      Pour les parents, enseignants et éducateurs — imprimez en un clic des fiches pédagogiques adaptées à l'âge de chaque enfant.
+    </p>
+    <div class="flex justify-center gap-10 flex-wrap">
+      <div class="text-center"><div class="text-2xl font-black">200</div><div class="text-white/65 text-xs font-medium">Imprimables</div></div>
+      <div class="w-px bg-white/25 self-stretch hidden sm:block"></div>
+      <div class="text-center"><div class="text-2xl font-black">5</div><div class="text-white/65 text-xs font-medium">Catégories</div></div>
+      <div class="w-px bg-white/25 self-stretch hidden sm:block"></div>
+      <div class="text-center"><div class="text-2xl font-black">4</div><div class="text-white/65 text-xs font-medium">Tranches d'âge</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTRES + CATÉGORIES -->
+<section class="main-section max-w-full px-6 py-10">
+<div class="max-w-6xl mx-auto">
+
+  <!-- Filtre âge -->
+  <div class="mb-8">
+    <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-3">Âge</p>
+    <div class="flex flex-wrap gap-2">
+      <button onclick="filterAge('tous')" class="age-btn active px-5 py-2 rounded-xl font-semibold text-sm" data-age="tous">Tous les âges</button>
+      <button onclick="filterAge('2-4')"  class="age-btn px-5 py-2 rounded-xl font-semibold text-sm" data-age="2-4">🍼 2 – 4 ans</button>
+      <button onclick="filterAge('4-6')"  class="age-btn px-5 py-2 rounded-xl font-semibold text-sm" data-age="4-6">🧒 4 – 6 ans</button>
+      <button onclick="filterAge('6-8')"  class="age-btn px-5 py-2 rounded-xl font-semibold text-sm" data-age="6-8">👦 6 – 8 ans</button>
+      <button onclick="filterAge('8-12')" class="age-btn px-5 py-2 rounded-xl font-semibold text-sm" data-age="8-12">🧑 8 – 12 ans</button>
+    </div>
+  </div>
+
+  <!-- Catégories -->
+  <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Catégorie</p>
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-5" id="catGrid">
+
+    <!-- Coloriage -->
+    <div class="cat-card active rounded-2xl overflow-hidden bg-white shadow-sm" data-cat="coloriage" onclick="selectCat(this)">
+      <div class="h-36" style="background:linear-gradient(135deg,#84fab0,#8fd3f4)">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+          <!-- feuille blanche -->
+          <rect x="52" y="20" width="56" height="72" rx="5" fill="white" opacity="0.9"/>
+          <line x1="62" y1="38" x2="98" y2="38" stroke="#d1d5db" stroke-width="2" stroke-linecap="round"/>
+          <line x1="62" y1="48" x2="98" y2="48" stroke="#d1d5db" stroke-width="2" stroke-linecap="round"/>
+          <line x1="62" y1="58" x2="88" y2="58" stroke="#d1d5db" stroke-width="2" stroke-linecap="round"/>
+          <!-- soleil dessiné -->
+          <circle cx="80" cy="72" r="9" fill="#fbbf24" opacity="0.85"/>
+          <line x1="80" y1="58" x2="80" y2="55" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+          <line x1="80" y1="89" x2="80" y2="86" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+          <line x1="66" y1="72" x2="63" y2="72" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+          <line x1="97" y1="72" x2="94" y2="72" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+          <!-- crayons -->
+          <rect x="28" y="55" width="10" height="38" rx="3" fill="#f87171" transform="rotate(-20,28,55)"/>
+          <polygon points="28,93 38,93 33,103" fill="#fef3c7" transform="rotate(-20,28,55)"/>
+          <rect x="28" y="55" width="10" height="8" rx="2" fill="#fca5a5" transform="rotate(-20,28,55)"/>
+          <rect x="108" y="48" width="10" height="38" rx="3" fill="#60a5fa" transform="rotate(18,108,48)"/>
+          <polygon points="108,86 118,86 113,96" fill="#fef3c7" transform="rotate(18,108,48)"/>
+          <rect x="108" y="48" width="10" height="8" rx="2" fill="#93c5fd" transform="rotate(18,108,48)"/>
+        </svg>
+      </div>
+      <div class="px-4 py-3 text-center">
+        <p class="font-bold text-gray-800 text-sm">Coloriage</p>
+        <p class="cat-count text-xs text-gray-400 font-medium mt-0.5">50 fiches</p>
+      </div>
+    </div>
+
+    <!-- Formes & Couleurs -->
+    <div class="cat-card rounded-2xl overflow-hidden bg-white shadow-sm" data-cat="formes" onclick="selectCat(this)">
+      <div class="h-36" style="background:linear-gradient(135deg,#ff9a9e,#fecfef)">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+          <!-- cercle -->
+          <circle cx="50" cy="55" r="24" fill="#f87171" opacity="0.9"/>
+          <!-- carré -->
+          <rect x="88" y="32" width="38" height="38" rx="6" fill="#60a5fa" opacity="0.9"/>
+          <!-- triangle -->
+          <polygon points="80,105 38,105 59,72" fill="#34d399" opacity="0.9"/>
+          <!-- étoile -->
+          <polygon points="128,88 131,98 142,98 133,104 136,114 128,108 120,114 123,104 114,98 125,98"
+            fill="#fbbf24" opacity="0.9"/>
+          <!-- petits ronds décoratifs -->
+          <circle cx="20" cy="25" r="5" fill="white" opacity="0.5"/>
+          <circle cx="145" cy="20" r="7" fill="white" opacity="0.4"/>
+          <circle cx="140" cy="60" r="4" fill="white" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="px-4 py-3 text-center">
+        <p class="font-bold text-gray-800 text-sm">Formes & Couleurs</p>
+        <p class="cat-count text-xs text-gray-400 font-medium mt-0.5">30 fiches</p>
+      </div>
+    </div>
+
+    <!-- Chiffres & Maths -->
+    <div class="cat-card rounded-2xl overflow-hidden bg-white shadow-sm" data-cat="chiffres" onclick="selectCat(this)">
+      <div class="h-36" style="background:linear-gradient(135deg,#a1c4fd,#c2e9fb)">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+          <!-- bulle 1 -->
+          <rect x="18" y="20" width="36" height="36" rx="10" fill="white" opacity="0.85"/>
+          <text x="36" y="46" text-anchor="middle" font-size="24" font-weight="900" fill="#3b82f6">1</text>
+          <!-- bulle 2 -->
+          <rect x="62" y="20" width="36" height="36" rx="10" fill="white" opacity="0.85"/>
+          <text x="80" y="46" text-anchor="middle" font-size="24" font-weight="900" fill="#8b5cf6">2</text>
+          <!-- bulle 3 -->
+          <rect x="106" y="20" width="36" height="36" rx="10" fill="white" opacity="0.85"/>
+          <text x="124" y="46" text-anchor="middle" font-size="24" font-weight="900" fill="#ec4899">3</text>
+          <!-- opération + -->
+          <rect x="30" y="70" width="44" height="34" rx="8" fill="white" opacity="0.75"/>
+          <text x="52" y="92" text-anchor="middle" font-size="20" font-weight="900" fill="#10b981">+</text>
+          <!-- opération = -->
+          <rect x="86" y="70" width="44" height="34" rx="8" fill="white" opacity="0.75"/>
+          <text x="108" y="91" text-anchor="middle" font-size="16" font-weight="900" fill="#f59e0b">=</text>
+          <!-- étoiles décoratives -->
+          <circle cx="15" cy="78" r="4" fill="white" opacity="0.5"/>
+          <circle cx="148" cy="60" r="5" fill="white" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="px-4 py-3 text-center">
+        <p class="font-bold text-gray-800 text-sm">Chiffres & Maths</p>
+        <p class="cat-count text-xs text-gray-400 font-medium mt-0.5">40 fiches</p>
+      </div>
+    </div>
+
+    <!-- Lettres & Lecture -->
+    <div class="cat-card rounded-2xl overflow-hidden bg-white shadow-sm" data-cat="lettres" onclick="selectCat(this)">
+      <div class="h-36" style="background:linear-gradient(135deg,#fbc2eb,#a6c1ee)">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+          <!-- livre ouvert -->
+          <path d="M20 30 Q80 20 80 30 L80 100 Q80 90 20 100 Z" fill="white" opacity="0.9"/>
+          <path d="M140 30 Q80 20 80 30 L80 100 Q80 90 140 100 Z" fill="#f3e8ff" opacity="0.9"/>
+          <!-- ligne centrale -->
+          <line x1="80" y1="28" x2="80" y2="100" stroke="#c4b5fd" stroke-width="2"/>
+          <!-- lettres sur page gauche -->
+          <text x="30" y="54" font-size="18" font-weight="900" fill="#7c3aed" opacity="0.85">A</text>
+          <text x="52" y="54" font-size="18" font-weight="900" fill="#ec4899" opacity="0.85">B</text>
+          <text x="34" y="76" font-size="18" font-weight="900" fill="#f59e0b" opacity="0.85">C</text>
+          <!-- lignes page droite -->
+          <line x1="92" y1="48" x2="128" y2="48" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="92" y1="60" x2="128" y2="60" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="92" y1="72" x2="118" y2="72" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="92" y1="84" x2="124" y2="84" stroke="#c4b5fd" stroke-width="2.5" stroke-linecap="round"/>
+          <!-- petits coeurs -->
+          <circle cx="22" cy="18" r="4" fill="white" opacity="0.5"/>
+          <circle cx="140" cy="108" r="5" fill="white" opacity="0.4"/>
+        </svg>
+      </div>
+      <div class="px-4 py-3 text-center">
+        <p class="font-bold text-gray-800 text-sm">Lettres & Lecture</p>
+        <p class="cat-count text-xs text-gray-400 font-medium mt-0.5">30 fiches</p>
+      </div>
+    </div>
+
+    <!-- Logique & Puzzles -->
+    <div class="cat-card rounded-2xl overflow-hidden bg-white shadow-sm" data-cat="logique" onclick="selectCat(this)">
+      <div class="h-36" style="background:linear-gradient(135deg,#fddb92,#f6d365)">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+          <!-- pièce puzzle haut-gauche -->
+          <path d="M30 20 L70 20 L70 40 Q80 36 80 44 Q80 52 70 48 L70 70 L30 70 L30 50
+                   Q20 54 20 46 Q20 38 30 42 Z"
+                fill="#f87171" opacity="0.9"/>
+          <!-- pièce puzzle haut-droite -->
+          <path d="M90 20 L130 20 L130 42 Q140 38 140 46 Q140 54 130 50 L130 70 L90 70
+                   L90 48 Q80 52 80 44 Q80 36 90 40 Z"
+                fill="#60a5fa" opacity="0.9"/>
+          <!-- pièce puzzle bas-gauche -->
+          <path d="M30 80 L70 80 L70 100 Q80 96 80 104 Q80 112 70 108 L70 115 L30 115
+                   L30 95 Q20 99 20 91 Q20 83 30 87 Z"
+                fill="#34d399" opacity="0.9"/>
+          <!-- pièce puzzle bas-droite -->
+          <path d="M90 80 L130 80 L130 115 L90 115 L90 108
+                   Q80 112 80 104 Q80 96 90 100 Z"
+                fill="#fbbf24" opacity="0.9"/>
+          <!-- points blancs décoratifs -->
+          <circle cx="50" cy="44" r="5" fill="white" opacity="0.45"/>
+          <circle cx="110" cy="44" r="5" fill="white" opacity="0.45"/>
+          <circle cx="50" cy="97" r="5" fill="white" opacity="0.45"/>
+          <circle cx="110" cy="97" r="5" fill="white" opacity="0.45"/>
+        </svg>
+      </div>
+      <div class="px-4 py-3 text-center">
+        <p class="font-bold text-gray-800 text-sm">Logique & Puzzles</p>
+        <p class="cat-count text-xs text-gray-400 font-medium mt-0.5">30 fiches</p>
+      </div>
+    </div>
+
+    <!-- Imprimable du moment -->
+    <div class="cat-card rounded-2xl overflow-hidden bg-white shadow-sm" data-cat="moment" onclick="selectCat(this)">
+      <div class="h-36 relative" style="background:linear-gradient(135deg,#f6d365 0%,#fda085 50%,#f093fb 100%)">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+          <!-- soleil -->
+          <circle cx="38" cy="38" r="18" fill="#fbbf24" opacity="0.95"/>
+          <line x1="38" y1="12" x2="38" y2="6"  stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+          <line x1="38" y1="70" x2="38" y2="64" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+          <line x1="12" y1="38" x2="6"  y2="38" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+          <line x1="70" y1="38" x2="64" y2="38" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+          <line x1="19" y1="19" x2="15" y2="15" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+          <line x1="57" y1="57" x2="61" y2="61" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+          <line x1="57" y1="19" x2="61" y2="15" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+          <line x1="19" y1="57" x2="15" y2="61" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+          <!-- flocon -->
+          <line x1="120" y1="25" x2="120" y2="65" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+          <line x1="100" y1="45" x2="140" y2="45" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+          <line x1="106" y1="31" x2="134" y2="59" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+          <line x1="134" y1="31" x2="106" y2="59" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+          <circle cx="120" cy="25" r="3" fill="white" opacity="0.9"/>
+          <circle cx="120" cy="65" r="3" fill="white" opacity="0.9"/>
+          <circle cx="100" cy="45" r="3" fill="white" opacity="0.9"/>
+          <circle cx="140" cy="45" r="3" fill="white" opacity="0.9"/>
+          <!-- feuille automne -->
+          <path d="M65 95 Q72 75 88 72 Q80 85 95 88 Q78 92 75 108 Q68 100 65 95Z" fill="#f97316" opacity="0.9"/>
+          <line x1="68" y1="98" x2="88" y2="75" stroke="#ea580c" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+          <!-- étoile de noël -->
+          <polygon points="130,80 133,92 145,92 135,99 139,111 130,104 121,111 125,99 115,92 127,92"
+            fill="#fbbf24" opacity="0.95"/>
+          <!-- badge NOUVEAU -->
+          <rect x="4" y="90" width="52" height="20" rx="10" fill="white" opacity="0.85"/>
+          <text x="30" y="104" text-anchor="middle" font-size="9" font-weight="900" fill="#f97316">✦ DU MOIS</text>
+        </svg>
+      </div>
+      <div class="px-4 py-3 text-center">
+        <p class="font-bold text-gray-800 text-sm">Imprimable du moment</p>
+        <p class="cat-count text-xs text-gray-400 font-medium mt-0.5">20 fiches</p>
+      </div>
+    </div>
+
+    <!-- Jeux à imprimer -->
+    <div class="cat-card rounded-2xl overflow-hidden bg-white shadow-sm" data-cat="jeux" onclick="selectCat(this)">
+      <div class="h-36" style="background:linear-gradient(135deg,#667eea,#764ba2)">
+        <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
+          <!-- carte de jeu gauche -->
+          <rect x="22" y="22" width="50" height="72" rx="7" fill="white" opacity="0.95" transform="rotate(-12,47,58)"/>
+          <text x="29" y="42" font-size="16" font-weight="900" fill="#ef4444" transform="rotate(-12,47,58)">♥</text>
+          <text x="29" y="84" font-size="16" font-weight="900" fill="#ef4444" transform="rotate(-12,47,58)" text-anchor="middle">♥</text>
+          <text x="47" y="66" font-size="22" font-weight="900" fill="#ef4444" text-anchor="middle" transform="rotate(-12,47,58)">A</text>
+          <!-- carte de jeu droite -->
+          <rect x="68" y="18" width="50" height="72" rx="7" fill="white" opacity="0.95" transform="rotate(10,93,54)"/>
+          <text x="75" y="37" font-size="16" font-weight="900" fill="#1d4ed8" transform="rotate(10,93,54)">♠</text>
+          <text x="93" y="61" font-size="22" font-weight="900" fill="#1d4ed8" text-anchor="middle" transform="rotate(10,93,54)">K</text>
+          <!-- dé -->
+          <rect x="108" y="68" width="36" height="36" rx="7" fill="white" opacity="0.9"/>
+          <circle cx="118" cy="78" r="3" fill="#4b5563"/>
+          <circle cx="134" cy="78" r="3" fill="#4b5563"/>
+          <circle cx="126" cy="86" r="3" fill="#4b5563"/>
+          <circle cx="118" cy="94" r="3" fill="#4b5563"/>
+          <circle cx="134" cy="94" r="3" fill="#4b5563"/>
+          <!-- étoiles déco -->
+          <circle cx="18" cy="100" r="4" fill="white" opacity="0.4"/>
+          <circle cx="148" cy="18" r="5" fill="white" opacity="0.35"/>
+        </svg>
+      </div>
+      <div class="px-4 py-3 text-center">
+        <p class="font-bold text-gray-800 text-sm">Jeux à imprimer</p>
+        <p class="cat-count text-xs text-gray-400 font-medium mt-0.5">25 fiches</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- TARIFS -->
+<section class="py-16 px-6 bg-white shadow-inner" id="tarifs">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-2xl font-black text-gray-800 text-center mb-2">Tarifs simples</h2>
+    <p class="text-gray-400 text-center text-sm font-medium mb-10">Commencez gratuitement, évoluez selon vos besoins</p>
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <div class="bg-gray-50 rounded-2xl border-2 border-gray-200 p-6 hover:-translate-y-1 transition-transform">
+        <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Gratuit</div>
+        <div class="text-4xl font-black text-gray-800 mb-0.5">0€</div>
+        <div class="text-sm text-gray-400 font-medium mb-5">Pour toujours</div>
+        <ul class="space-y-2.5 text-sm font-medium text-gray-600 mb-6">
+          <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✓</span> 3 téléchargements / catégorie</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✓</span> Toutes les catégories</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✓</span> Qualité standard</li>
+          <li class="flex items-center gap-2 text-gray-300"><span>✗</span> Favoris sauvegardés</li>
+          <li class="flex items-center gap-2 text-gray-300"><span>✗</span> Téléchargement par lot</li>
+        </ul>
+        <button class="w-full border-2 border-gray-200 text-gray-600 font-semibold py-2.5 rounded-xl hover:border-violet-400 hover:text-violet-600 transition-colors text-sm">Commencer gratuitement</button>
+      </div>
+
+      <div class="bg-gradient-to-br from-violet-600 to-purple-700 rounded-2xl p-6 relative shadow-xl hover:-translate-y-1 transition-transform">
+        <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-amber-400 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider whitespace-nowrap">⭐ Recommandé</div>
+        <div class="text-xs font-bold text-violet-200 uppercase tracking-wider mb-1">Premium</div>
+        <div class="text-4xl font-black text-white mb-0.5">5,99€</div>
+        <div class="text-sm text-violet-200 font-medium mb-5">par mois</div>
+        <ul class="space-y-2.5 text-sm font-medium text-white/90 mb-6">
+          <li class="flex items-center gap-2"><span class="text-green-300 font-bold">✓</span> Téléchargements illimités</li>
+          <li class="flex items-center gap-2"><span class="text-green-300 font-bold">✓</span> Toutes les catégories</li>
+          <li class="flex items-center gap-2"><span class="text-green-300 font-bold">✓</span> Qualité HD (300 dpi)</li>
+          <li class="flex items-center gap-2"><span class="text-green-300 font-bold">✓</span> Favoris & collections</li>
+          <li class="flex items-center gap-2"><span class="text-green-300 font-bold">✓</span> Téléchargement par lot</li>
+        </ul>
+        <button class="w-full bg-white text-violet-700 font-bold py-2.5 rounded-xl hover:bg-violet-50 transition-colors text-sm">S'abonner</button>
+      </div>
+
+      <div class="bg-gray-50 rounded-2xl border-2 border-gray-200 p-6 hover:-translate-y-1 transition-transform">
+        <div class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">École</div>
+        <div class="text-4xl font-black text-gray-800 mb-0.5">29,99€</div>
+        <div class="text-sm text-gray-400 font-medium mb-5">par mois</div>
+        <ul class="space-y-2.5 text-sm font-medium text-gray-600 mb-6">
+          <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✓</span> Tout Premium inclus</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✓</span> 10 comptes enseignants</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✓</span> Impression en lot</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✓</span> Usage en classe autorisé</li>
+          <li class="flex items-center gap-2"><span class="text-green-500 font-bold">✓</span> Support prioritaire</li>
+        </ul>
+        <button class="w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-2.5 rounded-xl transition-colors text-sm" style="box-shadow:0 4px 14px rgba(124,58,237,0.3)">S'abonner</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="py-16 px-6 bg-gradient-to-br from-violet-50 to-purple-50" id="contact">
+  <div class="max-w-2xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 bg-violet-100 text-violet-600 rounded-full px-4 py-1.5 mb-5 text-sm font-semibold">
+      📋 Devis sur mesure
+    </div>
+    <h2 class="text-3xl font-black text-gray-800 mb-3">Demandez votre devis</h2>
+    <p class="text-gray-500 font-medium mb-8 text-sm leading-relaxed">
+      École, crèche, association, collectivité… Vous avez un besoin spécifique ?<br/>
+      Décrivez votre projet et nous vous envoyons un devis personnalisé sous 24h.
+    </p>
+    <form class="bg-white rounded-2xl shadow-lg p-8 text-left space-y-4" style="box-shadow: 0 12px 40px rgba(124,58,237,0.1)">
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Prénom</label>
+          <input type="text" placeholder="Marie" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-violet-300 transition-shadow"/>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Nom</label>
+          <input type="text" placeholder="Dupont" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-violet-300 transition-shadow"/>
+        </div>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Email</label>
+        <input type="email" placeholder="marie@ecole.fr" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-violet-300 transition-shadow"/>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1.5">Établissement</label>
+        <input type="text" placeholder="École primaire, association, crèche…" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-violet-300 transition-shadow"/>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-1.5">Message</label>
+        <textarea rows="4" placeholder="Décrivez votre besoin…" class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-violet-300 transition-shadow resize-none"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-3 rounded-xl transition-colors shadow-md text-sm" style="box-shadow: 0 6px 18px rgba(124,58,237,0.35)">
+        Envoyer le message
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-800 text-gray-400 py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-5">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-violet-600 rounded-xl flex items-center justify-center"><span class="text-lg">🎨</span></div>
+      <span class="text-white font-black text-lg">Kido<span class="text-violet-400">Print</span></span>
+    </div>
+    <div class="flex gap-6 text-sm font-medium flex-wrap justify-center">
+      <a href="#" class="hover:text-white transition-colors">Mentions légales</a>
+      <a href="#" class="hover:text-white transition-colors">Confidentialité</a>
+      <a href="#" class="hover:text-white transition-colors">CGU</a>
+      <a href="#" class="hover:text-white transition-colors">Contact</a>
+    </div>
+    <div class="text-xs text-gray-600">© 2024 KidoPrint. Tous droits réservés.</div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 modal-overlay" onclick="closeModal(event)">
+  <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden" onclick="event.stopPropagation()">
+    <div id="modalHeader" class="h-44 relative">
+      <svg id="modalSvg" class="w-full h-full"></svg>
+      <button onclick="closeModal()" class="absolute top-3 right-3 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center text-gray-500 hover:bg-white text-lg font-bold">✕</button>
+    </div>
+    <div class="p-6">
+      <h3 id="modalTitle" class="text-xl font-black text-gray-800 mb-1"></h3>
+      <p id="modalDesc" class="text-sm text-gray-500 font-medium leading-relaxed mb-4"></p>
+      <div id="modalAges" class="flex flex-wrap gap-2 mb-5"></div>
+      <div class="flex items-center justify-between bg-gray-50 rounded-xl px-4 py-3 mb-5 text-sm font-semibold text-gray-500">
+        <span>📄 Fiches disponibles</span>
+        <span id="modalCount" class="font-black text-violet-600 text-base"></span>
+      </div>
+      <button class="w-full bg-violet-600 hover:bg-violet-700 text-white font-bold py-3 rounded-xl transition-colors text-sm flex items-center justify-center gap-2 shadow-md">
+        🔓 Accéder à la catégorie
+      </button>
+      <p class="text-xs text-gray-400 font-medium text-center mt-2">Accès illimité avec Premium</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const cats = {
+    coloriage: { name:"Coloriage", desc:"Animaux, paysages, véhicules, mandalas… La plus grande collection de coloriages adaptés par âge.", ages:["2-4","4-6","6-8","8-12"], gradient:"linear-gradient(135deg,#84fab0,#8fd3f4)",
+      countByAge:{ tous:50, "2-4":15, "4-6":15, "6-8":12, "8-12":8 } },
+    formes:    { name:"Formes & Couleurs", desc:"Cercle, carré, triangle, couleurs primaires… Apprendre les formes à travers des fiches ludiques et colorées.", ages:["2-4","4-6","6-8"], gradient:"linear-gradient(135deg,#ff9a9e,#fecfef)",
+      countByAge:{ tous:30, "2-4":12, "4-6":10, "6-8":8 } },
+    chiffres:  { name:"Chiffres & Maths", desc:"Compter, additionner, tables de multiplication… Des exercices progressifs pour tous les niveaux.", ages:["2-4","4-6","6-8","8-12"], gradient:"linear-gradient(135deg,#a1c4fd,#c2e9fb)",
+      countByAge:{ tous:40, "2-4":8, "4-6":12, "6-8":12, "8-12":8 } },
+    lettres:   { name:"Lettres & Lecture", desc:"Alphabet, écriture cursive, construction de mots — pour apprendre à lire et écrire avec plaisir.", ages:["4-6","6-8"], gradient:"linear-gradient(135deg,#fbc2eb,#a6c1ee)",
+      countByAge:{ tous:25, "4-6":13, "6-8":12 } },
+    logique:   { name:"Logique & Puzzles", desc:"Labyrinthes, suites logiques, puzzles, sudoku enfant… Pour développer la pensée critique.", ages:["2-4","4-6","6-8","8-12"], gradient:"linear-gradient(135deg,#fddb92,#f6d365)",
+      countByAge:{ tous:30, "2-4":6, "4-6":8, "6-8":10, "8-12":6 } },
+    moment:    { name:"Imprimable du moment", desc:"Coloriages et activités basés sur les saisons et événements : Noël, Halloween, Printemps, rentrée… Nouveau contenu chaque mois !", ages:["2-4","4-6","6-8","8-12"], gradient:"linear-gradient(135deg,#f6d365,#fda085,#f093fb)",
+      countByAge:{ tous:20, "2-4":5, "4-6":6, "6-8":5, "8-12":4 } },
+    jeux:      { name:"Jeux à imprimer", desc:"Jeux de plateau, cartes à jouer, dés, jeux de mémoire… À imprimer, découper et jouer en famille ou en classe.", ages:["6-8","8-12"], gradient:"linear-gradient(135deg,#667eea,#764ba2)",
+      countByAge:{ tous:25, "6-8":12, "8-12":13 } },
+  };
+
+  const ageLabels = { "2-4":"2–4 ans","4-6":"4–6 ans","6-8":"6–8 ans","8-12":"8–12 ans" };
+  const agePillColors = { "2-4":"bg-pink-100 text-pink-600","4-6":"bg-amber-100 text-amber-600","6-8":"bg-emerald-100 text-emerald-600","8-12":"bg-blue-100 text-blue-600" };
+
+  let selAge = 'tous';
+
+  function filterAge(age) {
+    selAge = age;
+    document.querySelectorAll('.age-btn').forEach(b => b.classList.toggle('active', b.dataset.age === age));
+    document.querySelectorAll('.cat-card').forEach(card => {
+      const cat = cats[card.dataset.cat];
+      const show = age === 'tous' || cat.ages.includes(age);
+      card.style.display = show ? '' : 'none';
+      if (show) {
+        const n = cat.countByAge[age] ?? cat.countByAge['tous'];
+        card.querySelector('.cat-count').textContent = `${n} fiche${n > 1 ? 's' : ''}`;
+      }
+    });
+  }
+
+  function selectCat(el) {
+    document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    const c = cats[el.dataset.cat];
+    const n = c.countByAge[selAge] ?? c.countByAge['tous'];
+    document.getElementById('modalHeader').style.background = c.gradient;
+    document.getElementById('modalSvg').innerHTML = el.querySelector('svg').innerHTML;
+    document.getElementById('modalTitle').textContent = c.name;
+    document.getElementById('modalDesc').textContent = c.desc;
+    document.getElementById('modalCount').textContent = `${n} fiche${n > 1 ? 's' : ''}`;
+    document.getElementById('modalAges').innerHTML = c.ages
+      .map(a => `<span class="text-xs font-semibold px-3 py-1 rounded-full ${agePillColors[a]}">${ageLabels[a]}</span>`)
+      .join('');
+    document.getElementById('modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(e) {
+    if (!e || e.target === document.getElementById('modal')) {
+      document.getElementById('modal').classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  }
+</script>
+</body>
+</html>
