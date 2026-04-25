@@ -925,6 +925,10 @@
       window.location.href = 'coloriage-6-8.html';
       return;
     }
+    if (catKey === 'coloriage' && selAge === '8-12') {
+      window.location.href = 'coloriage-8-12.html';
+      return;
+    }
     document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
     el.classList.add('active');
     const c = cats[catKey];
