@@ -441,103 +441,168 @@
       <div class="inline-flex items-center gap-2 bg-violet-100 text-violet-600 rounded-full px-4 py-1.5 mb-4 text-sm font-semibold">
         👀 Aperçu des fiches
       </div>
-      <h2 class="text-2xl font-black text-gray-800 mb-2">Découvrez nos fiches imprimables</h2>
-      <p class="text-gray-400 text-sm font-medium">Quelques exemples parmi les 200 fiches disponibles</p>
+      <h2 class="text-2xl font-black text-gray-800 mb-2">Des fiches prêtes à imprimer</h2>
+      <p class="text-gray-400 text-sm font-medium">Voici à quoi ressemblent vraiment nos fiches d'activité</p>
     </div>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
 
-      <!-- Fiche 1 — Gratuite -->
+      <!-- Fiche 1 — Trace la lettre A (Gratuit) -->
       <div class="rounded-2xl overflow-hidden bg-white border-2 border-gray-100 hover:border-violet-300 hover:-translate-y-2 transition-all duration-250" style="box-shadow:0 4px 16px rgba(0,0,0,0.07)">
-        <div class="h-40" style="background:linear-gradient(135deg,#84fab0,#8fd3f4)">
-          <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-            <rect x="42" y="18" width="76" height="90" rx="6" fill="white" opacity="0.92"/>
-            <circle cx="80" cy="55" r="22" fill="none" stroke="#6ee7b7" stroke-width="3" stroke-dasharray="5,3"/>
-            <circle cx="80" cy="55" r="12" fill="none" stroke="#34d399" stroke-width="2.5"/>
-            <text x="80" y="61" text-anchor="middle" font-size="14" font-weight="900" fill="#059669">A</text>
-            <line x1="55" y1="90" x2="105" y2="90" stroke="#d1d5db" stroke-width="2" stroke-linecap="round"/>
-            <line x1="55" y1="98" x2="92" y2="98" stroke="#d1d5db" stroke-width="2" stroke-linecap="round"/>
-            <rect x="28" y="50" width="8" height="30" rx="2" fill="#f87171" opacity="0.8" transform="rotate(-18,28,50)"/>
-            <polygon points="28,80 36,80 32,88" fill="#fef9c3" opacity="0.9" transform="rotate(-18,28,50)"/>
+        <div class="h-48 bg-blue-50 flex items-center justify-center p-3">
+          <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" class="h-full drop-shadow-md">
+            <rect x="0" y="0" width="140" height="160" rx="6" fill="white"/>
+            <!-- header -->
+            <rect x="0" y="0" width="140" height="22" rx="6" fill="#3b82f6" opacity="0.12"/>
+            <text x="70" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#3b82f6" letter-spacing="0.5">TRACE LA LETTRE</text>
+            <!-- lettre A en pointillés -->
+            <path d="M70,32 L45,105" stroke="#bfdbfe" stroke-width="8" stroke-dasharray="6,5" stroke-linecap="round" fill="none"/>
+            <path d="M70,32 L95,105" stroke="#bfdbfe" stroke-width="8" stroke-dasharray="6,5" stroke-linecap="round" fill="none"/>
+            <path d="M55,78 L85,78" stroke="#bfdbfe" stroke-width="8" stroke-dasharray="6,5" stroke-linecap="round" fill="none"/>
+            <!-- point de départ numéroté -->
+            <circle cx="70" cy="32" r="7" fill="#3b82f6"/>
+            <text x="70" y="36" text-anchor="middle" font-size="8" font-weight="900" fill="white">1</text>
+            <!-- flèches direction -->
+            <text x="52" y="58" font-size="11" fill="#fbbf24" opacity="0.9">↙</text>
+            <text x="83" y="58" font-size="11" fill="#fbbf24" opacity="0.9">↘</text>
+            <!-- lignes d'écriture -->
+            <line x1="12" y1="120" x2="128" y2="120" stroke="#e5e7eb" stroke-width="1.5"/>
+            <line x1="12" y1="132" x2="128" y2="132" stroke="#e5e7eb" stroke-width="1.5"/>
+            <line x1="12" y1="144" x2="128" y2="144" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="3,3"/>
+            <line x1="12" y1="156" x2="128" y2="156" stroke="#e5e7eb" stroke-width="1.5"/>
+            <!-- petit crayon déco -->
+            <rect x="110" y="26" width="7" height="22" rx="2" fill="#fbbf24" opacity="0.7" transform="rotate(20,110,26)"/>
+            <polygon points="110,48 117,48 113.5,56" fill="#fef9c3" opacity="0.8" transform="rotate(20,110,26)"/>
           </svg>
         </div>
         <div class="p-3">
           <span class="text-xs font-bold text-green-500 bg-green-50 px-2 py-0.5 rounded-full">Gratuit</span>
-          <p class="font-bold text-gray-800 text-sm mt-2">Tracer les lettres</p>
+          <p class="font-bold text-gray-800 text-sm mt-2">Trace la lettre A</p>
           <p class="text-xs text-gray-400 font-medium mt-0.5">4 – 6 ans · Lettres</p>
         </div>
       </div>
 
-      <!-- Fiche 2 — Premium -->
-      <div class="rounded-2xl overflow-hidden bg-white border-2 border-gray-100 hover:border-violet-300 hover:-translate-y-2 transition-all duration-250 relative" style="box-shadow:0 4px 16px rgba(0,0,0,0.07)">
-        <div class="h-40 relative" style="background:linear-gradient(135deg,#a1c4fd,#c2e9fb)">
-          <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-            <rect x="30" y="18" width="44" height="44" rx="8" fill="white" opacity="0.9"/>
-            <text x="52" y="48" text-anchor="middle" font-size="26" font-weight="900" fill="#3b82f6">5</text>
-            <rect x="86" y="18" width="44" height="44" rx="8" fill="white" opacity="0.9"/>
-            <circle cx="96" cy="28" r="4" fill="#fbbf24"/>
-            <circle cx="108" cy="28" r="4" fill="#fbbf24"/>
-            <circle cx="120" cy="28" r="4" fill="#fbbf24"/>
-            <circle cx="96" cy="40" r="4" fill="#fbbf24"/>
-            <circle cx="108" cy="40" r="4" fill="#fbbf24"/>
-            <rect x="30" y="74" width="100" height="30" rx="8" fill="white" opacity="0.85"/>
-            <text x="80" y="94" text-anchor="middle" font-size="14" font-weight="900" fill="#6366f1">2 + 3 = ?</text>
+      <!-- Fiche 2 — Additions simples (Gratuit) -->
+      <div class="rounded-2xl overflow-hidden bg-white border-2 border-gray-100 hover:border-violet-300 hover:-translate-y-2 transition-all duration-250" style="box-shadow:0 4px 16px rgba(0,0,0,0.07)">
+        <div class="h-48 bg-green-50 flex items-center justify-center p-3">
+          <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" class="h-full drop-shadow-md">
+            <rect x="0" y="0" width="140" height="160" rx="6" fill="white"/>
+            <rect x="0" y="0" width="140" height="22" rx="6" fill="#22c55e" opacity="0.12"/>
+            <text x="70" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#16a34a" letter-spacing="0.5">ADDITIONS SIMPLES</text>
+            <!-- Exercice 1 -->
+            <text x="18" y="46" font-size="16" font-weight="900" fill="#374151">2</text>
+            <text x="36" y="46" font-size="16" font-weight="900" fill="#22c55e">+</text>
+            <text x="52" y="46" font-size="16" font-weight="900" fill="#374151">3</text>
+            <text x="70" y="46" font-size="16" font-weight="900" fill="#374151">=</text>
+            <rect x="84" y="30" width="26" height="20" rx="4" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+            <!-- Exercice 2 -->
+            <text x="18" y="76" font-size="16" font-weight="900" fill="#374151">4</text>
+            <text x="36" y="76" font-size="16" font-weight="900" fill="#22c55e">+</text>
+            <text x="52" y="76" font-size="16" font-weight="900" fill="#374151">1</text>
+            <text x="70" y="76" font-size="16" font-weight="900" fill="#374151">=</text>
+            <rect x="84" y="60" width="26" height="20" rx="4" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+            <!-- Exercice 3 -->
+            <text x="18" y="106" font-size="16" font-weight="900" fill="#374151">3</text>
+            <text x="36" y="106" font-size="16" font-weight="900" fill="#22c55e">+</text>
+            <text x="52" y="106" font-size="16" font-weight="900" fill="#374151">3</text>
+            <text x="70" y="106" font-size="16" font-weight="900" fill="#374151">=</text>
+            <rect x="84" y="90" width="26" height="20" rx="4" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+            <!-- Exercice 4 -->
+            <text x="18" y="136" font-size="16" font-weight="900" fill="#374151">5</text>
+            <text x="36" y="136" font-size="16" font-weight="900" fill="#22c55e">+</text>
+            <text x="52" y="136" font-size="16" font-weight="900" fill="#374151">2</text>
+            <text x="70" y="136" font-size="16" font-weight="900" fill="#374151">=</text>
+            <rect x="84" y="120" width="26" height="20" rx="4" fill="none" stroke="#d1d5db" stroke-width="1.5"/>
+            <!-- séparateurs -->
+            <line x1="12" y1="53" x2="128" y2="53" stroke="#f3f4f6" stroke-width="1"/>
+            <line x1="12" y1="83" x2="128" y2="83" stroke="#f3f4f6" stroke-width="1"/>
+            <line x1="12" y1="113" x2="128" y2="113" stroke="#f3f4f6" stroke-width="1"/>
           </svg>
-          <div class="absolute inset-0 bg-white/60 backdrop-blur-sm flex items-center justify-center">
-            <div class="bg-violet-600 text-white rounded-xl px-3 py-2 flex items-center gap-2 shadow-lg">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10a2 2 0 110 4 2 2 0 010-4z"/></svg>
-              <span class="text-xs font-bold">Premium</span>
-            </div>
-          </div>
         </div>
         <div class="p-3">
-          <span class="text-xs font-bold text-violet-500 bg-violet-50 px-2 py-0.5 rounded-full">Premium</span>
+          <span class="text-xs font-bold text-green-500 bg-green-50 px-2 py-0.5 rounded-full">Gratuit</span>
           <p class="font-bold text-gray-800 text-sm mt-2">Additions simples</p>
           <p class="text-xs text-gray-400 font-medium mt-0.5">4 – 6 ans · Chiffres</p>
         </div>
       </div>
 
-      <!-- Fiche 3 — Gratuite -->
+      <!-- Fiche 3 — Labyrinthe (Gratuit) -->
       <div class="rounded-2xl overflow-hidden bg-white border-2 border-gray-100 hover:border-violet-300 hover:-translate-y-2 transition-all duration-250" style="box-shadow:0 4px 16px rgba(0,0,0,0.07)">
-        <div class="h-40" style="background:linear-gradient(135deg,#fddb92,#f6d365)">
-          <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-            <rect x="30" y="15" width="100" height="90" rx="8" fill="white" opacity="0.9"/>
-            <!-- labyrinthe simple -->
-            <rect x="40" y="25" width="80" height="70" rx="4" fill="none" stroke="#fbbf24" stroke-width="2.5"/>
-            <line x1="40" y1="45" x2="90" y2="45" stroke="#fbbf24" stroke-width="2.5"/>
-            <line x1="70" y1="45" x2="70" y2="65" stroke="#fbbf24" stroke-width="2.5"/>
-            <line x1="50" y1="65" x2="120" y2="65" stroke="#fbbf24" stroke-width="2.5"/>
-            <line x1="50" y1="65" x2="50" y2="85" stroke="#fbbf24" stroke-width="2.5"/>
-            <circle cx="47" cy="32" r="5" fill="#f97316" opacity="0.9"/>
-            <circle cx="113" cy="88" r="5" fill="#22c55e" opacity="0.9"/>
+        <div class="h-48 bg-amber-50 flex items-center justify-center p-3">
+          <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" class="h-full drop-shadow-md">
+            <rect x="0" y="0" width="140" height="160" rx="6" fill="white"/>
+            <rect x="0" y="0" width="140" height="22" rx="6" fill="#f59e0b" opacity="0.12"/>
+            <text x="70" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#d97706" letter-spacing="0.5">AIDE LE LAPIN !</text>
+            <!-- labyrinthe — grille 4x4 -->
+            <!-- bordure extérieure -->
+            <rect x="14" y="26" width="112" height="112" rx="3" fill="none" stroke="#374151" stroke-width="2.5"/>
+            <!-- murs intérieurs -->
+            <line x1="14" y1="54" x2="56" y2="54" stroke="#374151" stroke-width="2"/>
+            <line x1="56" y1="26" x2="56" y2="54" stroke="#374151" stroke-width="2"/>
+            <line x1="84" y1="26" x2="84" y2="54" stroke="#374151" stroke-width="2"/>
+            <line x1="84" y1="54" x2="126" y2="54" stroke="#374151" stroke-width="2"/>
+            <line x1="28" y1="82" x2="70" y2="82" stroke="#374151" stroke-width="2"/>
+            <line x1="70" y1="54" x2="70" y2="82" stroke="#374151" stroke-width="2"/>
+            <line x1="98" y1="54" x2="98" y2="82" stroke="#374151" stroke-width="2"/>
+            <line x1="98" y1="82" x2="126" y2="82" stroke="#374151" stroke-width="2"/>
+            <line x1="14" y1="110" x2="42" y2="110" stroke="#374151" stroke-width="2"/>
+            <line x1="42" y1="82" x2="42" y2="110" stroke="#374151" stroke-width="2"/>
+            <line x1="70" y1="110" x2="112" y2="110" stroke="#374151" stroke-width="2"/>
+            <line x1="112" y1="82" x2="112" y2="138" stroke="#374151" stroke-width="2"/>
+            <!-- Lapin (début) -->
+            <circle cx="28" cy="40" r="9" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+            <ellipse cx="24" cy="33" rx="3" ry="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+            <ellipse cx="32" cy="33" rx="3" ry="6" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1.5"/>
+            <circle cx="27" cy="41" r="1.5" fill="#374151"/>
+            <circle cx="31" cy="41" r="1.5" fill="#374151"/>
+            <!-- Carotte (fin) -->
+            <polygon points="112,130 120,130 116,148" fill="#f97316"/>
+            <line x1="116" y1="130" x2="112" y2="124" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
+            <line x1="116" y1="130" x2="116" y2="122" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
+            <line x1="116" y1="130" x2="120" y2="124" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="p-3">
           <span class="text-xs font-bold text-green-500 bg-green-50 px-2 py-0.5 rounded-full">Gratuit</span>
-          <p class="font-bold text-gray-800 text-sm mt-2">Labyrinthe simple</p>
-          <p class="text-xs text-gray-400 font-medium mt-0.5">2 – 4 ans · Logique</p>
+          <p class="font-bold text-gray-800 text-sm mt-2">Labyrinthe — le lapin</p>
+          <p class="text-xs text-gray-400 font-medium mt-0.5">4 – 6 ans · Logique</p>
         </div>
       </div>
 
-      <!-- Fiche 4 — Premium -->
+      <!-- Fiche 4 — Coloriage (Premium) -->
       <div class="rounded-2xl overflow-hidden bg-white border-2 border-gray-100 hover:border-violet-300 hover:-translate-y-2 transition-all duration-250 relative" style="box-shadow:0 4px 16px rgba(0,0,0,0.07)">
-        <div class="h-40 relative" style="background:linear-gradient(135deg,#fbc2eb,#a6c1ee)">
-          <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-            <!-- mandala simple -->
-            <circle cx="80" cy="60" r="46" fill="white" opacity="0.88"/>
-            <circle cx="80" cy="60" r="36" fill="none" stroke="#c4b5fd" stroke-width="2"/>
-            <circle cx="80" cy="60" r="24" fill="none" stroke="#a78bfa" stroke-width="2"/>
-            <circle cx="80" cy="60" r="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
-            <line x1="80" y1="14" x2="80" y2="106" stroke="#c4b5fd" stroke-width="1.5" opacity="0.6"/>
-            <line x1="34" y1="60" x2="126" y2="60" stroke="#c4b5fd" stroke-width="1.5" opacity="0.6"/>
-            <line x1="47" y1="27" x2="113" y2="93" stroke="#c4b5fd" stroke-width="1.5" opacity="0.6"/>
-            <line x1="113" y1="27" x2="47" y2="93" stroke="#c4b5fd" stroke-width="1.5" opacity="0.6"/>
-            <circle cx="80" cy="24" r="5" fill="#7c3aed" opacity="0.7"/>
-            <circle cx="80" cy="96" r="5" fill="#7c3aed" opacity="0.7"/>
-            <circle cx="44" cy="60" r="5" fill="#7c3aed" opacity="0.7"/>
-            <circle cx="116" cy="60" r="5" fill="#7c3aed" opacity="0.7"/>
+        <div class="h-48 bg-orange-50 flex items-center justify-center p-3 relative">
+          <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" class="h-full drop-shadow-md">
+            <rect x="0" y="0" width="140" height="160" rx="6" fill="white"/>
+            <rect x="0" y="0" width="140" height="22" rx="6" fill="#f97316" opacity="0.12"/>
+            <text x="70" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#ea580c" letter-spacing="0.5">COLORIE LE LION</text>
+            <!-- corps lion contour -->
+            <ellipse cx="72" cy="110" rx="38" ry="28" fill="none" stroke="#374151" stroke-width="2"/>
+            <!-- crinière -->
+            <circle cx="72" cy="72" r="30" fill="none" stroke="#374151" stroke-width="2" stroke-dasharray="3,2"/>
+            <!-- tête -->
+            <circle cx="72" cy="72" r="20" fill="none" stroke="#374151" stroke-width="2"/>
+            <!-- oreilles -->
+            <circle cx="55" cy="54" r="7" fill="none" stroke="#374151" stroke-width="1.5"/>
+            <circle cx="89" cy="54" r="7" fill="none" stroke="#374151" stroke-width="1.5"/>
+            <!-- yeux -->
+            <circle cx="65" cy="68" r="4" fill="none" stroke="#374151" stroke-width="1.5"/>
+            <circle cx="79" cy="68" r="4" fill="none" stroke="#374151" stroke-width="1.5"/>
+            <circle cx="66" cy="68" r="1.5" fill="#374151"/>
+            <circle cx="80" cy="68" r="1.5" fill="#374151"/>
+            <!-- nez et bouche -->
+            <ellipse cx="72" cy="76" rx="4" ry="3" fill="none" stroke="#374151" stroke-width="1.5"/>
+            <path d="M65,82 Q72,87 79,82" fill="none" stroke="#374151" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- pattes -->
+            <rect x="44" y="128" width="12" height="20" rx="4" fill="none" stroke="#374151" stroke-width="1.5"/>
+            <rect x="60" y="130" width="12" height="18" rx="4" fill="none" stroke="#374151" stroke-width="1.5"/>
+            <rect x="76" y="130" width="12" height="18" rx="4" fill="none" stroke="#374151" stroke-width="1.5"/>
+            <rect x="92" y="128" width="12" height="20" rx="4" fill="none" stroke="#374151" stroke-width="1.5"/>
+            <!-- queue -->
+            <path d="M110,105 Q128,90 125,75" fill="none" stroke="#374151" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="126" cy="73" r="5" fill="none" stroke="#374151" stroke-width="1.5"/>
           </svg>
-          <div class="absolute inset-0 bg-white/60 backdrop-blur-sm flex items-center justify-center">
+          <div class="absolute inset-0 rounded-t-2xl bg-white/65 backdrop-blur-sm flex items-center justify-center">
             <div class="bg-violet-600 text-white rounded-xl px-3 py-2 flex items-center gap-2 shadow-lg">
               <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10a2 2 0 110 4 2 2 0 010-4z"/></svg>
               <span class="text-xs font-bold">Premium</span>
@@ -546,89 +611,166 @@
         </div>
         <div class="p-3">
           <span class="text-xs font-bold text-violet-500 bg-violet-50 px-2 py-0.5 rounded-full">Premium</span>
-          <p class="font-bold text-gray-800 text-sm mt-2">Mandala fleur</p>
-          <p class="text-xs text-gray-400 font-medium mt-0.5">6 – 8 ans · Coloriage</p>
+          <p class="font-bold text-gray-800 text-sm mt-2">Coloriage — le lion</p>
+          <p class="text-xs text-gray-400 font-medium mt-0.5">4 – 6 ans · Coloriage</p>
         </div>
       </div>
 
-      <!-- Fiche 5 — Gratuite -->
+      <!-- Fiche 5 — Compte et relie (Gratuit) -->
       <div class="rounded-2xl overflow-hidden bg-white border-2 border-gray-100 hover:border-violet-300 hover:-translate-y-2 transition-all duration-250" style="box-shadow:0 4px 16px rgba(0,0,0,0.07)">
-        <div class="h-40" style="background:linear-gradient(135deg,#ff9a9e,#fecfef)">
-          <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-            <rect x="25" y="15" width="110" height="90" rx="8" fill="white" opacity="0.9"/>
-            <circle cx="58" cy="52" r="20" fill="#f87171" opacity="0.85"/>
-            <rect x="82" y="32" width="34" height="34" rx="6" fill="#60a5fa" opacity="0.85"/>
-            <polygon points="80,100 42,100 61,72" fill="#34d399" opacity="0.85"/>
-            <text x="128" y="100" text-anchor="middle" font-size="26" fill="#fbbf24" opacity="0.9">★</text>
+        <div class="h-48 bg-pink-50 flex items-center justify-center p-3">
+          <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" class="h-full drop-shadow-md">
+            <rect x="0" y="0" width="140" height="160" rx="6" fill="white"/>
+            <rect x="0" y="0" width="140" height="22" rx="6" fill="#ec4899" opacity="0.12"/>
+            <text x="70" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#db2777" letter-spacing="0.5">COMPTE ET RELIE</text>
+            <!-- Ligne 1 : 1 étoile → chiffre 1 -->
+            <text x="22" y="46" font-size="14" fill="#fbbf24">★</text>
+            <line x1="36" y1="40" x2="96" y2="40" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <rect x="96" y="30" width="20" height="18" rx="3" fill="#fce7f3" stroke="#f9a8d4" stroke-width="1.5"/>
+            <text x="106" y="43" text-anchor="middle" font-size="13" font-weight="900" fill="#db2777">1</text>
+            <!-- Ligne 2 : 3 étoiles → chiffre 3 -->
+            <text x="12" y="76" font-size="12" fill="#fbbf24">★</text>
+            <text x="24" y="76" font-size="12" fill="#fbbf24">★</text>
+            <text x="36" y="76" font-size="12" fill="#fbbf24">★</text>
+            <line x1="52" y1="70" x2="96" y2="70" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <rect x="96" y="60" width="20" height="18" rx="3" fill="#fce7f3" stroke="#f9a8d4" stroke-width="1.5"/>
+            <text x="106" y="73" text-anchor="middle" font-size="13" font-weight="900" fill="#db2777">3</text>
+            <!-- Ligne 3 : 2 étoiles → chiffre 2 -->
+            <text x="16" y="106" font-size="13" fill="#fbbf24">★</text>
+            <text x="30" y="106" font-size="13" fill="#fbbf24">★</text>
+            <line x1="47" y1="100" x2="96" y2="100" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <rect x="96" y="90" width="20" height="18" rx="3" fill="#fce7f3" stroke="#f9a8d4" stroke-width="1.5"/>
+            <text x="106" y="103" text-anchor="middle" font-size="13" font-weight="900" fill="#db2777">2</text>
+            <!-- Ligne 4 : 4 étoiles → chiffre 4 -->
+            <text x="10" y="136" font-size="11" fill="#fbbf24">★</text>
+            <text x="22" y="136" font-size="11" fill="#fbbf24">★</text>
+            <text x="34" y="136" font-size="11" fill="#fbbf24">★</text>
+            <text x="46" y="136" font-size="11" fill="#fbbf24">★</text>
+            <line x1="62" y1="130" x2="96" y2="130" stroke="#e5e7eb" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <rect x="96" y="120" width="20" height="18" rx="3" fill="#fce7f3" stroke="#f9a8d4" stroke-width="1.5"/>
+            <text x="106" y="133" text-anchor="middle" font-size="13" font-weight="900" fill="#db2777">4</text>
           </svg>
         </div>
         <div class="p-3">
           <span class="text-xs font-bold text-green-500 bg-green-50 px-2 py-0.5 rounded-full">Gratuit</span>
-          <p class="font-bold text-gray-800 text-sm mt-2">Reconnaitre les formes</p>
+          <p class="font-bold text-gray-800 text-sm mt-2">Compte et relie</p>
+          <p class="text-xs text-gray-400 font-medium mt-0.5">2 – 4 ans · Chiffres</p>
+        </div>
+      </div>
+
+      <!-- Fiche 6 — Sudoku (Premium) -->
+      <div class="rounded-2xl overflow-hidden bg-white border-2 border-gray-100 hover:border-violet-300 hover:-translate-y-2 transition-all duration-250 relative" style="box-shadow:0 4px 16px rgba(0,0,0,0.07)">
+        <div class="h-48 bg-violet-50 flex items-center justify-center p-3 relative">
+          <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" class="h-full drop-shadow-md">
+            <rect x="0" y="0" width="140" height="160" rx="6" fill="white"/>
+            <rect x="0" y="0" width="140" height="22" rx="6" fill="#7c3aed" opacity="0.12"/>
+            <text x="70" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#6d28d9" letter-spacing="0.5">SUDOKU ANIMAUX</text>
+            <!-- grille 4x4 -->
+            <rect x="14" y="28" width="112" height="112" rx="3" fill="none" stroke="#7c3aed" stroke-width="2"/>
+            <!-- lignes verticales -->
+            <line x1="42" y1="28" x2="42" y2="140" stroke="#7c3aed" stroke-width="1.5"/>
+            <line x1="70" y1="28" x2="70" y2="140" stroke="#7c3aed" stroke-width="1.5"/>
+            <line x1="98" y1="28" x2="98" y2="140" stroke="#7c3aed" stroke-width="1.5"/>
+            <!-- lignes horizontales -->
+            <line x1="14" y1="56" x2="126" y2="56" stroke="#7c3aed" stroke-width="1.5"/>
+            <line x1="14" y1="84" x2="126" y2="84" stroke="#7c3aed" stroke-width="1.5"/>
+            <line x1="14" y1="112" x2="126" y2="112" stroke="#7c3aed" stroke-width="1.5"/>
+            <!-- bordures épaisses (blocs 2x2) -->
+            <rect x="14" y="28" width="56" height="56" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+            <rect x="70" y="28" width="56" height="56" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+            <rect x="14" y="84" width="56" height="56" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+            <rect x="70" y="84" width="56" height="56" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+            <!-- animaux dans les cases (emoji-like formes) -->
+            <!-- 🐶 case (0,0) -->
+            <circle cx="28" cy="42" r="9" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+            <circle cx="24" cy="37" r="3" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+            <circle cx="32" cy="37" r="3" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+            <circle cx="27" cy="43" r="1.5" fill="#374151"/>
+            <circle cx="31" cy="43" r="1.5" fill="#374151"/>
+            <!-- 🐱 case (1,1) -->
+            <circle cx="56" cy="70" r="9" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+            <polygon points="51,61 54,67 48,67" fill="#fce7f3" stroke="#ec4899" stroke-width="1"/>
+            <polygon points="61,61 64,67 58,67" fill="#fce7f3" stroke="#ec4899" stroke-width="1"/>
+            <circle cx="55" cy="71" r="1.5" fill="#374151"/>
+            <circle cx="59" cy="71" r="1.5" fill="#374151"/>
+            <!-- 🐶 case (2,1) -->
+            <circle cx="84" cy="70" r="9" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+            <circle cx="80" cy="65" r="3" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+            <circle cx="88" cy="65" r="3" fill="#fef3c7" stroke="#d97706" stroke-width="1"/>
+            <circle cx="83" cy="71" r="1.5" fill="#374151"/>
+            <circle cx="87" cy="71" r="1.5" fill="#374151"/>
+            <!-- 🐱 case (3,2) -->
+            <circle cx="112" cy="98" r="9" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+            <polygon points="107,89 110,95 104,95" fill="#fce7f3" stroke="#ec4899" stroke-width="1"/>
+            <polygon points="117,89 120,95 114,95" fill="#fce7f3" stroke="#ec4899" stroke-width="1"/>
+            <circle cx="111" cy="99" r="1.5" fill="#374151"/>
+            <circle cx="115" cy="99" r="1.5" fill="#374151"/>
+            <!-- cases vides avec ? -->
+            <text x="56" y="48" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="84" y="48" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="112" y="48" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="28" y="76" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="112" y="76" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="28" y="104" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="56" y="104" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="84" y="104" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="28" y="132" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="56" y="132" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="84" y="132" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+            <text x="112" y="132" text-anchor="middle" font-size="18" fill="#e5e7eb" font-weight="900">?</text>
+          </svg>
+          <div class="absolute inset-0 rounded-t-2xl bg-white/65 backdrop-blur-sm flex items-center justify-center">
+            <div class="bg-violet-600 text-white rounded-xl px-3 py-2 flex items-center gap-2 shadow-lg">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10a2 2 0 110 4 2 2 0 010-4z"/></svg>
+              <span class="text-xs font-bold">Premium</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-3">
+          <span class="text-xs font-bold text-violet-500 bg-violet-50 px-2 py-0.5 rounded-full">Premium</span>
+          <p class="font-bold text-gray-800 text-sm mt-2">Sudoku animaux 4×4</p>
+          <p class="text-xs text-gray-400 font-medium mt-0.5">6 – 8 ans · Logique</p>
+        </div>
+      </div>
+
+      <!-- Fiche 7 — Formes à colorier (Gratuit) -->
+      <div class="rounded-2xl overflow-hidden bg-white border-2 border-gray-100 hover:border-violet-300 hover:-translate-y-2 transition-all duration-250" style="box-shadow:0 4px 16px rgba(0,0,0,0.07)">
+        <div class="h-48 bg-red-50 flex items-center justify-center p-3">
+          <svg viewBox="0 0 140 160" xmlns="http://www.w3.org/2000/svg" class="h-full drop-shadow-md">
+            <rect x="0" y="0" width="140" height="160" rx="6" fill="white"/>
+            <rect x="0" y="0" width="140" height="22" rx="6" fill="#ef4444" opacity="0.10"/>
+            <text x="70" y="14" text-anchor="middle" font-size="7.5" font-weight="700" fill="#dc2626" letter-spacing="0.5">COLORIE LES FORMES</text>
+            <!-- Cercle + label "rouge" -->
+            <circle cx="34" cy="55" r="22" fill="none" stroke="#374151" stroke-width="2"/>
+            <text x="34" y="88" text-anchor="middle" font-size="8" font-weight="700" fill="#ef4444">ROUGE</text>
+            <!-- Carré + label "bleu" -->
+            <rect x="58" y="33" width="40" height="40" rx="3" fill="none" stroke="#374151" stroke-width="2"/>
+            <text x="78" y="88" text-anchor="middle" font-size="8" font-weight="700" fill="#3b82f6">BLEU</text>
+            <!-- Triangle + label "vert" -->
+            <polygon points="116,73 98,105 134,105" fill="none" stroke="#374151" stroke-width="2"/>
+            <text x="116" y="118" text-anchor="middle" font-size="8" font-weight="700" fill="#22c55e">VERT</text>
+            <!-- Étoile + label "jaune" -->
+            <polygon points="34,118 37,128 48,128 39,134 42,144 34,138 26,144 29,134 20,128 31,128" fill="none" stroke="#374151" stroke-width="1.5"/>
+            <text x="34" y="155" text-anchor="middle" font-size="8" font-weight="700" fill="#f59e0b">JAUNE</text>
+            <!-- Losange + label "violet" -->
+            <polygon points="78,100 90,118 78,136 66,118" fill="none" stroke="#374151" stroke-width="2"/>
+            <text x="78" y="150" text-anchor="middle" font-size="8" font-weight="700" fill="#7c3aed">VIOLET</text>
+          </svg>
+        </div>
+        <div class="p-3">
+          <span class="text-xs font-bold text-green-500 bg-green-50 px-2 py-0.5 rounded-full">Gratuit</span>
+          <p class="font-bold text-gray-800 text-sm mt-2">Colorie les formes</p>
           <p class="text-xs text-gray-400 font-medium mt-0.5">2 – 4 ans · Formes</p>
         </div>
       </div>
 
-      <!-- Fiche 6 — Premium -->
-      <div class="rounded-2xl overflow-hidden bg-white border-2 border-gray-100 hover:border-violet-300 hover:-translate-y-2 transition-all duration-250 relative" style="box-shadow:0 4px 16px rgba(0,0,0,0.07)">
-        <div class="h-40 relative" style="background:linear-gradient(135deg,#667eea,#764ba2)">
-          <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-            <rect x="20" y="15" width="52" height="72" rx="7" fill="white" opacity="0.92" transform="rotate(-8,46,51)"/>
-            <text x="38" y="42" font-size="14" font-weight="900" fill="#ef4444" transform="rotate(-8,46,51)">♥</text>
-            <text x="46" y="66" text-anchor="middle" font-size="20" font-weight="900" fill="#ef4444" transform="rotate(-8,46,51)">A</text>
-            <rect x="88" y="12" width="52" height="72" rx="7" fill="white" opacity="0.92" transform="rotate(8,114,48)"/>
-            <text x="100" y="38" font-size="14" font-weight="900" fill="#1d4ed8" transform="rotate(8,114,48)">♠</text>
-            <text x="114" y="62" text-anchor="middle" font-size="20" font-weight="900" fill="#1d4ed8" transform="rotate(8,114,48)">K</text>
-            <rect x="58" y="85" width="44" height="28" rx="6" fill="white" opacity="0.88"/>
-            <circle cx="68" cy="93" r="3" fill="#374151"/>
-            <circle cx="80" cy="99" r="3" fill="#374151"/>
-            <circle cx="92" cy="93" r="3" fill="#374151"/>
-          </svg>
-          <div class="absolute inset-0 bg-white/60 backdrop-blur-sm flex items-center justify-center">
-            <div class="bg-violet-600 text-white rounded-xl px-3 py-2 flex items-center gap-2 shadow-lg">
-              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1C8.676 1 6 3.676 6 7v2H4v14h16V9h-2V7c0-3.324-2.676-6-6-6zm0 2c2.276 0 4 1.724 4 4v2H8V7c0-2.276 1.724-4 4-4zm0 10a2 2 0 110 4 2 2 0 010-4z"/></svg>
-              <span class="text-xs font-bold">Premium</span>
-            </div>
-          </div>
-        </div>
-        <div class="p-3">
-          <span class="text-xs font-bold text-violet-500 bg-violet-50 px-2 py-0.5 rounded-full">Premium</span>
-          <p class="font-bold text-gray-800 text-sm mt-2">Jeu de cartes à imprimer</p>
-          <p class="text-xs text-gray-400 font-medium mt-0.5">6 – 8 ans · Jeux</p>
-        </div>
-      </div>
-
-      <!-- Fiche 7 — Gratuite -->
-      <div class="rounded-2xl overflow-hidden bg-white border-2 border-gray-100 hover:border-violet-300 hover:-translate-y-2 transition-all duration-250" style="box-shadow:0 4px 16px rgba(0,0,0,0.07)">
-        <div class="h-40" style="background:linear-gradient(135deg,#f6d365,#fda085,#f093fb)">
-          <svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-            <rect x="30" y="15" width="100" height="90" rx="8" fill="white" opacity="0.9"/>
-            <!-- sapin de noël -->
-            <polygon points="80,22 55,58 105,58" fill="#22c55e" opacity="0.85"/>
-            <polygon points="80,38 50,80 110,80" fill="#16a34a" opacity="0.85"/>
-            <rect x="73" y="80" width="14" height="18" rx="3" fill="#92400e" opacity="0.8"/>
-            <circle cx="80" cy="26" r="4" fill="#fbbf24"/>
-            <circle cx="64" cy="52" r="3.5" fill="#f87171"/>
-            <circle cx="96" cy="52" r="3.5" fill="#60a5fa"/>
-            <circle cx="58" cy="70" r="3.5" fill="#fbbf24"/>
-            <circle cx="80" cy="68" r="3.5" fill="#f87171"/>
-            <circle cx="102" cy="70" r="3.5" fill="#a78bfa"/>
-          </svg>
-        </div>
-        <div class="p-3">
-          <span class="text-xs font-bold text-green-500 bg-green-50 px-2 py-0.5 rounded-full">Gratuit</span>
-          <p class="font-bold text-gray-800 text-sm mt-2">Coloriage sapin de Noël</p>
-          <p class="text-xs text-gray-400 font-medium mt-0.5">2 – 6 ans · Du moment</p>
-        </div>
-      </div>
-
       <!-- Fiche 8 — CTA -->
-      <div class="rounded-2xl overflow-hidden bg-gradient-to-br from-violet-600 to-purple-700 flex flex-col items-center justify-center p-6 text-center" style="box-shadow:0 8px 32px rgba(124,58,237,0.35)">
-        <div class="text-4xl mb-3">📄</div>
-        <p class="font-black text-white text-sm mb-1">200 fiches disponibles</p>
-        <p class="text-violet-200 text-xs font-medium mb-4">Accès illimité avec Premium</p>
-        <a href="tarifs.html" class="bg-white text-violet-700 font-bold px-5 py-2 rounded-xl text-xs hover:bg-violet-50 transition-colors">
-          Voir les tarifs
+      <div class="rounded-2xl overflow-hidden bg-gradient-to-br from-violet-600 to-purple-700 flex flex-col items-center justify-center p-6 text-center" style="box-shadow:0 8px 32px rgba(124,58,237,0.35); min-height: 240px;">
+        <div class="text-5xl mb-4">📄</div>
+        <p class="font-black text-white mb-1">200 fiches disponibles</p>
+        <p class="text-violet-200 text-xs font-medium mb-5">Toutes les catégories, tous les âges</p>
+        <a href="tarifs.html" class="bg-white text-violet-700 font-bold px-5 py-2.5 rounded-xl text-sm hover:bg-violet-50 transition-colors">
+          Accès illimité →
         </a>
       </div>
 
