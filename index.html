@@ -941,6 +941,10 @@
       window.location.href = 'formes-6-8.html';
       return;
     }
+    if (catKey === 'chiffres' && selAge === '2-4') {
+      window.location.href = 'chiffres-2-4.html';
+      return;
+    }
     document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
     el.classList.add('active');
     const c = cats[catKey];

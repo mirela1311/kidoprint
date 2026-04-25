@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chiffres & Maths 2–4 ans — KidoPrint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    body { background-color: #f8fafc; }
+    .nav-shadow { box-shadow: 0 4px 30px rgba(124,58,237,0.15); }
+    .fiche-card { transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s ease; }
+    .fiche-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.13); }
+    .paper-bg {
+      background-color: #fff;
+      background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+      background-size: 20px 20px;
+      background-position: -1px -1px;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #a78bfa; border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="bg-white nav-shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center shadow-sm"><span class="text-xl">🎨</span></div>
+        <span class="text-xl font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-500">
+        <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+        <a href="tarifs.html" class="hover:text-violet-600 transition-colors">Tarifs</a>
+        <a href="#" class="hover:text-violet-600 transition-colors">À propos</a>
+        <a href="contact.html" class="hover:text-violet-600 transition-colors font-semibold text-violet-500">Nous contacter</a>
+      </div>
+      <button class="hidden sm:block text-sm font-medium text-gray-500 hover:text-violet-600 transition-colors px-3 py-1.5">Connexion</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="bg-white border-b border-gray-100 px-6 py-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-center gap-2 text-sm text-gray-400 font-medium mb-5">
+      <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+      <span>›</span>
+      <span class="text-gray-600">Chiffres & Maths</span>
+      <span>›</span>
+      <span class="text-violet-600 font-semibold">2 – 4 ans</span>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-2 text-sm font-semibold text-violet-600 hover:text-violet-800 bg-violet-50 hover:bg-violet-100 px-4 py-2 rounded-xl transition-colors">← Retour</a>
+        <div>
+          <h1 class="text-2xl font-black text-gray-800">Chiffres & Maths — 2 à 4 ans</h1>
+          <p class="text-sm text-gray-500 mt-0.5">Tracer les chiffres, compter et associer les quantités</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+          8 fiches disponibles
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          3 gratuites
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="max-w-6xl mx-auto px-6 py-10">
+
+  <!-- FICHES GRATUITES -->
+  <div class="flex items-center gap-3 mb-6">
+    <span class="bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wide">Gratuit</span>
+    <h2 class="text-lg font-black text-gray-800">Fiches accessibles</h2>
+    <div class="flex-1 h-px bg-gray-200"></div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+
+    <!-- FICHE 1 : Le chiffre 1 -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <!-- Chiffre 1 à tracer (pointillés) -->
+          <text x="60" y="150" font-family="Arial" font-size="130" fill="none" stroke="#d1d5db" stroke-width="6" stroke-dasharray="10,6" letter-spacing="0">1</text>
+          <!-- Flèche de direction de tracé -->
+          <circle cx="72" cy="48" r="8" fill="#3b82f6" opacity="0.8"/>
+          <text x="69" y="53" font-family="Arial" font-size="10" fill="white" font-weight="bold">1</text>
+          <!-- Une pomme en dessous -->
+          <g transform="translate(20, 170)">
+            <ellipse cx="80" cy="36" rx="28" ry="26" fill="none" stroke="#ef4444" stroke-width="4.5"/>
+            <path d="M80 10 Q86 0 94 4" fill="none" stroke="#22c55e" stroke-width="4"/>
+            <ellipse cx="70" cy="32" rx="7" ry="9" fill="white" opacity="0.35"/>
+          </g>
+          <!-- Label -->
+          <text x="100" y="248" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Trace le chiffre 1 !</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">1</span>
+          <h3 class="font-black text-gray-800 text-sm">Le chiffre 1</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Trace le chiffre et colorie la pomme</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Tracé</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">2-4 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FICHE 2 : Le chiffre 2 -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <!-- Chiffre 2 à tracer -->
+          <text x="50" y="150" font-family="Arial" font-size="130" fill="none" stroke="#d1d5db" stroke-width="6" stroke-dasharray="10,6">2</text>
+          <circle cx="72" cy="48" r="8" fill="#3b82f6" opacity="0.8"/>
+          <text x="69" y="53" font-family="Arial" font-size="10" fill="white" font-weight="bold">1</text>
+          <!-- Deux canards -->
+          <g transform="translate(10,170)">
+            <!-- canard 1 -->
+            <ellipse cx="40" cy="38" rx="18" ry="12" fill="none" stroke="#f59e0b" stroke-width="4"/>
+            <circle cx="54" cy="27" r="9" fill="none" stroke="#f59e0b" stroke-width="4"/>
+            <path d="M60 28 L68 26 L63 32 Z" fill="#f59e0b"/>
+            <!-- canard 2 -->
+            <ellipse cx="110" cy="38" rx="18" ry="12" fill="none" stroke="#f59e0b" stroke-width="4"/>
+            <circle cx="124" cy="27" r="9" fill="none" stroke="#f59e0b" stroke-width="4"/>
+            <path d="M130 28 L138 26 L133 32 Z" fill="#f59e0b"/>
+          </g>
+          <text x="100" y="248" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Trace le chiffre 2 !</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">2</span>
+          <h3 class="font-black text-gray-800 text-sm">Le chiffre 2</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Trace le chiffre et colorie les canards</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Tracé</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">2-4 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FICHE 3 : Compte et relie -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <!-- Titre -->
+          <text x="100" y="20" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Compte et relie !</text>
+          <!-- Colonne gauche : groupes d'objets -->
+          <!-- 1 étoile -->
+          <polygon points="30,45 34,58 47,58 37,66 41,79 30,71 19,79 23,66 13,58 26,58" fill="none" stroke="#f59e0b" stroke-width="3.5"/>
+          <!-- 2 cœurs -->
+          <path d="M12,115 C12,108 22,105 22,113 C22,105 32,108 32,115 C32,122 22,130 22,130 C22,130 12,122 12,115Z" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <path d="M36,115 C36,108 46,105 46,113 C46,105 56,108 56,115 C56,122 46,130 46,130 C46,130 36,122 36,115Z" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <!-- 3 ronds -->
+          <circle cx="20" cy="178" r="10" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+          <circle cx="44" cy="178" r="10" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+          <circle cx="68" cy="178" r="10" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+
+          <!-- Colonne droite : chiffres -->
+          <text x="148" y="68" font-family="Arial" font-size="36" fill="none" stroke="#9ca3af" stroke-width="3" text-anchor="middle">3</text>
+          <text x="148" y="133" font-family="Arial" font-size="36" fill="none" stroke="#9ca3af" stroke-width="3" text-anchor="middle">1</text>
+          <text x="148" y="193" font-family="Arial" font-size="36" fill="none" stroke="#9ca3af" stroke-width="3" text-anchor="middle">2</text>
+
+          <!-- Lignes pointillées à relier -->
+          <line x1="75" y1="62" x2="125" y2="62" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,4"/>
+          <line x1="75" y1="120" x2="125" y2="120" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,4"/>
+          <line x1="75" y1="178" x2="125" y2="178" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,4"/>
+
+          <text x="100" y="248" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Relie chaque groupe à son chiffre</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center text-sm font-black text-amber-700">★</span>
+          <h3 class="font-black text-gray-800 text-sm">Compte et relie</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Relie chaque groupe d'objets à son chiffre</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full">Logique</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">2-4 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FICHES PREMIUM -->
+  <div class="flex items-center gap-3 mb-6">
+    <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wide">Premium</span>
+    <h2 class="text-lg font-black text-gray-800">Fiches Premium</h2>
+    <div class="flex-1 h-px bg-gray-200"></div>
+    <span class="text-xs text-gray-400 font-medium">5 fiches · débloque tout</span>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+
+    <!-- PREMIUM 1 : Le chiffre 3 -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="50" y="150" font-family="Arial" font-size="130" fill="none" stroke="#d1d5db" stroke-width="6" stroke-dasharray="10,6">3</text>
+          <g transform="translate(8,175)">
+            <circle cx="28" cy="28" r="18" fill="none" stroke="#ef4444" stroke-width="4"/>
+            <circle cx="72" cy="28" r="18" fill="none" stroke="#f59e0b" stroke-width="4"/>
+            <circle cx="116" cy="28" r="18" fill="none" stroke="#3b82f6" stroke-width="4"/>
+          </g>
+          <text x="100" y="248" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Trace le chiffre 3 !</text>
+        </svg>
+      </div>
+      <!-- Overlay premium -->
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">3</span>
+          <h3 class="font-black text-gray-800 text-sm">Le chiffre 3</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Trace le chiffre et colorie les ballons</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Tracé</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">2-4 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 2 : Le chiffre 4 -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="50" y="150" font-family="Arial" font-size="130" fill="none" stroke="#d1d5db" stroke-width="6" stroke-dasharray="10,6">4</text>
+          <g transform="translate(10,175)">
+            <rect x="8" y="8" width="30" height="38" rx="4" fill="none" stroke="#8b5cf6" stroke-width="4"/>
+            <rect x="50" y="8" width="30" height="38" rx="4" fill="none" stroke="#8b5cf6" stroke-width="4"/>
+            <rect x="92" y="8" width="30" height="38" rx="4" fill="none" stroke="#8b5cf6" stroke-width="4"/>
+            <rect x="134" y="8" width="30" height="38" rx="4" fill="none" stroke="#8b5cf6" stroke-width="4"/>
+          </g>
+          <text x="100" y="248" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Trace le chiffre 4 !</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">4</span>
+          <h3 class="font-black text-gray-800 text-sm">Le chiffre 4</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Trace le chiffre et colorie les cadeaux</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Tracé</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">2-4 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 3 : Le chiffre 5 -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="50" y="150" font-family="Arial" font-size="130" fill="none" stroke="#d1d5db" stroke-width="6" stroke-dasharray="10,6">5</text>
+          <g transform="translate(14,175)">
+            <polygon points="28,8 34,24 50,24 38,33 42,49 28,40 14,49 18,33 6,24 22,24" fill="none" stroke="#f59e0b" stroke-width="4"/>
+            <polygon points="72,8 78,24 94,24 82,33 86,49 72,40 58,49 62,33 50,24 66,24" fill="none" stroke="#f59e0b" stroke-width="4"/>
+            <polygon points="116,8 122,24 138,24 126,33 130,49 116,40 102,49 106,33 94,24 110,24" fill="none" stroke="#f59e0b" stroke-width="4"/>
+            <polygon points="160,8 166,24 182,24 170,33 174,49 160,40 146,49 150,33 138,24 154,24" fill="none" stroke="#f59e0b" stroke-width="4"/>
+            <polygon points="204,8 210,24 226,24 214,33 218,49 204,40 190,49 194,33 182,24 198,24" fill="none" stroke="#f59e0b" stroke-width="4"/>
+          </g>
+          <text x="100" y="248" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Trace le chiffre 5 !</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">5</span>
+          <h3 class="font-black text-gray-800 text-sm">Le chiffre 5</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Trace le chiffre et colorie les étoiles</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Tracé</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">2-4 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 4 : Qui a plus ? -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="22" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Qui a le plus de fruits ?</text>
+          <!-- Panier gauche -->
+          <path d="M20,80 Q20,120 50,120 L80,120 Q110,120 110,80 Z" fill="none" stroke="#f59e0b" stroke-width="4"/>
+          <path d="M30,80 Q50,50 90,80" fill="none" stroke="#f59e0b" stroke-width="4"/>
+          <!-- 2 pommes dans le panier gauche -->
+          <ellipse cx="45" cy="100" rx="14" ry="12" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <ellipse cx="75" cy="100" rx="14" ry="12" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <text x="65" y="145" font-family="Arial" font-size="28" text-anchor="middle" fill="none" stroke="#9ca3af" stroke-width="3">2</text>
+
+          <!-- Panier droit -->
+          <path d="M105,80 Q105,120 135,120 L165,120 Q195,120 195,80 Z" fill="none" stroke="#f59e0b" stroke-width="4"/>
+          <path d="M115,80 Q135,50 175,80" fill="none" stroke="#f59e0b" stroke-width="4"/>
+          <!-- 4 pommes dans le panier droit -->
+          <ellipse cx="122" cy="96" rx="11" ry="10" fill="none" stroke="#ef4444" stroke-width="3"/>
+          <ellipse cx="145" cy="96" rx="11" ry="10" fill="none" stroke="#ef4444" stroke-width="3"/>
+          <ellipse cx="168" cy="96" rx="11" ry="10" fill="none" stroke="#ef4444" stroke-width="3"/>
+          <ellipse cx="133" cy="113" rx="11" ry="10" fill="none" stroke="#ef4444" stroke-width="3"/>
+          <text x="150" y="145" font-family="Arial" font-size="28" text-anchor="middle" fill="none" stroke="#9ca3af" stroke-width="3">4</text>
+
+          <!-- Encadré réponse -->
+          <rect x="60" y="160" width="80" height="36" rx="8" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="6,4"/>
+          <text x="100" y="182" font-family="Arial" font-size="11" fill="#d1d5db" text-anchor="middle">Le panier …</text>
+          <text x="100" y="248" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Entoure le panier le plus plein</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center text-sm font-black text-amber-700">?</span>
+          <h3 class="font-black text-gray-800 text-sm">Qui a le plus ?</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Compare deux groupes et entoure le plus grand</p>
+        <div class="flex gap-1">
+          <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full">Comparaison</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">2-4 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 5 : Colorie autant -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="20" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Colorie autant de cases !</text>
+          <!-- Ligne 1 : modèle 3 carrés colorés -->
+          <text x="10" y="50" font-family="Arial" font-size="10" fill="#6b7280">Modèle :</text>
+          <rect x="10" y="58" width="28" height="28" rx="4" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <text x="24" y="77" font-family="Arial" font-size="18" text-anchor="middle" fill="#ef4444">★</text>
+          <rect x="46" y="58" width="28" height="28" rx="4" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <text x="60" y="77" font-family="Arial" font-size="18" text-anchor="middle" fill="#ef4444">★</text>
+          <rect x="82" y="58" width="28" height="28" rx="4" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <text x="96" y="77" font-family="Arial" font-size="18" text-anchor="middle" fill="#ef4444">★</text>
+          <!-- À colorier -->
+          <text x="10" y="115" font-family="Arial" font-size="10" fill="#6b7280">À toi :</text>
+          <rect x="10" y="122" width="28" height="28" rx="4" fill="none" stroke="#d1d5db" stroke-width="3.5"/>
+          <rect x="46" y="122" width="28" height="28" rx="4" fill="none" stroke="#d1d5db" stroke-width="3.5"/>
+          <rect x="82" y="122" width="28" height="28" rx="4" fill="none" stroke="#d1d5db" stroke-width="3.5"/>
+          <rect x="118" y="122" width="28" height="28" rx="4" fill="none" stroke="#d1d5db" stroke-width="3.5"/>
+          <rect x="154" y="122" width="28" height="28" rx="4" fill="none" stroke="#d1d5db" stroke-width="3.5"/>
+
+          <!-- Ligne 2 : modèle 2 -->
+          <text x="10" y="175" font-family="Arial" font-size="10" fill="#6b7280">Modèle :</text>
+          <rect x="10" y="183" width="28" height="28" rx="4" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+          <text x="24" y="202" font-family="Arial" font-size="18" text-anchor="middle" fill="#3b82f6">●</text>
+          <rect x="46" y="183" width="28" height="28" rx="4" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+          <text x="60" y="202" font-family="Arial" font-size="18" text-anchor="middle" fill="#3b82f6">●</text>
+          <!-- À colorier ligne 2 -->
+          <text x="10" y="236" font-family="Arial" font-size="10" fill="#6b7280">À toi :</text>
+          <rect x="10" y="243" width="28" height="28" rx="4" fill="none" stroke="#d1d5db" stroke-width="3.5"/>
+          <rect x="46" y="243" width="28" height="28" rx="4" fill="none" stroke="#d1d5db" stroke-width="3.5"/>
+          <rect x="82" y="243" width="28" height="28" rx="4" fill="none" stroke="#d1d5db" stroke-width="3.5"/>
+          <rect x="118" y="243" width="28" height="28" rx="4" fill="none" stroke="#d1d5db" stroke-width="3.5"/>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">≡</span>
+          <h3 class="font-black text-gray-800 text-sm">Colorie autant</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Reproduis le même nombre de cases colorées</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Quantité</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">2-4 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 6 : Les doigts de la main -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="18" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Compte les doigts !</text>
+          <!-- Main avec 3 doigts levés -->
+          <!-- paume -->
+          <rect x="55" y="100" width="90" height="70" rx="15" fill="none" stroke="#f59e0b" stroke-width="4.5"/>
+          <!-- pouce -->
+          <rect x="30" y="108" width="28" height="45" rx="12" fill="none" stroke="#f59e0b" stroke-width="4.5"/>
+          <!-- index -->
+          <rect x="62" y="45" width="22" height="60" rx="11" fill="none" stroke="#f59e0b" stroke-width="4.5"/>
+          <!-- majeur -->
+          <rect x="89" y="38" width="22" height="66" rx="11" fill="none" stroke="#f59e0b" stroke-width="4.5"/>
+          <!-- annulaire levé -->
+          <rect x="116" y="50" width="22" height="55" rx="11" fill="none" stroke="#f59e0b" stroke-width="4.5"/>
+          <!-- auriculaire baissé (dans la paume) -->
+          <path d="M142,100 Q148,95 148,108" fill="none" stroke="#f59e0b" stroke-width="4.5"/>
+          <!-- Réponse -->
+          <rect x="70" y="185" width="60" height="36" rx="10" fill="none" stroke="#d1d5db" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <text x="100" y="208" font-family="Arial" font-size="22" text-anchor="middle" fill="#e5e7eb" stroke="#d1d5db" stroke-width="1">?</text>
+          <text x="100" y="248" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Écris le nombre de doigts levés</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center text-sm">✋</span>
+          <h3 class="font-black text-gray-800 text-sm">Les doigts de la main</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Compte les doigts levés et écris le chiffre</p>
+        <div class="flex gap-1">
+          <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full">Comptage</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">2-4 ans</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BANNIÈRE CTA -->
+  <div class="rounded-3xl p-8 text-center mb-10" style="background:linear-gradient(135deg,#a1c4fd,#c2e9fb)">
+    <h3 class="text-xl font-black text-gray-800 mb-2">Accédez à toutes les fiches Chiffres & Maths</h3>
+    <p class="text-sm text-gray-600 mb-5 max-w-lg mx-auto">Chiffres 1 à 5, comparaison de quantités, comptage sur les doigts… Toutes les bases pour les tout-petits en illimité.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white font-black px-8 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-shadow text-sm">Voir les offres Premium</button>
+      <button class="bg-white text-gray-700 font-bold px-8 py-3 rounded-2xl text-sm hover:bg-gray-50 transition-colors">Retour à la bibliothèque</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-gray-100 py-8 px-6 mt-4">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center"><span class="text-lg">🎨</span></div>
+      <span class="font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+    </div>
+    <p class="text-xs text-gray-400">© 2025 KidoPrint — Activités imprimables pour enfants</p>
+    <div class="flex gap-5 text-xs font-medium text-gray-400">
+      <a href="#" class="hover:text-violet-600 transition-colors">Confidentialité</a>
+      <a href="#" class="hover:text-violet-600 transition-colors">CGU</a>
+      <a href="contact.html" class="hover:text-violet-600 transition-colors">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
