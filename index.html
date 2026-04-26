@@ -973,6 +973,10 @@
       window.location.href = 'logique-4-6.html';
       return;
     }
+    if (catKey === 'logique' && selAge === '6-8') {
+      window.location.href = 'logique-6-8.html';
+      return;
+    }
     document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
     el.classList.add('active');
     const c = cats[catKey];
