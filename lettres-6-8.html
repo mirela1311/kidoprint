@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lettres & Lecture 6–8 ans — KidoPrint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    body { background-color: #f8fafc; }
+    .nav-shadow { box-shadow: 0 4px 30px rgba(124,58,237,0.15); }
+    .fiche-card { transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s ease; }
+    .fiche-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.13); }
+    .paper-bg {
+      background-color: #fff;
+      background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+      background-size: 20px 20px;
+      background-position: -1px -1px;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #a78bfa; border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="bg-white nav-shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center shadow-sm"><span class="text-xl">🎨</span></div>
+        <span class="text-xl font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-500">
+        <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+        <a href="tarifs.html" class="hover:text-violet-600 transition-colors">Tarifs</a>
+        <a href="#" class="hover:text-violet-600 transition-colors">À propos</a>
+        <a href="contact.html" class="hover:text-violet-600 transition-colors font-semibold text-violet-500">Nous contacter</a>
+      </div>
+      <button class="hidden sm:block text-sm font-medium text-gray-500 hover:text-violet-600 transition-colors px-3 py-1.5">Connexion</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="bg-white border-b border-gray-100 px-6 py-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-center gap-2 text-sm text-gray-400 font-medium mb-5">
+      <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+      <span>›</span>
+      <span class="text-gray-600">Lettres & Lecture</span>
+      <span>›</span>
+      <span class="text-violet-600 font-semibold">6 – 8 ans</span>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-2 text-sm font-semibold text-violet-600 hover:text-violet-800 bg-violet-50 hover:bg-violet-100 px-4 py-2 rounded-xl transition-colors">← Retour</a>
+        <div>
+          <h1 class="text-2xl font-black text-gray-800">Lettres & Lecture — 6 à 8 ans</h1>
+          <p class="text-sm text-gray-500 mt-0.5">Lecture fluide, compréhension de texte, vocabulaire et écriture cursive</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 bg-pink-50 text-pink-700 text-xs font-bold px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+          12 fiches disponibles
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          3 gratuites
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="max-w-6xl mx-auto px-6 py-10">
+
+  <!-- FICHES GRATUITES -->
+  <div class="flex items-center gap-3 mb-6">
+    <span class="bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wide">Gratuit</span>
+    <h2 class="text-lg font-black text-gray-800">Fiches accessibles</h2>
+    <div class="flex-1 h-px bg-gray-200"></div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+
+    <!-- FICHE 1 : Lecture — La tortue et le lièvre -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="14" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Lis et réponds !</text>
+
+          <!-- Illustration tortue et lièvre -->
+          <g transform="translate(20,18)">
+            <!-- tortue -->
+            <ellipse cx="28" cy="38" rx="22" ry="14" fill="none" stroke="#22c55e" stroke-width="3"/>
+            <circle cx="28" cy="28" r="9" fill="none" stroke="#22c55e" stroke-width="3"/>
+            <line x1="14" y1="50" x2="10" y2="60" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="42" y1="50" x2="46" y2="60" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- lièvre -->
+            <ellipse cx="120" cy="42" rx="18" ry="12" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <circle cx="130" cy="30" r="10" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <line x1="126" y1="20" x2="122" y2="8"  stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="134" y1="20" x2="138" y2="8"  stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="106" y1="52" x2="100" y2="64" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="134" y1="52" x2="138" y2="64" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+
+          <!-- Mini texte -->
+          <rect x="8" y="90" width="184" height="72" rx="8" fill="#fefce8" stroke="#fde68a" stroke-width="1.5"/>
+          <text x="100" y="106" font-family="Arial" font-size="9" fill="#92400e" text-anchor="middle">La tortue et le lièvre font</text>
+          <text x="100" y="119" font-family="Arial" font-size="9" fill="#92400e" text-anchor="middle">une course. Le lièvre part vite</text>
+          <text x="100" y="132" font-family="Arial" font-size="9" fill="#92400e" text-anchor="middle">mais s'endort sous un arbre.</text>
+          <text x="100" y="145" font-family="Arial" font-size="9" fill="#92400e" text-anchor="middle">La tortue continue doucement</text>
+          <text x="100" y="158" font-family="Arial" font-size="9" font-weight="bold" fill="#92400e" text-anchor="middle">et arrive la première !</text>
+
+          <!-- Questions -->
+          <text x="10" y="178" font-family="Arial" font-size="9" font-weight="bold" fill="#6b7280">1. Qui gagne la course ?</text>
+          <rect x="10" y="182" width="180" height="16" rx="4" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+          <text x="10" y="208" font-family="Arial" font-size="9" font-weight="bold" fill="#6b7280">2. Pourquoi le lièvre perd-il ?</text>
+          <rect x="10" y="212" width="180" height="16" rx="4" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+          <text x="10" y="238" font-family="Arial" font-size="9" font-weight="bold" fill="#6b7280">3. Quelle leçon apprend-on ?</text>
+          <rect x="10" y="242" width="180" height="16" rx="4" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center text-sm">📖</span>
+          <h3 class="font-black text-gray-800 text-sm">La tortue et le lièvre</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Lis le texte et réponds aux questions</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full">Lecture</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">6-8 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FICHE 2 : Mots croisés — les animaux -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="14" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Mots croisés — Les animaux</text>
+
+          <!-- Grille 6×5 -->
+          <g transform="translate(14, 22)">
+            <!-- Ligne 1 : _ C H A T _ -->
+            <rect x="0"   y="0"  width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="28"  y="0"  width="26" height="26" rx="3" fill="white" stroke="#a78bfa" stroke-width="2"/><text x="41"  y="18" font-family="Arial" font-size="14" font-weight="bold" fill="#7c3aed" text-anchor="middle">C</text>
+            <rect x="56"  y="0"  width="26" height="26" rx="3" fill="white" stroke="#a78bfa" stroke-width="2"/><text x="69"  y="18" font-family="Arial" font-size="14" font-weight="bold" fill="#7c3aed" text-anchor="middle">H</text>
+            <rect x="84"  y="0"  width="26" height="26" rx="3" fill="white" stroke="#a78bfa" stroke-width="2"/><text x="97"  y="18" font-family="Arial" font-size="14" font-weight="bold" fill="#7c3aed" text-anchor="middle">A</text>
+            <rect x="112" y="0"  width="26" height="26" rx="3" fill="white" stroke="#a78bfa" stroke-width="2"/><text x="125" y="18" font-family="Arial" font-size="14" font-weight="bold" fill="#7c3aed" text-anchor="middle">T</text>
+            <rect x="140" y="0"  width="26" height="26" rx="3" fill="#374151"/>
+
+            <!-- Ligne 2 : _ _ H _ _ _ -->
+            <rect x="0"   y="28" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="28"  y="28" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="56"  y="28" width="26" height="26" rx="3" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/><text x="69"  y="46" font-family="Arial" font-size="12" fill="#d1d5db" text-anchor="middle">?</text>
+            <rect x="84"  y="28" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="112" y="28" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="140" y="28" width="26" height="26" rx="3" fill="#374151"/>
+
+            <!-- Ligne 3 : L I O N _ _ -->
+            <rect x="0"   y="56" width="26" height="26" rx="3" fill="white" stroke="#fbbf24" stroke-width="2"/><text x="13"  y="74" font-family="Arial" font-size="14" font-weight="bold" fill="#d97706" text-anchor="middle">L</text>
+            <rect x="28"  y="56" width="26" height="26" rx="3" fill="white" stroke="#fbbf24" stroke-width="2"/><text x="41"  y="74" font-family="Arial" font-size="14" font-weight="bold" fill="#d97706" text-anchor="middle">I</text>
+            <rect x="56"  y="56" width="26" height="26" rx="3" fill="white" stroke="#fbbf24" stroke-width="2"/><text x="69"  y="74" font-family="Arial" font-size="14" font-weight="bold" fill="#d97706" text-anchor="middle">E</text>
+            <rect x="84"  y="56" width="26" height="26" rx="3" fill="white" stroke="#fbbf24" stroke-width="2"/><text x="97"  y="74" font-family="Arial" font-size="14" font-weight="bold" fill="#d97706" text-anchor="middle">N</text>
+            <rect x="112" y="56" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="140" y="56" width="26" height="26" rx="3" fill="#374151"/>
+
+            <!-- Ligne 4 : _ _ V _ _ _ -->
+            <rect x="0"   y="84" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="28"  y="84" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="56"  y="84" width="26" height="26" rx="3" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/><text x="69"  y="102" font-family="Arial" font-size="12" fill="#d1d5db" text-anchor="middle">?</text>
+            <rect x="84"  y="84" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="112" y="84" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="140" y="84" width="26" height="26" rx="3" fill="#374151"/>
+
+            <!-- Ligne 5 : _ _ A _ _ _ -->
+            <rect x="0"   y="112" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="28"  y="112" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="56"  y="112" width="26" height="26" rx="3" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/><text x="69"  y="130" font-family="Arial" font-size="12" fill="#d1d5db" text-anchor="middle">?</text>
+            <rect x="84"  y="112" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="112" y="112" width="26" height="26" rx="3" fill="#374151"/>
+            <rect x="140" y="112" width="26" height="26" rx="3" fill="#374151"/>
+          </g>
+
+          <!-- Définitions -->
+          <text x="10" y="178" font-family="Arial" font-size="9.5" font-weight="bold" fill="#6b7280">→ Animal qui ronronne (4 lettres)</text>
+          <text x="10" y="194" font-family="Arial" font-size="9.5" font-weight="bold" fill="#6b7280">→ Roi de la savane (4 lettres)</text>
+          <text x="10" y="210" font-family="Arial" font-size="9.5" font-weight="bold" fill="#6b7280">↓ Animal à crinière (5 lettres)</text>
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Remplis la grille avec les mots</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-purple-100 flex items-center justify-center text-sm">🔤</span>
+          <h3 class="font-black text-gray-800 text-sm">Mots croisés — Animaux</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Complète la grille avec les mots d'animaux</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-0.5 rounded-full">Vocabulaire</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">6-8 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FICHE 3 : Écriture cursive — les voyelles -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="14" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Écriture cursive — Voyelles</text>
+
+          <!-- Voyelles en pointillés à tracer -->
+          <!-- a -->
+          <text x="30" y="58" font-family="Georgia, serif" font-size="44" font-style="italic" fill="none" stroke="#fca5a5" stroke-width="3" stroke-dasharray="8,5" text-anchor="middle">a</text>
+          <circle cx="14" cy="32" r="6" fill="#ec4899"/><text x="11" y="37" font-family="Arial" font-size="9" fill="white" font-weight="bold">1</text>
+          <!-- e -->
+          <text x="80" y="58" font-family="Georgia, serif" font-size="44" font-style="italic" fill="none" stroke="#86efac" stroke-width="3" stroke-dasharray="8,5" text-anchor="middle">e</text>
+          <circle cx="64" cy="36" r="6" fill="#16a34a"/><text x="61" y="41" font-family="Arial" font-size="9" fill="white" font-weight="bold">1</text>
+          <!-- i -->
+          <text x="126" y="58" font-family="Georgia, serif" font-size="44" font-style="italic" fill="none" stroke="#93c5fd" stroke-width="3" stroke-dasharray="8,5" text-anchor="middle">i</text>
+          <circle cx="120" cy="32" r="6" fill="#2563eb"/><text x="117" y="37" font-family="Arial" font-size="9" fill="white" font-weight="bold">1</text>
+          <!-- o -->
+          <text x="168" y="58" font-family="Georgia, serif" font-size="44" font-style="italic" fill="none" stroke="#fcd34d" stroke-width="3" stroke-dasharray="8,5" text-anchor="middle">o</text>
+          <circle cx="152" cy="38" r="6" fill="#d97706"/><text x="149" y="43" font-family="Arial" font-size="9" fill="white" font-weight="bold">1</text>
+
+          <!-- Lignes d'écriture avec interlignes Séyès -->
+          <line x1="10" y1="84"  x2="190" y2="84"  stroke="#93c5fd" stroke-width="1.5"/>
+          <line x1="10" y1="100" x2="190" y2="100" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="10" y1="116" x2="190" y2="116" stroke="#93c5fd" stroke-width="1.5"/>
+          <line x1="10" y1="132" x2="190" y2="132" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="10" y1="148" x2="190" y2="148" stroke="#93c5fd" stroke-width="1.5"/>
+          <line x1="10" y1="164" x2="190" y2="164" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="10" y1="180" x2="190" y2="180" stroke="#93c5fd" stroke-width="1.5"/>
+          <line x1="10" y1="196" x2="190" y2="196" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="10" y1="212" x2="190" y2="212" stroke="#93c5fd" stroke-width="1.5"/>
+          <line x1="10" y1="228" x2="190" y2="228" stroke="#e5e7eb" stroke-width="1"/>
+
+          <!-- Modèles en cursive -->
+          <text x="14" y="112" font-family="Georgia, serif" font-size="22" font-style="italic" fill="#fca5a5" opacity="0.5">a  e  i  o  u</text>
+
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Trace puis recopie les voyelles</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-pink-100 flex items-center justify-center text-sm font-black text-pink-600 italic">a</span>
+          <h3 class="font-black text-gray-800 text-sm">Cursive — Les voyelles</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Trace les voyelles en cursive sur les lignes Séyès</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-pink-100 text-pink-700 text-xs font-bold px-2 py-0.5 rounded-full">Cursive</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">6-8 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FICHES PREMIUM -->
+  <div class="flex items-center gap-3 mb-6">
+    <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wide">Premium</span>
+    <h2 class="text-lg font-black text-gray-800">Fiches Premium</h2>
+    <div class="flex-1 h-px bg-gray-200"></div>
+    <span class="text-xs text-gray-400 font-medium">9 fiches · débloque tout</span>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+
+    <!-- PREMIUM 1 : Masculin / Féminin -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="14" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Masculin ou Féminin ?</text>
+          <!-- 6 noms à classer -->
+          <!-- maison → féminin -->
+          <rect x="8" y="22" width="84" height="26" rx="7" fill="#fce7f3" stroke="#f9a8d4" stroke-width="2"/>
+          <text x="50" y="39" font-family="Arial" font-size="13" font-weight="bold" fill="#be185d" text-anchor="middle">la maison</text>
+          <!-- chien → masculin -->
+          <rect x="108" y="22" width="84" height="26" rx="7" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+          <text x="150" y="39" font-family="Arial" font-size="13" font-weight="bold" fill="#1d4ed8" text-anchor="middle">le chien</text>
+          <!-- soleil → masculin -->
+          <rect x="8" y="56" width="84" height="26" rx="7" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="50" y="73" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle">soleil</text>
+          <!-- forêt → féminin -->
+          <rect x="108" y="56" width="84" height="26" rx="7" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="150" y="73" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle">forêt</text>
+          <!-- jardin → masculin -->
+          <rect x="8" y="90" width="84" height="26" rx="7" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="50" y="107" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle">jardin</text>
+          <!-- lune → féminin -->
+          <rect x="108" y="90" width="84" height="26" rx="7" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="150" y="107" font-family="Arial" font-size="13" fill="#6b7280" text-anchor="middle">lune</text>
+
+          <!-- Tableau de tri -->
+          <text x="100" y="132" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Écris le bon article (le / la / un / une) :</text>
+          <rect x="8"   y="140" width="84" height="22" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+          <text x="50"  y="155" font-family="Arial" font-size="10" font-weight="bold" fill="#1d4ed8" text-anchor="middle">__ soleil</text>
+          <rect x="108" y="140" width="84" height="22" rx="6" fill="#fce7f3" stroke="#f9a8d4" stroke-width="2"/>
+          <text x="150" y="155" font-family="Arial" font-size="10" font-weight="bold" fill="#be185d" text-anchor="middle">__ forêt</text>
+          <rect x="8"   y="168" width="84" height="22" rx="6" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+          <text x="50"  y="183" font-family="Arial" font-size="10" font-weight="bold" fill="#1d4ed8" text-anchor="middle">__ jardin</text>
+          <rect x="108" y="168" width="84" height="22" rx="6" fill="#fce7f3" stroke="#f9a8d4" stroke-width="2"/>
+          <text x="150" y="183" font-family="Arial" font-size="10" font-weight="bold" fill="#be185d" text-anchor="middle">__ lune</text>
+
+          <!-- Singulier / Pluriel -->
+          <text x="100" y="208" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Mets au pluriel :</text>
+          <text x="10" y="226" font-family="Arial" font-size="10" fill="#6b7280">le chat → les …………</text>
+          <text x="10" y="244" font-family="Arial" font-size="10" fill="#6b7280">une fleur → des …………</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-pink-100 flex items-center justify-center text-sm font-black text-pink-600">le/la</span>
+          <h3 class="font-black text-gray-800 text-sm">Masculin & Féminin</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Classe les noms et écris le bon article</p>
+        <div class="flex gap-1">
+          <span class="bg-pink-100 text-pink-700 text-xs font-bold px-2 py-0.5 rounded-full">Grammaire</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">6-8 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 2 : Les syllabes muettes -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="14" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Complète avec ou / où / et / est</text>
+          <!-- 6 phrases à trous -->
+          <text x="10" y="38" font-family="Arial" font-size="10" fill="#374151">1. Le chat <tspan font-weight="bold" fill="#ec4899">___</tspan> le chien</text>
+          <text x="10" y="53" font-family="Arial" font-size="9" fill="#6b7280">jouent ensemble.</text>
+
+          <text x="10" y="76" font-family="Arial" font-size="10" fill="#374151">2. Il fait chaud <tspan font-weight="bold" fill="#ec4899">___</tspan> froid ?</text>
+
+          <text x="10" y="100" font-family="Arial" font-size="10" fill="#374151">3. La fleur <tspan font-weight="bold" fill="#ec4899">___</tspan> rouge.</text>
+
+          <text x="10" y="124" font-family="Arial" font-size="10" fill="#374151">4. <tspan font-weight="bold" fill="#ec4899">___</tspan> habites-tu ?</text>
+
+          <text x="10" y="148" font-family="Arial" font-size="10" fill="#374151">5. Il mange une pomme</text>
+          <text x="10" y="163" font-family="Arial" font-size="10" fill="#374151"><tspan font-weight="bold" fill="#ec4899">___</tspan> une poire.</text>
+
+          <text x="10" y="187" font-family="Arial" font-size="10" fill="#374151">6. Le soleil <tspan font-weight="bold" fill="#ec4899">___</tspan> brillant.</text>
+
+          <!-- Aide-mémoire -->
+          <rect x="8" y="202" width="184" height="46" rx="8" fill="#fefce8" stroke="#fde68a" stroke-width="1.5"/>
+          <text x="100" y="218" font-family="Arial" font-size="9" font-weight="bold" fill="#92400e" text-anchor="middle">Aide-mémoire</text>
+          <text x="14"  y="232" font-family="Arial" font-size="8.5" fill="#92400e">• et = relie deux mots  (il et elle)</text>
+          <text x="14"  y="244" font-family="Arial" font-size="8.5" fill="#92400e">• est = verbe être  (il est grand)</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center text-sm font-black text-amber-700">et/est</span>
+          <h3 class="font-black text-gray-800 text-sm">Homophones — et / est / ou</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Complète les phrases avec le bon homophone</p>
+        <div class="flex gap-1">
+          <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full">Orthographe</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">6-8 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 3 : Anagrammes -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="14" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Remets les lettres en ordre !</text>
+
+          <!-- Anagramme 1 : TAHE → HATE? Non: NAIP → PAIN -->
+          <!-- NAIP → PAIN -->
+          <text x="100" y="36" font-family="Arial" font-size="9.5" fill="#6b7280" text-anchor="middle">Retrouve le mot caché :</text>
+
+          <rect x="18" y="44" width="26" height="26" rx="6" fill="#fce7f3" stroke="#f9a8d4" stroke-width="2"/><text x="31" y="62" font-family="Arial" font-size="16" font-weight="bold" fill="#be185d" text-anchor="middle">N</text>
+          <rect x="50" y="44" width="26" height="26" rx="6" fill="#fce7f3" stroke="#f9a8d4" stroke-width="2"/><text x="63" y="62" font-family="Arial" font-size="16" font-weight="bold" fill="#be185d" text-anchor="middle">A</text>
+          <rect x="82" y="44" width="26" height="26" rx="6" fill="#fce7f3" stroke="#f9a8d4" stroke-width="2"/><text x="95" y="62" font-family="Arial" font-size="16" font-weight="bold" fill="#be185d" text-anchor="middle">I</text>
+          <rect x="114" y="44" width="26" height="26" rx="6" fill="#fce7f3" stroke="#f9a8d4" stroke-width="2"/><text x="127" y="62" font-family="Arial" font-size="16" font-weight="bold" fill="#be185d" text-anchor="middle">P</text>
+          <text x="152" y="62" font-family="Arial" font-size="22" text-anchor="middle">🍞</text>
+          <!-- Cases réponse -->
+          <rect x="18"  y="78" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="50"  y="78" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="82"  y="78" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="114" y="78" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+
+          <line x1="10" y1="116" x2="190" y2="116" stroke="#f3f4f6" stroke-width="2"/>
+
+          <!-- LBELA → BALLE -->
+          <rect x="10" y="124" width="26" height="26" rx="6" fill="#ede9fe" stroke="#c4b5fd" stroke-width="2"/><text x="23" y="142" font-family="Arial" font-size="16" font-weight="bold" fill="#7c3aed" text-anchor="middle">L</text>
+          <rect x="42" y="124" width="26" height="26" rx="6" fill="#ede9fe" stroke="#c4b5fd" stroke-width="2"/><text x="55" y="142" font-family="Arial" font-size="16" font-weight="bold" fill="#7c3aed" text-anchor="middle">B</text>
+          <rect x="74" y="124" width="26" height="26" rx="6" fill="#ede9fe" stroke="#c4b5fd" stroke-width="2"/><text x="87" y="142" font-family="Arial" font-size="16" font-weight="bold" fill="#7c3aed" text-anchor="middle">E</text>
+          <rect x="106" y="124" width="26" height="26" rx="6" fill="#ede9fe" stroke="#c4b5fd" stroke-width="2"/><text x="119" y="142" font-family="Arial" font-size="16" font-weight="bold" fill="#7c3aed" text-anchor="middle">L</text>
+          <rect x="138" y="124" width="26" height="26" rx="6" fill="#ede9fe" stroke="#c4b5fd" stroke-width="2"/><text x="151" y="142" font-family="Arial" font-size="16" font-weight="bold" fill="#7c3aed" text-anchor="middle">A</text>
+          <text x="178" y="142" font-family="Arial" font-size="20" text-anchor="middle">⚽</text>
+          <rect x="10"  y="158" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="42"  y="158" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="74"  y="158" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="106" y="158" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="138" y="158" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+
+          <line x1="10" y1="196" x2="190" y2="196" stroke="#f3f4f6" stroke-width="2"/>
+
+          <!-- OTIRUC → TRICOU ... TUORC → COURT -->
+          <text x="24"  y="220" font-family="Arial" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">S</text>
+          <text x="52"  y="220" font-family="Arial" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">I</text>
+          <text x="80"  y="220" font-family="Arial" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">O</text>
+          <text x="108" y="220" font-family="Arial" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">R</text>
+          <text x="136" y="220" font-family="Arial" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">I</text>
+          <text x="166" y="220" font-family="Arial" font-size="20" text-anchor="middle">🌸</text>
+          <rect x="10"  y="228" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="42"  y="228" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="74"  y="228" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="106" y="228" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="138" y="228" width="26" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-purple-100 flex items-center justify-center text-sm">🔀</span>
+          <h3 class="font-black text-gray-800 text-sm">Anagrammes</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Remets les lettres dans l'ordre pour former un mot</p>
+        <div class="flex gap-1">
+          <span class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-0.5 rounded-full">Vocabulaire</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">6-8 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 4 : Verbes au présent -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="14" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Conjugue au présent !</text>
+          <!-- Verbe MANGER -->
+          <rect x="8" y="22" width="184" height="20" rx="6" fill="#ec4899"/>
+          <text x="100" y="36" font-family="Arial" font-size="12" font-weight="bold" fill="white" text-anchor="middle">MANGER (présent)</text>
+          <text x="14" y="58" font-family="Arial" font-size="11" fill="#374151">Je  mang<tspan font-weight="bold" fill="#ec4899">___</tspan></text>
+          <text x="14" y="76" font-family="Arial" font-size="11" fill="#374151">Tu  mang<tspan font-weight="bold" fill="#ec4899">___</tspan></text>
+          <text x="14" y="94" font-family="Arial" font-size="11" fill="#374151">Il / Elle  mang<tspan font-weight="bold" fill="#ec4899">___</tspan></text>
+          <text x="14" y="112" font-family="Arial" font-size="11" fill="#374151">Nous  mang<tspan font-weight="bold" fill="#ec4899">___</tspan></text>
+          <text x="14" y="130" font-family="Arial" font-size="11" fill="#374151">Vous  mang<tspan font-weight="bold" fill="#ec4899">___</tspan></text>
+          <text x="14" y="148" font-family="Arial" font-size="11" fill="#374151">Ils / Elles  mang<tspan font-weight="bold" fill="#ec4899">___</tspan></text>
+
+          <!-- Aide -->
+          <rect x="8" y="158" width="184" height="34" rx="8" fill="#fefce8" stroke="#fde68a" stroke-width="1.5"/>
+          <text x="100" y="172" font-family="Arial" font-size="9" fill="#92400e" text-anchor="middle" font-weight="bold">Terminaisons :</text>
+          <text x="100" y="185" font-family="Arial" font-size="8.5" fill="#92400e" text-anchor="middle">e  ·  es  ·  e  ·  eons  ·  ez  ·  ent</text>
+
+          <!-- Phrases à conjuguer -->
+          <text x="10" y="210" font-family="Arial" font-size="9.5" font-weight="bold" fill="#6b7280">Complète les phrases :</text>
+          <text x="10" y="226" font-family="Arial" font-size="9.5" fill="#374151">Le chien _______ dans le jardin.</text>
+          <text x="10" y="242" font-family="Arial" font-size="8.5" fill="#9ca3af">(courir)</text>
+          <text x="10" y="258" font-family="Arial" font-size="9.5" fill="#374151">Nous _______ un livre.</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-pink-100 flex items-center justify-center text-sm font-black text-pink-600">V</span>
+          <h3 class="font-black text-gray-800 text-sm">Verbes au présent</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Conjugue les verbes du 1er groupe au présent</p>
+        <div class="flex gap-1">
+          <span class="bg-pink-100 text-pink-700 text-xs font-bold px-2 py-0.5 rounded-full">Conjugaison</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">6-8 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 5 : Texte à trous -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="14" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Complète le texte !</text>
+          <!-- Illustration -->
+          <text x="100" y="46" font-family="Arial" font-size="34" text-anchor="middle">🌳🦋🌸</text>
+          <!-- Texte à trous -->
+          <rect x="8" y="56" width="184" height="150" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+          <text x="16" y="76" font-family="Arial" font-size="9.5" fill="#374151">Au _______ , les fleurs</text>
+          <text x="16" y="92" font-family="Arial" font-size="9.5" fill="#374151">_______ dans le jardin.</text>
+          <text x="16" y="108" font-family="Arial" font-size="9.5" fill="#374151">Les _______ butinent</text>
+          <text x="16" y="124" font-family="Arial" font-size="9.5" fill="#374151">de fleur en fleur.</text>
+          <text x="16" y="140" font-family="Arial" font-size="9.5" fill="#374151">Le soleil est _______ et</text>
+          <text x="16" y="156" font-family="Arial" font-size="9.5" fill="#374151">les enfants _______ dehors.</text>
+          <text x="16" y="172" font-family="Arial" font-size="9.5" fill="#374151">C'est une belle journée</text>
+          <text x="16" y="188" font-family="Arial" font-size="9.5" fill="#374151">de _______  !</text>
+
+          <!-- Mots proposés -->
+          <text x="100" y="220" font-family="Arial" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="bold">Mots à utiliser :</text>
+          <text x="100" y="236" font-family="Arial" font-size="9" fill="#6b7280" text-anchor="middle">printemps · poussent · abeilles</text>
+          <text x="100" y="250" font-family="Arial" font-size="9" fill="#6b7280" text-anchor="middle">chaud · jouent · printemps</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center text-sm">📝</span>
+          <h3 class="font-black text-gray-800 text-sm">Texte à trous</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Complète le texte avec les bons mots</p>
+        <div class="flex gap-1">
+          <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-0.5 rounded-full">Lecture</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">6-8 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 6 : Dictée illustrée -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="14" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Dictée illustrée</text>
+
+          <!-- Image principale -->
+          <g transform="translate(30,18)">
+            <!-- maison -->
+            <polygon points="70,0 140,50 0,50" fill="none" stroke="#ef4444" stroke-width="3"/>
+            <rect x="20" y="50" width="100" height="60" rx="4" fill="none" stroke="#ef4444" stroke-width="3"/>
+            <!-- porte -->
+            <rect x="52" y="76" width="28" height="34" rx="4" fill="none" stroke="#d97706" stroke-width="2.5"/>
+            <!-- fenêtres -->
+            <rect x="22" y="58" width="22" height="22" rx="3" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+            <line x1="33" y1="58" x2="33" y2="80" stroke="#3b82f6" stroke-width="1.5"/>
+            <line x1="22" y1="69" x2="44" y2="69" stroke="#3b82f6" stroke-width="1.5"/>
+            <rect x="96" y="58" width="22" height="22" rx="3" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+            <line x1="107" y1="58" x2="107" y2="80" stroke="#3b82f6" stroke-width="1.5"/>
+            <line x1="96" y1="69" x2="118" y2="69" stroke="#3b82f6" stroke-width="1.5"/>
+            <!-- soleil -->
+            <circle cx="130" cy="18" r="12" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+            <line x1="130" y1="2"  x2="130" y2="-2"  stroke="#f59e0b" stroke-width="2"/>
+            <line x1="144" y1="5"  x2="146" y2="3"   stroke="#f59e0b" stroke-width="2"/>
+            <line x1="148" y1="18" x2="152" y2="18"  stroke="#f59e0b" stroke-width="2"/>
+          </g>
+
+          <!-- Légende avec mots à copier -->
+          <text x="100" y="138" font-family="Arial" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="bold">Lis, retiens, puis écris :</text>
+          <rect x="8" y="144" width="184" height="14" rx="4" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+          <text x="100" y="154" font-family="Arial" font-size="8.5" fill="#1d4ed8" text-anchor="middle" font-weight="bold">La maison rouge a deux fenêtres bleues.</text>
+          <!-- Lignes de recopie -->
+          <line x1="8" y1="174" x2="192" y2="174" stroke="#bfdbfe" stroke-width="1.5"/>
+          <line x1="8" y1="190" x2="192" y2="190" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="8" y1="206" x2="192" y2="206" stroke="#bfdbfe" stroke-width="1.5"/>
+          <line x1="8" y1="222" x2="192" y2="222" stroke="#e5e7eb" stroke-width="1"/>
+          <line x1="8" y1="238" x2="192" y2="238" stroke="#bfdbfe" stroke-width="1.5"/>
+          <text x="100" y="256" font-family="Arial" font-size="9.5" fill="#6b7280" text-anchor="middle" font-weight="bold">Recopie la phrase sur les lignes</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm">✏️</span>
+          <h3 class="font-black text-gray-800 text-sm">Dictée illustrée</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Lis, mémorise et recopie la phrase</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Écriture</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">6-8 ans</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BANNIÈRE CTA -->
+  <div class="rounded-3xl p-8 text-center mb-10" style="background:linear-gradient(135deg,#fbc2eb,#a6c1ee)">
+    <h3 class="text-xl font-black text-gray-800 mb-2">Accédez à toutes les fiches Lettres & Lecture</h3>
+    <p class="text-sm text-gray-600 mb-5 max-w-lg mx-auto">Lecture, compréhension, grammaire, conjugaison, orthographe… Tout le programme CP-CE2 en illimité.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white font-black px-8 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-shadow text-sm">Voir les offres Premium</button>
+      <button class="bg-white text-gray-700 font-bold px-8 py-3 rounded-2xl text-sm hover:bg-gray-50 transition-colors">Retour à la bibliothèque</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-gray-100 py-8 px-6 mt-4">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center"><span class="text-lg">🎨</span></div>
+      <span class="font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+    </div>
+    <p class="text-xs text-gray-400">© 2025 KidoPrint — Activités imprimables pour enfants</p>
+    <div class="flex gap-5 text-xs font-medium text-gray-400">
+      <a href="#" class="hover:text-violet-600 transition-colors">Confidentialité</a>
+      <a href="#" class="hover:text-violet-600 transition-colors">CGU</a>
+      <a href="contact.html" class="hover:text-violet-600 transition-colors">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

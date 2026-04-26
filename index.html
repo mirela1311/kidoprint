@@ -961,6 +961,10 @@
       window.location.href = 'lettres-4-6.html';
       return;
     }
+    if (catKey === 'lettres' && selAge === '6-8') {
+      window.location.href = 'lettres-6-8.html';
+      return;
+    }
     document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
     el.classList.add('active');
     const c = cats[catKey];
