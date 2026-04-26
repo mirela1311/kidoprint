@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chiffres & Maths 8–12 ans — KidoPrint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    body { background-color: #f8fafc; }
+    .nav-shadow { box-shadow: 0 4px 30px rgba(124,58,237,0.15); }
+    .fiche-card { transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s ease; }
+    .fiche-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.13); }
+    .paper-bg {
+      background-color: #fff;
+      background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+      background-size: 20px 20px;
+      background-position: -1px -1px;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #a78bfa; border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="bg-white nav-shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center shadow-sm"><span class="text-xl">🎨</span></div>
+        <span class="text-xl font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-500">
+        <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+        <a href="tarifs.html" class="hover:text-violet-600 transition-colors">Tarifs</a>
+        <a href="#" class="hover:text-violet-600 transition-colors">À propos</a>
+        <a href="contact.html" class="hover:text-violet-600 transition-colors font-semibold text-violet-500">Nous contacter</a>
+      </div>
+      <button class="hidden sm:block text-sm font-medium text-gray-500 hover:text-violet-600 transition-colors px-3 py-1.5">Connexion</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="bg-white border-b border-gray-100 px-6 py-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-center gap-2 text-sm text-gray-400 font-medium mb-5">
+      <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+      <span>›</span>
+      <span class="text-gray-600">Chiffres & Maths</span>
+      <span>›</span>
+      <span class="text-violet-600 font-semibold">8 – 12 ans</span>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-2 text-sm font-semibold text-violet-600 hover:text-violet-800 bg-violet-50 hover:bg-violet-100 px-4 py-2 rounded-xl transition-colors">← Retour</a>
+        <div>
+          <h1 class="text-2xl font-black text-gray-800">Chiffres & Maths — 8 à 12 ans</h1>
+          <p class="text-sm text-gray-500 mt-0.5">Multiplication posée, division, fractions et problèmes complexes</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+          8 fiches disponibles
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          3 gratuites
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="max-w-6xl mx-auto px-6 py-10">
+
+  <!-- FICHES GRATUITES -->
+  <div class="flex items-center gap-3 mb-6">
+    <span class="bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wide">Gratuit</span>
+    <h2 class="text-lg font-black text-gray-800">Fiches accessibles</h2>
+    <div class="flex-1 h-px bg-gray-200"></div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+
+    <!-- FICHE 1 : Multiplication posée -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="16" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Multiplication posée</text>
+
+          <!-- Opération 1 : 47 × 6 -->
+          <rect x="20" y="24" width="160" height="90" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+          <text x="115" y="54" font-family="Arial" font-size="26" font-weight="bold" fill="#1e40af" text-anchor="end">4 7</text>
+          <text x="38" y="54" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280">×</text>
+          <text x="115" y="80" font-family="Arial" font-size="26" font-weight="bold" fill="#1e40af" text-anchor="end">6</text>
+          <line x1="30" y1="86" x2="160" y2="86" stroke="#93c5fd" stroke-width="2.5"/>
+          <!-- retenue -->
+          <text x="76" y="46" font-family="Arial" font-size="11" fill="#93c5fd" text-anchor="middle">4</text>
+          <rect x="85" y="92" width="65" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <text x="117" y="109" font-family="Arial" font-size="16" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <!-- Opération 2 : 83 × 5 -->
+          <rect x="20" y="128" width="160" height="90" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="2"/>
+          <text x="115" y="158" font-family="Arial" font-size="26" font-weight="bold" fill="#166534" text-anchor="end">8 3</text>
+          <text x="38" y="158" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280">×</text>
+          <text x="115" y="184" font-family="Arial" font-size="26" font-weight="bold" fill="#166534" text-anchor="end">5</text>
+          <line x1="30" y1="190" x2="160" y2="190" stroke="#86efac" stroke-width="2.5"/>
+          <text x="76" y="150" font-family="Arial" font-size="11" fill="#86efac" text-anchor="middle">1</text>
+          <rect x="85" y="196" width="65" height="26" rx="6" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <text x="117" y="213" font-family="Arial" font-size="16" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Pose et calcule</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">×</span>
+          <h3 class="font-black text-gray-800 text-sm">Multiplication posée</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Multiplications à 2 chiffres × 1 chiffre en colonne</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Multiplication</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">8-12 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FICHE 2 : Division euclidienne -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="16" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Division euclidienne</text>
+
+          <!-- Division 1 : 84 ÷ 4 -->
+          <rect x="10" y="26" width="180" height="90" rx="10" fill="#fdf4ff" stroke="#e9d5ff" stroke-width="2"/>
+          <!-- dividende -->
+          <text x="45" y="72" font-family="Arial" font-size="30" font-weight="bold" fill="#6b21a8" text-anchor="middle">84</text>
+          <!-- barre verticale et diviseur -->
+          <line x1="68" y1="44" x2="68" y2="100" stroke="#6b21a8" stroke-width="2.5"/>
+          <line x1="68" y1="44" x2="140" y2="44" stroke="#6b21a8" stroke-width="2.5"/>
+          <text x="104" y="42" font-family="Arial" font-size="22" font-weight="bold" fill="#6b21a8" text-anchor="middle">4</text>
+          <!-- quotient -->
+          <rect x="72" y="48" width="60" height="28" rx="6" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <text x="102" y="67" font-family="Arial" font-size="16" fill="#e5e7eb" text-anchor="middle">?</text>
+          <!-- reste -->
+          <text x="28" y="96" font-family="Arial" font-size="11" fill="#9ca3af">Reste :</text>
+          <rect x="60" y="84" width="34" height="22" rx="5" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="77" y="99" font-family="Arial" font-size="12" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <!-- Division 2 : 97 ÷ 3 -->
+          <rect x="10" y="130" width="180" height="90" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+          <text x="45" y="176" font-family="Arial" font-size="30" font-weight="bold" fill="#991b1b" text-anchor="middle">97</text>
+          <line x1="68" y1="148" x2="68" y2="204" stroke="#991b1b" stroke-width="2.5"/>
+          <line x1="68" y1="148" x2="140" y2="148" stroke="#991b1b" stroke-width="2.5"/>
+          <text x="104" y="146" font-family="Arial" font-size="22" font-weight="bold" fill="#991b1b" text-anchor="middle">3</text>
+          <rect x="72" y="152" width="60" height="28" rx="6" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <text x="102" y="171" font-family="Arial" font-size="16" fill="#e5e7eb" text-anchor="middle">?</text>
+          <text x="28" y="200" font-family="Arial" font-size="11" fill="#9ca3af">Reste :</text>
+          <rect x="60" y="188" width="34" height="22" rx="5" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="77" y="203" font-family="Arial" font-size="12" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Trouve le quotient et le reste</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-purple-100 flex items-center justify-center text-sm font-black text-purple-700">÷</span>
+          <h3 class="font-black text-gray-800 text-sm">Division euclidienne</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Trouve le quotient et le reste de la division</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-0.5 rounded-full">Division</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">8-12 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FICHE 3 : Les fractions -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="16" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Représente la fraction !</text>
+
+          <!-- Cercle 1 : 1/2 -->
+          <circle cx="46" cy="60" r="32" fill="none" stroke="#3b82f6" stroke-width="3"/>
+          <path d="M46,28 A32,32 0 0 1 46,92 Z" fill="#bfdbfe"/>
+          <line x1="46" y1="28" x2="46" y2="92" stroke="#3b82f6" stroke-width="2.5"/>
+          <text x="46" y="108" font-family="Arial" font-size="13" font-weight="bold" fill="#1e40af" text-anchor="middle">1/2</text>
+          <!-- Case réponse : combien de parts colorées -->
+          <text x="46" y="124" font-family="Arial" font-size="9" fill="#6b7280" text-anchor="middle">parts colorées :</text>
+          <rect x="28" y="127" width="36" height="18" rx="4" fill="none" stroke="#93c5fd" stroke-width="1.5"/>
+          <text x="46" y="140" font-family="Arial" font-size="12" font-weight="bold" fill="#3b82f6" text-anchor="middle">1</text>
+
+          <!-- Cercle 2 : 3/4 -->
+          <circle cx="154" cy="60" r="32" fill="none" stroke="#ef4444" stroke-width="3"/>
+          <path d="M154,28 A32,32 0 1 1 122,60 L154,60 Z" fill="#fecaca"/>
+          <line x1="154" y1="28" x2="154" y2="92" stroke="#ef4444" stroke-width="2"/>
+          <line x1="122" y1="60" x2="186" y2="60" stroke="#ef4444" stroke-width="2"/>
+          <text x="154" y="108" font-family="Arial" font-size="13" font-weight="bold" fill="#991b1b" text-anchor="middle">3/4</text>
+          <text x="154" y="124" font-family="Arial" font-size="9" fill="#6b7280" text-anchor="middle">parts colorées :</text>
+          <rect x="136" y="127" width="36" height="18" rx="4" fill="none" stroke="#fca5a5" stroke-width="1.5"/>
+          <text x="154" y="140" font-family="Arial" font-size="12" font-weight="bold" fill="#ef4444" text-anchor="middle">3</text>
+
+          <!-- Rectangle à colorier : 2/5 -->
+          <text x="100" y="162" font-family="Arial" font-size="11" font-weight="bold" fill="#6b7280" text-anchor="middle">Colorie 2/5 du rectangle :</text>
+          <rect x="10"  y="170" width="36" height="28" rx="3" fill="none" stroke="#8b5cf6" stroke-width="2.5"/>
+          <rect x="50"  y="170" width="36" height="28" rx="3" fill="none" stroke="#8b5cf6" stroke-width="2.5"/>
+          <rect x="90"  y="170" width="36" height="28" rx="3" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="130" y="170" width="36" height="28" rx="3" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <rect x="154" y="170" width="36" height="28" rx="3" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="28"  y="189" font-family="Arial" font-size="20" fill="#8b5cf6" text-anchor="middle">★</text>
+          <text x="68"  y="189" font-family="Arial" font-size="20" fill="#8b5cf6" text-anchor="middle">★</text>
+
+          <text x="100" y="226" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Combien de parts faut-il colorier ?</text>
+          <rect x="76" y="232" width="48" height="22" rx="6" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <text x="100" y="248" font-family="Arial" font-size="13" fill="#e5e7eb" text-anchor="middle">?</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">½</span>
+          <h3 class="font-black text-gray-800 text-sm">Les fractions</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Lire, représenter et colorier des fractions simples</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Fractions</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">8-12 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FICHES PREMIUM -->
+  <div class="flex items-center gap-3 mb-6">
+    <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wide">Premium</span>
+    <h2 class="text-lg font-black text-gray-800">Fiches Premium</h2>
+    <div class="flex-1 h-px bg-gray-200"></div>
+    <span class="text-xs text-gray-400 font-medium">5 fiches · débloque tout</span>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+
+    <!-- PREMIUM 1 : Multiplication posée 3×2 -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="16" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Multiplication 3 chiffres</text>
+          <rect x="15" y="26" width="170" height="110" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+          <!-- 324 × 12 -->
+          <text x="140" y="62" font-family="Arial" font-size="24" font-weight="bold" fill="#1e40af" text-anchor="end">3 2 4</text>
+          <text x="30" y="62" font-family="Arial" font-size="20" font-weight="bold" fill="#6b7280">×</text>
+          <text x="140" y="88" font-family="Arial" font-size="24" font-weight="bold" fill="#1e40af" text-anchor="end">1 2</text>
+          <line x1="25" y1="95" x2="160" y2="95" stroke="#93c5fd" stroke-width="2.5"/>
+          <!-- ligne 1 (×2) -->
+          <rect x="55" y="100" width="90" height="22" rx="5" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="100" y="115" font-family="Arial" font-size="11" fill="#d1d5db" text-anchor="middle">324 × 2 = ?</text>
+          <!-- ligne 2 (×10) -->
+          <rect x="40" y="126" width="105" height="22" rx="5" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="93" y="141" font-family="Arial" font-size="11" fill="#d1d5db" text-anchor="middle">324 × 10 = ?</text>
+          <line x1="25" y1="154" x2="160" y2="154" stroke="#93c5fd" stroke-width="2"/>
+          <text x="55" y="150" font-family="Arial" font-size="10" fill="#93c5fd">+</text>
+          <rect x="55" y="158" width="90" height="24" rx="6" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="5,3"/>
+          <text x="100" y="175" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">Total = ?</text>
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Calcule étape par étape</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">×</span>
+          <h3 class="font-black text-gray-800 text-sm">Multiplication 3×2</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Multiplication à 3 chiffres par 2 chiffres</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Multiplication</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">8-12 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 2 : Fractions sur la droite numérique -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="16" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Place les fractions sur la droite</text>
+
+          <!-- Droite numérique 1 : tiers -->
+          <text x="14" y="48" font-family="Arial" font-size="9" fill="#6b7280" font-weight="bold">Tiers :</text>
+          <line x1="14" y1="64" x2="186" y2="64" stroke="#3b82f6" stroke-width="2.5"/>
+          <line x1="14" y1="56" x2="14" y2="72" stroke="#3b82f6" stroke-width="2.5"/>
+          <text x="14" y="82" font-family="Arial" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">0</text>
+          <line x1="186" y1="56" x2="186" y2="72" stroke="#3b82f6" stroke-width="2.5"/>
+          <text x="186" y="82" font-family="Arial" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">1</text>
+          <!-- graduations tiers -->
+          <line x1="71" y1="58" x2="71" y2="70" stroke="#3b82f6" stroke-width="2"/>
+          <line x1="128" y1="58" x2="128" y2="70" stroke="#3b82f6" stroke-width="2"/>
+          <!-- flèches à placer -->
+          <line x1="100" y1="52" x2="100" y2="58" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="3,2"/>
+          <circle cx="100" cy="50" r="4" fill="#ef4444"/>
+          <text x="100" y="44" font-family="Arial" font-size="10" font-weight="bold" fill="#ef4444" text-anchor="middle">1/3 ?</text>
+
+          <!-- Droite numérique 2 : quarts -->
+          <text x="14" y="112" font-family="Arial" font-size="9" fill="#6b7280" font-weight="bold">Quarts :</text>
+          <line x1="14" y1="128" x2="186" y2="128" stroke="#8b5cf6" stroke-width="2.5"/>
+          <line x1="14" y1="120" x2="14" y2="136" stroke="#8b5cf6" stroke-width="2.5"/>
+          <text x="14" y="146" font-family="Arial" font-size="11" font-weight="bold" fill="#6b21a8" text-anchor="middle">0</text>
+          <line x1="186" y1="120" x2="186" y2="136" stroke="#8b5cf6" stroke-width="2.5"/>
+          <text x="186" y="146" font-family="Arial" font-size="11" font-weight="bold" fill="#6b21a8" text-anchor="middle">1</text>
+          <line x1="57" y1="122" x2="57" y2="134" stroke="#8b5cf6" stroke-width="2"/>
+          <line x1="100" y1="122" x2="100" y2="134" stroke="#8b5cf6" stroke-width="2"/>
+          <line x1="143" y1="122" x2="143" y2="134" stroke="#8b5cf6" stroke-width="2"/>
+          <line x1="57" y1="116" x2="57" y2="122" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="3,2"/>
+          <circle cx="57" cy="114" r="4" fill="#ef4444"/>
+          <text x="57" y="108" font-family="Arial" font-size="10" font-weight="bold" fill="#ef4444" text-anchor="middle">1/4 ?</text>
+          <line x1="143" y1="116" x2="143" y2="122" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="3,2"/>
+          <circle cx="143" cy="114" r="4" fill="#f59e0b"/>
+          <text x="143" y="108" font-family="Arial" font-size="10" font-weight="bold" fill="#f59e0b" text-anchor="middle">3/4 ?</text>
+
+          <!-- Comparaison de fractions -->
+          <text x="100" y="178" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Compare ces fractions :</text>
+          <text x="44" y="210" font-family="Arial" font-size="20" font-weight="bold" fill="#3b82f6" text-anchor="middle">1/2</text>
+          <rect x="72" y="194" width="56" height="26" rx="6" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="100" y="212" font-family="Arial" font-size="16" fill="#d1d5db" text-anchor="middle">&lt; = &gt;</text>
+          <text x="158" y="210" font-family="Arial" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">3/4</text>
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Place et compare les fractions</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-purple-100 flex items-center justify-center text-sm font-black text-purple-700">½</span>
+          <h3 class="font-black text-gray-800 text-sm">Fractions sur la droite</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Place et compare les fractions sur la droite numérique</p>
+        <div class="flex gap-1">
+          <span class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-0.5 rounded-full">Fractions</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">8-12 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 3 : Problème multi-étapes -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="16" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Problème à plusieurs étapes</text>
+          <!-- Illustration marché -->
+          <g transform="translate(60, 22)">
+            <!-- stand -->
+            <rect x="0" y="20" width="80" height="40" rx="4" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <path d="M-10,20 L90,20 L80,5 L0,5 Z" fill="none" stroke="#f59e0b" stroke-width="2.5"/>
+            <!-- fruits -->
+            <circle cx="18" cy="38" r="8" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+            <circle cx="36" cy="38" r="8" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+            <circle cx="54" cy="38" r="8" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+            <circle cx="72" cy="38" r="8" fill="none" stroke="#22c55e" stroke-width="2.5"/>
+            <text x="40" y="13" font-family="Arial" font-size="9" font-weight="bold" fill="#f59e0b" text-anchor="middle">MARCHÉ</text>
+          </g>
+
+          <!-- Énoncé -->
+          <rect x="8" y="92" width="184" height="118" rx="8" fill="#fefce8" stroke="#fde68a" stroke-width="1.5"/>
+          <text x="100" y="110" font-family="Arial" font-size="9.5" fill="#92400e" text-anchor="middle">Au marché, une pomme coûte</text>
+          <text x="100" y="124" font-family="Arial" font-size="9.5" fill="#92400e" text-anchor="middle">0,50 € et une poire coûte 0,75 €.</text>
+          <text x="100" y="138" font-family="Arial" font-size="9.5" fill="#92400e" text-anchor="middle">Léa achète 4 pommes et</text>
+          <text x="100" y="152" font-family="Arial" font-size="9.5" fill="#92400e" text-anchor="middle">2 poires. Elle paye avec</text>
+          <text x="100" y="166" font-family="Arial" font-size="9.5" font-weight="bold" fill="#92400e" text-anchor="middle">un billet de 5 €.</text>
+          <text x="100" y="182" font-family="Arial" font-size="9.5" font-weight="bold" fill="#92400e" text-anchor="middle">Quelle monnaie reçoit-elle ?</text>
+          <!-- espaces calcul -->
+          <rect x="16" y="192" width="168" height="14" rx="4" fill="white" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="100" y="203" font-family="Arial" font-size="8" fill="#d1d5db" text-anchor="middle">Étape 1 : coût des pommes = …</text>
+          <rect x="16" y="210" width="168" height="14" rx="4" fill="white" stroke="#d1d5db" stroke-width="1" stroke-dasharray="4,3"/>
+          <text x="100" y="221" font-family="Arial" font-size="8" fill="#d1d5db" text-anchor="middle">Étape 2 : coût total = …</text>
+
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Résous en plusieurs étapes</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center text-sm">🛒</span>
+          <h3 class="font-black text-gray-800 text-sm">Problème du marché</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Problème de monnaie en plusieurs étapes</p>
+        <div class="flex gap-1">
+          <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full">Problème</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">8-12 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 4 : Périmètre et aire -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="16" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Périmètre et aire</text>
+
+          <!-- Rectangle : 8×5 -->
+          <rect x="20" y="28" width="160" height="72" rx="6" fill="none" stroke="#3b82f6" stroke-width="3"/>
+          <!-- cotes -->
+          <text x="100" y="24" font-family="Arial" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">8 cm</text>
+          <text x="10" y="70" font-family="Arial" font-size="12" font-weight="bold" fill="#1e40af" text-anchor="middle">5 cm</text>
+          <!-- Formules -->
+          <text x="26" y="116" font-family="Arial" font-size="10" fill="#6b7280">P = 2 × (L + l) =</text>
+          <rect x="136" y="104" width="50" height="20" rx="5" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="161" y="118" font-family="Arial" font-size="11" fill="#d1d5db" text-anchor="middle">? cm</text>
+          <text x="26" y="138" font-family="Arial" font-size="10" fill="#6b7280">A = L × l =</text>
+          <rect x="100" y="126" width="50" height="20" rx="5" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="125" y="140" font-family="Arial" font-size="11" fill="#d1d5db" text-anchor="middle">? cm²</text>
+
+          <!-- Carré : 6 cm -->
+          <rect x="50" y="154" width="60" height="60" rx="6" fill="none" stroke="#8b5cf6" stroke-width="3"/>
+          <text x="80" y="150" font-family="Arial" font-size="12" font-weight="bold" fill="#6b21a8" text-anchor="middle">6 cm</text>
+          <text x="36" y="186" font-family="Arial" font-size="12" font-weight="bold" fill="#6b21a8" text-anchor="middle">6 cm</text>
+          <!-- Formules carré -->
+          <text x="118" y="168" font-family="Arial" font-size="10" fill="#6b7280">P =</text>
+          <rect x="134" y="158" width="50" height="20" rx="5" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="159" y="172" font-family="Arial" font-size="11" fill="#d1d5db" text-anchor="middle">? cm</text>
+          <text x="118" y="194" font-family="Arial" font-size="10" fill="#6b7280">A =</text>
+          <rect x="134" y="184" width="50" height="20" rx="5" fill="none" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="159" y="198" font-family="Arial" font-size="11" fill="#d1d5db" text-anchor="middle">? cm²</text>
+
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Calcule le périmètre et l'aire</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm">📐</span>
+          <h3 class="font-black text-gray-800 text-sm">Périmètre et aire</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Calcule le périmètre et l'aire de figures simples</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Géométrie</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">8-12 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 5 : Nombres décimaux -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="16" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Les nombres décimaux</text>
+
+          <!-- Tableau de décomposition -->
+          <text x="100" y="36" font-family="Arial" font-size="9.5" fill="#6b7280" text-anchor="middle">Décompose les nombres :</text>
+          <!-- En-têtes -->
+          <rect x="10"  y="42" width="45" height="20" rx="4" fill="#1e40af"/>
+          <text x="32"  y="56" font-family="Arial" font-size="9" font-weight="bold" fill="white" text-anchor="middle">Unités</text>
+          <rect x="59"  y="42" width="45" height="20" rx="4" fill="#3b82f6"/>
+          <text x="81"  y="56" font-family="Arial" font-size="9" font-weight="bold" fill="white" text-anchor="middle">Dixièmes</text>
+          <rect x="108" y="42" width="45" height="20" rx="4" fill="#93c5fd"/>
+          <text x="130" y="56" font-family="Arial" font-size="8" font-weight="bold" fill="white" text-anchor="middle">Centièmes</text>
+          <rect x="157" y="42" width="36" height="20" rx="4" fill="#dbeafe"/>
+          <text x="175" y="56" font-family="Arial" font-size="9" font-weight="bold" fill="#1e40af" text-anchor="middle">Total</text>
+
+          <!-- Ligne 1 : 3,47 -->
+          <rect x="10"  y="66" width="45" height="22" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+          <text x="32"  y="81" font-family="Arial" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">3</text>
+          <rect x="59"  y="66" width="45" height="22" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+          <text x="81"  y="81" font-family="Arial" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">4</text>
+          <rect x="108" y="66" width="45" height="22" rx="3" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1.5"/>
+          <text x="130" y="81" font-family="Arial" font-size="14" font-weight="bold" fill="#1e40af" text-anchor="middle">7</text>
+          <rect x="157" y="66" width="36" height="22" rx="3" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5"/>
+          <text x="175" y="81" font-family="Arial" font-size="13" font-weight="bold" fill="#1e40af" text-anchor="middle">3,47</text>
+
+          <!-- Ligne 2 : ? , ? ? = 5,09 -->
+          <rect x="10"  y="92" width="45" height="22" rx="3" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="32"  y="107" font-family="Arial" font-size="12" fill="#e5e7eb" text-anchor="middle">?</text>
+          <rect x="59"  y="92" width="45" height="22" rx="3" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="81"  y="107" font-family="Arial" font-size="12" fill="#e5e7eb" text-anchor="middle">?</text>
+          <rect x="108" y="92" width="45" height="22" rx="3" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="130" y="107" font-family="Arial" font-size="12" fill="#e5e7eb" text-anchor="middle">?</text>
+          <rect x="157" y="92" width="36" height="22" rx="3" fill="#fef9c3" stroke="#fde047" stroke-width="1.5"/>
+          <text x="175" y="107" font-family="Arial" font-size="12" font-weight="bold" fill="#854d0e" text-anchor="middle">5,09</text>
+
+          <!-- Opérations décimales -->
+          <text x="100" y="135" font-family="Arial" font-size="10" font-weight="bold" fill="#6b7280" text-anchor="middle">Calcule :</text>
+          <!-- 4,5 + 2,3 -->
+          <rect x="10" y="142" width="84" height="34" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="2"/>
+          <text x="52" y="164" font-family="Arial" font-size="15" font-weight="bold" fill="#166534" text-anchor="middle">4,5 + 2,3 =</text>
+          <rect x="96" y="142" width="34" height="34" rx="7" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="113" y="164" font-family="Arial" font-size="13" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <!-- 8,7 − 3,4 -->
+          <rect x="10" y="184" width="84" height="34" rx="8" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+          <text x="52" y="206" font-family="Arial" font-size="15" font-weight="bold" fill="#991b1b" text-anchor="middle">8,7 − 3,4 =</text>
+          <rect x="96" y="184" width="34" height="34" rx="7" fill="white" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="4,3"/>
+          <text x="113" y="206" font-family="Arial" font-size="13" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Décompose et calcule</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">0,5</span>
+          <h3 class="font-black text-gray-800 text-sm">Nombres décimaux</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Décomposer et calculer avec les décimaux</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Décimaux</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">8-12 ans</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BANNIÈRE CTA -->
+  <div class="rounded-3xl p-8 text-center mb-10" style="background:linear-gradient(135deg,#a1c4fd,#c2e9fb)">
+    <h3 class="text-xl font-black text-gray-800 mb-2">Accédez à toutes les fiches Chiffres & Maths</h3>
+    <p class="text-sm text-gray-600 mb-5 max-w-lg mx-auto">Multiplications posées, divisions, fractions, décimaux, périmètres… Tout le programme CM1-CM2 en illimité.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white font-black px-8 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-shadow text-sm">Voir les offres Premium</button>
+      <button class="bg-white text-gray-700 font-bold px-8 py-3 rounded-2xl text-sm hover:bg-gray-50 transition-colors">Retour à la bibliothèque</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-gray-100 py-8 px-6 mt-4">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center"><span class="text-lg">🎨</span></div>
+      <span class="font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+    </div>
+    <p class="text-xs text-gray-400">© 2025 KidoPrint — Activités imprimables pour enfants</p>
+    <div class="flex gap-5 text-xs font-medium text-gray-400">
+      <a href="#" class="hover:text-violet-600 transition-colors">Confidentialité</a>
+      <a href="#" class="hover:text-violet-600 transition-colors">CGU</a>
+      <a href="contact.html" class="hover:text-violet-600 transition-colors">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
