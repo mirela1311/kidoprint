@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chiffres & Maths 4–6 ans — KidoPrint</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Poppins', sans-serif; }
+    body { background-color: #f8fafc; }
+    .nav-shadow { box-shadow: 0 4px 30px rgba(124,58,237,0.15); }
+    .fiche-card { transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), box-shadow 0.2s ease; }
+    .fiche-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(0,0,0,0.13); }
+    .paper-bg {
+      background-color: #fff;
+      background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+      background-size: 20px 20px;
+      background-position: -1px -1px;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #a78bfa; border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="bg-white nav-shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center shadow-sm"><span class="text-xl">🎨</span></div>
+        <span class="text-xl font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-500">
+        <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+        <a href="tarifs.html" class="hover:text-violet-600 transition-colors">Tarifs</a>
+        <a href="#" class="hover:text-violet-600 transition-colors">À propos</a>
+        <a href="contact.html" class="hover:text-violet-600 transition-colors font-semibold text-violet-500">Nous contacter</a>
+      </div>
+      <button class="hidden sm:block text-sm font-medium text-gray-500 hover:text-violet-600 transition-colors px-3 py-1.5">Connexion</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<section class="bg-white border-b border-gray-100 px-6 py-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-center gap-2 text-sm text-gray-400 font-medium mb-5">
+      <a href="index.html" class="hover:text-violet-600 transition-colors">Bibliothèque</a>
+      <span>›</span>
+      <span class="text-gray-600">Chiffres & Maths</span>
+      <span>›</span>
+      <span class="text-violet-600 font-semibold">4 – 6 ans</span>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="flex items-center gap-2 text-sm font-semibold text-violet-600 hover:text-violet-800 bg-violet-50 hover:bg-violet-100 px-4 py-2 rounded-xl transition-colors">← Retour</a>
+        <div>
+          <h1 class="text-2xl font-black text-gray-800">Chiffres & Maths — 4 à 6 ans</h1>
+          <p class="text-sm text-gray-500 mt-0.5">Compter jusqu'à 10, suites numériques et premières additions</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+          12 fiches disponibles
+        </span>
+        <span class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1.5 rounded-full">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          3 gratuites
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENU PRINCIPAL -->
+<main class="max-w-6xl mx-auto px-6 py-10">
+
+  <!-- FICHES GRATUITES -->
+  <div class="flex items-center gap-3 mb-6">
+    <span class="bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wide">Gratuit</span>
+    <h2 class="text-lg font-black text-gray-800">Fiches accessibles</h2>
+    <div class="flex-1 h-px bg-gray-200"></div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+
+    <!-- FICHE 1 : La frise numérique 1-10 -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="18" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Complète la frise !</text>
+          <!-- Frise : cases numérotées 1-10, 3 cases vides à remplir -->
+          <!-- Ligne 1 : 1 à 5 -->
+          <g transform="translate(5, 28)">
+            <!-- case 1 -->
+            <rect x="0" y="0" width="34" height="34" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+            <text x="17" y="23" font-family="Arial" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">1</text>
+            <!-- case 2 vide -->
+            <rect x="38" y="0" width="34" height="34" rx="6" fill="#fff" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+            <text x="55" y="23" font-family="Arial" font-size="14" fill="#d1d5db" text-anchor="middle">?</text>
+            <!-- case 3 -->
+            <rect x="76" y="0" width="34" height="34" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+            <text x="93" y="23" font-family="Arial" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">3</text>
+            <!-- case 4 -->
+            <rect x="114" y="0" width="34" height="34" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+            <text x="131" y="23" font-family="Arial" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">4</text>
+            <!-- case 5 vide -->
+            <rect x="152" y="0" width="34" height="34" rx="6" fill="#fff" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+            <text x="169" y="23" font-family="Arial" font-size="14" fill="#d1d5db" text-anchor="middle">?</text>
+          </g>
+          <!-- Ligne 2 : 6 à 10 -->
+          <g transform="translate(5, 74)">
+            <!-- case 6 -->
+            <rect x="0" y="0" width="34" height="34" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+            <text x="17" y="23" font-family="Arial" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">6</text>
+            <!-- case 7 -->
+            <rect x="38" y="0" width="34" height="34" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+            <text x="55" y="23" font-family="Arial" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">7</text>
+            <!-- case 8 vide -->
+            <rect x="76" y="0" width="34" height="34" rx="6" fill="#fff" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+            <text x="93" y="23" font-family="Arial" font-size="14" fill="#d1d5db" text-anchor="middle">?</text>
+            <!-- case 9 -->
+            <rect x="114" y="0" width="34" height="34" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+            <text x="131" y="23" font-family="Arial" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">9</text>
+            <!-- case 10 -->
+            <rect x="152" y="0" width="34" height="34" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+            <text x="169" y="23" font-family="Arial" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">10</text>
+          </g>
+
+          <!-- Chenille décorative -->
+          <g transform="translate(18, 135)">
+            <!-- corps -->
+            <circle cx="0"   cy="20" r="14" fill="none" stroke="#22c55e" stroke-width="3.5"/>
+            <circle cx="30"  cy="20" r="14" fill="none" stroke="#22c55e" stroke-width="3.5"/>
+            <circle cx="60"  cy="20" r="14" fill="none" stroke="#22c55e" stroke-width="3.5"/>
+            <circle cx="90"  cy="20" r="14" fill="none" stroke="#22c55e" stroke-width="3.5"/>
+            <circle cx="120" cy="20" r="14" fill="none" stroke="#22c55e" stroke-width="3.5"/>
+            <!-- tête -->
+            <circle cx="150" cy="20" r="16" fill="none" stroke="#16a34a" stroke-width="3.5"/>
+            <circle cx="144" cy="15" r="3" fill="#16a34a"/>
+            <circle cx="156" cy="15" r="3" fill="#16a34a"/>
+            <path d="M144,25 Q150,30 156,25" fill="none" stroke="#16a34a" stroke-width="2.5"/>
+            <!-- antennes -->
+            <line x1="144" y1="4" x2="140" y2="-4" stroke="#16a34a" stroke-width="2.5"/>
+            <circle cx="140" cy="-4" r="3" fill="#16a34a"/>
+            <line x1="156" y1="4" x2="160" y2="-4" stroke="#16a34a" stroke-width="2.5"/>
+            <circle cx="160" cy="-4" r="3" fill="#16a34a"/>
+          </g>
+
+          <text x="100" y="250" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Écris les chiffres manquants</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">1…</span>
+          <h3 class="font-black text-gray-800 text-sm">La frise 1 à 10</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Complète les chiffres manquants sur la frise</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Suite</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">4-6 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FICHE 2 : Dénombrement — la ferme -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="18" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Combien y en a-t-il ?</text>
+
+          <!-- Vaches : 4 -->
+          <g transform="translate(8, 25)">
+            <text x="0" y="14" font-family="Arial" font-size="10" fill="#6b7280" font-weight="bold">Vaches :</text>
+            <!-- vache 1 -->
+            <ellipse cx="18" cy="42" rx="14" ry="10" fill="none" stroke="#78716c" stroke-width="3"/>
+            <circle cx="26" cy="33" r="8" fill="none" stroke="#78716c" stroke-width="3"/>
+            <line x1="10" y1="52" x2="8" y2="64" stroke="#78716c" stroke-width="3"/>
+            <line x1="26" y1="52" x2="24" y2="64" stroke="#78716c" stroke-width="3"/>
+            <!-- vache 2 -->
+            <ellipse cx="58" cy="42" rx="14" ry="10" fill="none" stroke="#78716c" stroke-width="3"/>
+            <circle cx="66" cy="33" r="8" fill="none" stroke="#78716c" stroke-width="3"/>
+            <line x1="50" y1="52" x2="48" y2="64" stroke="#78716c" stroke-width="3"/>
+            <line x1="66" y1="52" x2="64" y2="64" stroke="#78716c" stroke-width="3"/>
+            <!-- vache 3 -->
+            <ellipse cx="98" cy="42" rx="14" ry="10" fill="none" stroke="#78716c" stroke-width="3"/>
+            <circle cx="106" cy="33" r="8" fill="none" stroke="#78716c" stroke-width="3"/>
+            <line x1="90" y1="52" x2="88" y2="64" stroke="#78716c" stroke-width="3"/>
+            <line x1="106" y1="52" x2="104" y2="64" stroke="#78716c" stroke-width="3"/>
+            <!-- vache 4 -->
+            <ellipse cx="138" cy="42" rx="14" ry="10" fill="none" stroke="#78716c" stroke-width="3"/>
+            <circle cx="146" cy="33" r="8" fill="none" stroke="#78716c" stroke-width="3"/>
+            <line x1="130" y1="52" x2="128" y2="64" stroke="#78716c" stroke-width="3"/>
+            <line x1="146" y1="52" x2="144" y2="64" stroke="#78716c" stroke-width="3"/>
+            <!-- Réponse -->
+            <rect x="70" y="70" width="44" height="28" rx="8" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+            <text x="92" y="89" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+          </g>
+
+          <!-- Poules : 7 -->
+          <g transform="translate(8, 140)">
+            <text x="0" y="14" font-family="Arial" font-size="10" fill="#6b7280" font-weight="bold">Poules :</text>
+            <!-- 7 poules simplifiées -->
+            <circle cx="14" cy="36" r="8" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <path d="M18,30 L22,26 L18,28 Z" fill="#f59e0b"/>
+            <circle cx="38" cy="36" r="8" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <path d="M42,30 L46,26 L42,28 Z" fill="#f59e0b"/>
+            <circle cx="62" cy="36" r="8" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <path d="M66,30 L70,26 L66,28 Z" fill="#f59e0b"/>
+            <circle cx="86" cy="36" r="8" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <path d="M90,30 L94,26 L90,28 Z" fill="#f59e0b"/>
+            <circle cx="110" cy="36" r="8" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <path d="M114,30 L118,26 L114,28 Z" fill="#f59e0b"/>
+            <circle cx="134" cy="36" r="8" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <path d="M138,30 L142,26 L138,28 Z" fill="#f59e0b"/>
+            <circle cx="158" cy="36" r="8" fill="none" stroke="#f59e0b" stroke-width="3"/>
+            <path d="M162,30 L166,26 L162,28 Z" fill="#f59e0b"/>
+            <!-- Réponse -->
+            <rect x="70" y="50" width="44" height="28" rx="8" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+            <text x="92" y="69" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+          </g>
+
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Compte et écris le nombre</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-amber-100 flex items-center justify-center text-sm">🐄</span>
+          <h3 class="font-black text-gray-800 text-sm">À la ferme</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Compte les animaux et écris le bon chiffre</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full">Comptage</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">4-6 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FICHE 3 : Ma première addition -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="18" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Additionne les groupes !</text>
+
+          <!-- Addition 1 : 2 + 3 -->
+          <!-- 2 ballons -->
+          <circle cx="22" cy="60" r="14" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+          <line x1="22" y1="74" x2="22" y2="84" stroke="#3b82f6" stroke-width="2.5"/>
+          <circle cx="50" cy="60" r="14" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+          <line x1="50" y1="74" x2="50" y2="84" stroke="#3b82f6" stroke-width="2.5"/>
+          <!-- signe + -->
+          <text x="72" y="68" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280" text-anchor="middle">+</text>
+          <!-- 3 ballons -->
+          <circle cx="96" cy="60" r="14" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <line x1="96" y1="74" x2="96" y2="84" stroke="#ef4444" stroke-width="2.5"/>
+          <circle cx="124" cy="60" r="14" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <line x1="124" y1="74" x2="124" y2="84" stroke="#ef4444" stroke-width="2.5"/>
+          <circle cx="152" cy="60" r="14" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <line x1="152" y1="74" x2="152" y2="84" stroke="#ef4444" stroke-width="2.5"/>
+          <!-- = et case réponse -->
+          <text x="174" y="68" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280" text-anchor="middle">=</text>
+          <!-- ligne et chiffres sous les groupes -->
+          <text x="36" y="100" font-family="Arial" font-size="20" font-weight="bold" fill="#3b82f6" text-anchor="middle">2</text>
+          <text x="72" y="100" font-family="Arial" font-size="20" font-weight="bold" fill="#6b7280" text-anchor="middle">+</text>
+          <text x="124" y="100" font-family="Arial" font-size="20" font-weight="bold" fill="#ef4444" text-anchor="middle">3</text>
+          <text x="160" y="100" font-family="Arial" font-size="20" font-weight="bold" fill="#6b7280" text-anchor="middle">=</text>
+          <rect x="170" y="82" width="28" height="26" rx="6" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="184" y="100" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <!-- Séparateur -->
+          <line x1="20" y1="118" x2="180" y2="118" stroke="#f3f4f6" stroke-width="2"/>
+
+          <!-- Addition 2 : 4 + 1 -->
+          <!-- 4 étoiles -->
+          <polygon points="20,148 22,155 30,155 24,160 26,167 20,162 14,167 16,160 10,155 18,155" fill="none" stroke="#f59e0b" stroke-width="3"/>
+          <polygon points="42,148 44,155 52,155 46,160 48,167 42,162 36,167 38,160 32,155 40,155" fill="none" stroke="#f59e0b" stroke-width="3"/>
+          <polygon points="64,148 66,155 74,155 68,160 70,167 64,162 58,167 60,160 54,155 62,155" fill="none" stroke="#f59e0b" stroke-width="3"/>
+          <polygon points="86,148 88,155 96,155 90,160 92,167 86,162 80,167 82,160 76,155 84,155" fill="none" stroke="#f59e0b" stroke-width="3"/>
+          <text x="106" y="162" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280" text-anchor="middle">+</text>
+          <!-- 1 étoile -->
+          <polygon points="128,148 130,155 138,155 132,160 134,167 128,162 122,167 124,160 118,155 126,155" fill="none" stroke="#f59e0b" stroke-width="3"/>
+          <text x="158" y="162" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280" text-anchor="middle">=</text>
+
+          <text x="48" y="185" font-family="Arial" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">4</text>
+          <text x="80" y="185" font-family="Arial" font-size="20" font-weight="bold" fill="#6b7280" text-anchor="middle">+</text>
+          <text x="110" y="185" font-family="Arial" font-size="20" font-weight="bold" fill="#f59e0b" text-anchor="middle">1</text>
+          <text x="144" y="185" font-family="Arial" font-size="20" font-weight="bold" fill="#6b7280" text-anchor="middle">=</text>
+          <rect x="155" y="167" width="28" height="26" rx="6" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="169" y="185" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Compte et écris le résultat</text>
+        </svg>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center text-sm font-black text-emerald-700">+</span>
+          <h3 class="font-black text-gray-800 text-sm">Ma première addition</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Additionne les groupes d'objets illustrés</p>
+        <div class="flex items-center justify-between">
+          <div class="flex gap-1">
+            <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-0.5 rounded-full">Addition</span>
+            <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">4-6 ans</span>
+          </div>
+          <button class="text-xs font-bold text-white bg-emerald-500 hover:bg-emerald-600 transition-colors px-3 py-1.5 rounded-lg">Imprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FICHES PREMIUM -->
+  <div class="flex items-center gap-3 mb-6">
+    <span class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-3 py-1 rounded-full uppercase tracking-wide">Premium</span>
+    <h2 class="text-lg font-black text-gray-800">Fiches Premium</h2>
+    <div class="flex-1 h-px bg-gray-200"></div>
+    <span class="text-xs text-gray-400 font-medium">9 fiches · débloque tout</span>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+
+    <!-- PREMIUM 1 : Avant et après -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="18" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Avant et après</text>
+          <!-- Exercice : _ 5 _ -->
+          <rect x="20" y="40" width="40" height="40" rx="8" fill="none" stroke="#d1d5db" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <text x="40" y="66" font-family="Arial" font-size="24" fill="#e5e7eb" text-anchor="middle">?</text>
+          <rect x="80" y="40" width="40" height="40" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="2.5"/>
+          <text x="100" y="66" font-family="Arial" font-size="24" font-weight="bold" fill="#2563eb" text-anchor="middle">5</text>
+          <rect x="140" y="40" width="40" height="40" rx="8" fill="none" stroke="#d1d5db" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <text x="160" y="66" font-family="Arial" font-size="24" fill="#e5e7eb" text-anchor="middle">?</text>
+          <!-- Exercice 2 : _ 8 _ -->
+          <rect x="20" y="110" width="40" height="40" rx="8" fill="none" stroke="#d1d5db" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <text x="40" y="136" font-family="Arial" font-size="24" fill="#e5e7eb" text-anchor="middle">?</text>
+          <rect x="80" y="110" width="40" height="40" rx="8" fill="#fef3c7" stroke="#fcd34d" stroke-width="2.5"/>
+          <text x="100" y="136" font-family="Arial" font-size="24" font-weight="bold" fill="#d97706" text-anchor="middle">8</text>
+          <rect x="140" y="110" width="40" height="40" rx="8" fill="none" stroke="#d1d5db" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <text x="160" y="136" font-family="Arial" font-size="24" fill="#e5e7eb" text-anchor="middle">?</text>
+          <!-- Exercice 3 : _ 3 _ -->
+          <rect x="20" y="178" width="40" height="40" rx="8" fill="none" stroke="#d1d5db" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <text x="40" y="204" font-family="Arial" font-size="24" fill="#e5e7eb" text-anchor="middle">?</text>
+          <rect x="80" y="178" width="40" height="40" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="2.5"/>
+          <text x="100" y="204" font-family="Arial" font-size="24" font-weight="bold" fill="#16a34a" text-anchor="middle">3</text>
+          <rect x="140" y="178" width="40" height="40" rx="8" fill="none" stroke="#d1d5db" stroke-width="2.5" stroke-dasharray="6,4"/>
+          <text x="160" y="204" font-family="Arial" font-size="24" fill="#e5e7eb" text-anchor="middle">?</text>
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Écris le nombre avant et après</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm font-black text-blue-700">‹›</span>
+          <h3 class="font-black text-gray-800 text-sm">Avant et après</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Écris le nombre qui vient avant et après</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Ordre</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">4-6 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 2 : Plus grand ou plus petit -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="18" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Place le bon symbole !</text>
+          <!-- 3 vs 7 -->
+          <text x="30" y="68" font-family="Arial" font-size="34" font-weight="bold" fill="#3b82f6" text-anchor="middle">3</text>
+          <rect x="76" y="46" width="48" height="34" rx="8" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="100" y="70" font-family="Arial" font-size="20" fill="#d1d5db" text-anchor="middle">&lt; &gt;</text>
+          <text x="170" y="68" font-family="Arial" font-size="34" font-weight="bold" fill="#ef4444" text-anchor="middle">7</text>
+          <!-- 9 vs 4 -->
+          <text x="30" y="138" font-family="Arial" font-size="34" font-weight="bold" fill="#8b5cf6" text-anchor="middle">9</text>
+          <rect x="76" y="116" width="48" height="34" rx="8" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="100" y="140" font-family="Arial" font-size="20" fill="#d1d5db" text-anchor="middle">&lt; &gt;</text>
+          <text x="170" y="138" font-family="Arial" font-size="34" font-weight="bold" fill="#22c55e" text-anchor="middle">4</text>
+          <!-- 6 vs 6 -->
+          <text x="30" y="208" font-family="Arial" font-size="34" font-weight="bold" fill="#f59e0b" text-anchor="middle">6</text>
+          <rect x="76" y="186" width="48" height="34" rx="8" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="100" y="210" font-family="Arial" font-size="20" fill="#d1d5db" text-anchor="middle">=</text>
+          <text x="170" y="208" font-family="Arial" font-size="34" font-weight="bold" fill="#f59e0b" text-anchor="middle">6</text>
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Écris &lt;  =  ou  &gt;</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-purple-100 flex items-center justify-center text-sm font-black text-purple-700">&lt;&gt;</span>
+          <h3 class="font-black text-gray-800 text-sm">Plus grand ou plus petit</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Compare deux nombres avec &lt; = &gt;</p>
+        <div class="flex gap-1">
+          <span class="bg-purple-100 text-purple-700 text-xs font-bold px-2 py-0.5 rounded-full">Comparaison</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">4-6 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 3 : Soustraction illustrée -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="18" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">On enlève combien ?</text>
+          <!-- 5 poissons, 2 barrés -->
+          <g transform="translate(8, 30)">
+            <!-- poisson 1 -->
+            <ellipse cx="18" cy="28" rx="14" ry="9" fill="none" stroke="#3b82f6" stroke-width="3"/>
+            <polygon points="32,20 40,28 32,36" fill="none" stroke="#3b82f6" stroke-width="3"/>
+            <!-- poisson 2 -->
+            <ellipse cx="58" cy="28" rx="14" ry="9" fill="none" stroke="#3b82f6" stroke-width="3"/>
+            <polygon points="72,20 80,28 72,36" fill="none" stroke="#3b82f6" stroke-width="3"/>
+            <!-- poisson 3 -->
+            <ellipse cx="98" cy="28" rx="14" ry="9" fill="none" stroke="#3b82f6" stroke-width="3"/>
+            <polygon points="112,20 120,28 112,36" fill="none" stroke="#3b82f6" stroke-width="3"/>
+            <!-- poisson 4 barré -->
+            <ellipse cx="138" cy="28" rx="14" ry="9" fill="none" stroke="#ef4444" stroke-width="3"/>
+            <polygon points="152,20 160,28 152,36" fill="none" stroke="#ef4444" stroke-width="3"/>
+            <line x1="120" y1="16" x2="164" y2="40" stroke="#ef4444" stroke-width="3"/>
+            <!-- poisson 5 barré -->
+            <ellipse cx="18" cy="68" rx="14" ry="9" fill="none" stroke="#ef4444" stroke-width="3"/>
+            <polygon points="32,60 40,68 32,76" fill="none" stroke="#ef4444" stroke-width="3"/>
+            <line x1="0" y1="56" x2="44" y2="80" stroke="#ef4444" stroke-width="3"/>
+          </g>
+          <!-- Opération -->
+          <text x="30" y="160" font-family="Arial" font-size="28" font-weight="bold" fill="#3b82f6" text-anchor="middle">5</text>
+          <text x="70" y="160" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">−</text>
+          <text x="110" y="160" font-family="Arial" font-size="28" font-weight="bold" fill="#ef4444" text-anchor="middle">2</text>
+          <text x="148" y="160" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">=</text>
+          <rect x="163" y="138" width="30" height="30" rx="7" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="178" y="158" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+          <!-- Deuxième soustraction -->
+          <text x="30" y="218" font-family="Arial" font-size="28" font-weight="bold" fill="#8b5cf6" text-anchor="middle">8</text>
+          <text x="70" y="218" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">−</text>
+          <text x="110" y="218" font-family="Arial" font-size="28" font-weight="bold" fill="#ef4444" text-anchor="middle">3</text>
+          <text x="148" y="218" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">=</text>
+          <rect x="163" y="196" width="30" height="30" rx="7" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="178" y="216" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+          <text x="100" y="252" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Barre et compte ce qui reste</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-red-100 flex items-center justify-center text-sm font-black text-red-600">−</span>
+          <h3 class="font-black text-gray-800 text-sm">Soustraction illustrée</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Barre les objets et compte ce qui reste</p>
+        <div class="flex gap-1">
+          <span class="bg-red-100 text-red-700 text-xs font-bold px-2 py-0.5 rounded-full">Soustraction</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">4-6 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 4 : Le jeu de dés -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="18" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Quel chiffre montre le dé ?</text>
+          <!-- Dé 1 : face 4 -->
+          <rect x="20" y="30" width="60" height="60" rx="10" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+          <circle cx="36" cy="46" r="5" fill="#3b82f6"/>
+          <circle cx="64" cy="46" r="5" fill="#3b82f6"/>
+          <circle cx="36" cy="74" r="5" fill="#3b82f6"/>
+          <circle cx="64" cy="74" r="5" fill="#3b82f6"/>
+          <rect x="90" y="48" width="30" height="26" rx="6" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="105" y="66" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <!-- Dé 2 : face 6 -->
+          <rect x="20" y="112" width="60" height="60" rx="10" fill="none" stroke="#8b5cf6" stroke-width="3.5"/>
+          <circle cx="36" cy="126" r="5" fill="#8b5cf6"/>
+          <circle cx="64" cy="126" r="5" fill="#8b5cf6"/>
+          <circle cx="36" cy="142" r="5" fill="#8b5cf6"/>
+          <circle cx="64" cy="142" r="5" fill="#8b5cf6"/>
+          <circle cx="36" cy="158" r="5" fill="#8b5cf6"/>
+          <circle cx="64" cy="158" r="5" fill="#8b5cf6"/>
+          <rect x="90" y="128" width="30" height="26" rx="6" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="105" y="146" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <!-- Dé 3 : face 2 -->
+          <rect x="20" y="192" width="60" height="60" rx="10" fill="none" stroke="#f59e0b" stroke-width="3.5"/>
+          <circle cx="36" cy="206" r="5" fill="#f59e0b"/>
+          <circle cx="64" cy="238" r="5" fill="#f59e0b"/>
+          <rect x="90" y="208" width="30" height="26" rx="6" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="105" y="226" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+          <text x="152" y="252" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle">Écris le chiffre</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm">🎲</span>
+          <h3 class="font-black text-gray-800 text-sm">Le jeu de dés</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Lis la face du dé et écris le chiffre</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Lecture</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">4-6 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 5 : Additions manquantes -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="18" font-family="Arial" font-size="11" fill="#6b7280" text-anchor="middle" font-weight="bold">Complète les additions !</text>
+          <!-- 4 additions avec case vide à remplir -->
+          <!-- 1 + ? = 4 -->
+          <text x="22" y="70" font-family="Arial" font-size="28" font-weight="bold" fill="#3b82f6" text-anchor="middle">1</text>
+          <text x="52" y="70" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">+</text>
+          <rect x="66" y="48" width="34" height="30" rx="7" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="83" y="68" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+          <text x="114" y="70" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">=</text>
+          <text x="148" y="70" font-family="Arial" font-size="28" font-weight="bold" fill="#22c55e" text-anchor="middle">4</text>
+
+          <!-- ? + 3 = 7 -->
+          <rect x="6" y="103" width="34" height="30" rx="7" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="23" y="123" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+          <text x="54" y="128" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">+</text>
+          <text x="86" y="128" font-family="Arial" font-size="28" font-weight="bold" fill="#ef4444" text-anchor="middle">3</text>
+          <text x="118" y="128" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">=</text>
+          <text x="152" y="128" font-family="Arial" font-size="28" font-weight="bold" fill="#22c55e" text-anchor="middle">7</text>
+
+          <!-- 4 + 4 = ? -->
+          <text x="22" y="186" font-family="Arial" font-size="28" font-weight="bold" fill="#8b5cf6" text-anchor="middle">4</text>
+          <text x="52" y="186" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">+</text>
+          <text x="82" y="186" font-family="Arial" font-size="28" font-weight="bold" fill="#8b5cf6" text-anchor="middle">4</text>
+          <text x="114" y="186" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">=</text>
+          <rect x="130" y="163" width="34" height="30" rx="7" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="147" y="183" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+
+          <!-- 6 + ? = 10 -->
+          <text x="22" y="238" font-family="Arial" font-size="28" font-weight="bold" fill="#f59e0b" text-anchor="middle">6</text>
+          <text x="52" y="238" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">+</text>
+          <rect x="66" y="215" width="34" height="30" rx="7" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <text x="83" y="235" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+          <text x="114" y="238" font-family="Arial" font-size="28" font-weight="bold" fill="#6b7280" text-anchor="middle">=</text>
+          <text x="152" y="238" font-family="Arial" font-size="28" font-weight="bold" fill="#22c55e" text-anchor="middle">10</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center text-sm font-black text-emerald-700">+?</span>
+          <h3 class="font-black text-gray-800 text-sm">Additions manquantes</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Trouve le nombre manquant dans l'addition</p>
+        <div class="flex gap-1">
+          <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-0.5 rounded-full">Addition</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">4-6 ans</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PREMIUM 6 : Le train des chiffres pairs/impairs -->
+    <div class="fiche-card bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden relative">
+      <div class="paper-bg p-5 aspect-[3/4] flex items-center justify-center">
+        <svg viewBox="0 0 200 260" width="100%" height="100%">
+          <text x="100" y="18" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Trie les nombres dans le bon train !</text>
+          <!-- Train pairs -->
+          <!-- locomotive -->
+          <rect x="10" y="36" width="42" height="30" rx="6" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+          <rect x="14" y="28" width="28" height="12" rx="4" fill="none" stroke="#3b82f6" stroke-width="3"/>
+          <circle cx="20" cy="70" r="6" fill="none" stroke="#3b82f6" stroke-width="3"/>
+          <circle cx="44" cy="70" r="6" fill="none" stroke="#3b82f6" stroke-width="3"/>
+          <text x="31" y="56" font-family="Arial" font-size="9" font-weight="bold" fill="#3b82f6" text-anchor="middle">PAIRS</text>
+          <!-- wagon -->
+          <rect x="58" y="40" width="36" height="26" rx="5" fill="none" stroke="#93c5fd" stroke-width="3"/>
+          <circle cx="66" cy="70" r="5" fill="none" stroke="#93c5fd" stroke-width="2.5"/>
+          <circle cx="86" cy="70" r="5" fill="none" stroke="#93c5fd" stroke-width="2.5"/>
+          <text x="76" y="57" font-family="Arial" font-size="16" font-weight="bold" fill="#93c5fd" text-anchor="middle">2</text>
+          <!-- wagon vide -->
+          <rect x="100" y="40" width="36" height="26" rx="5" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <circle cx="108" cy="70" r="5" fill="none" stroke="#d1d5db" stroke-width="2"/>
+          <circle cx="128" cy="70" r="5" fill="none" stroke="#d1d5db" stroke-width="2"/>
+          <text x="118" y="57" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+          <!-- rails -->
+          <line x1="5" y1="78" x2="195" y2="78" stroke="#d1d5db" stroke-width="2"/>
+
+          <!-- Train impairs -->
+          <rect x="10" y="110" width="42" height="30" rx="6" fill="none" stroke="#ef4444" stroke-width="3.5"/>
+          <rect x="14" y="102" width="28" height="12" rx="4" fill="none" stroke="#ef4444" stroke-width="3"/>
+          <circle cx="20" cy="144" r="6" fill="none" stroke="#ef4444" stroke-width="3"/>
+          <circle cx="44" cy="144" r="6" fill="none" stroke="#ef4444" stroke-width="3"/>
+          <text x="31" y="130" font-family="Arial" font-size="8" font-weight="bold" fill="#ef4444" text-anchor="middle">IMPAIRS</text>
+          <rect x="58" y="114" width="36" height="26" rx="5" fill="none" stroke="#fca5a5" stroke-width="3"/>
+          <circle cx="66" cy="144" r="5" fill="none" stroke="#fca5a5" stroke-width="2.5"/>
+          <circle cx="86" cy="144" r="5" fill="none" stroke="#fca5a5" stroke-width="2.5"/>
+          <text x="76" y="131" font-family="Arial" font-size="16" font-weight="bold" fill="#fca5a5" text-anchor="middle">3</text>
+          <rect x="100" y="114" width="36" height="26" rx="5" fill="none" stroke="#d1d5db" stroke-width="2" stroke-dasharray="5,3"/>
+          <circle cx="108" cy="144" r="5" fill="none" stroke="#d1d5db" stroke-width="2"/>
+          <circle cx="128" cy="144" r="5" fill="none" stroke="#d1d5db" stroke-width="2"/>
+          <text x="118" y="131" font-family="Arial" font-size="14" fill="#e5e7eb" text-anchor="middle">?</text>
+          <line x1="5" y1="152" x2="195" y2="152" stroke="#d1d5db" stroke-width="2"/>
+
+          <!-- Chiffres à trier -->
+          <text x="100" y="175" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Place les bons chiffres :</text>
+          <text x="26" y="210" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280" text-anchor="middle">1</text>
+          <text x="58" y="210" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280" text-anchor="middle">4</text>
+          <text x="90" y="210" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280" text-anchor="middle">5</text>
+          <text x="122" y="210" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280" text-anchor="middle">6</text>
+          <text x="154" y="210" font-family="Arial" font-size="22" font-weight="bold" fill="#6b7280" text-anchor="middle">9</text>
+          <text x="100" y="252" font-family="Arial" font-size="10" fill="#6b7280" text-anchor="middle" font-weight="bold">Écris chaque chiffre dans le bon train</text>
+        </svg>
+      </div>
+      <div class="absolute inset-0 backdrop-blur-sm bg-white/72 flex flex-col items-center justify-center gap-3 rounded-2xl">
+        <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <p class="text-sm font-black text-gray-800">Fiche Premium</p>
+        <p class="text-xs text-gray-500 text-center px-6">Débloquez toutes les fiches</p>
+        <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white text-xs font-black px-5 py-2 rounded-xl shadow hover:shadow-md transition-shadow">Voir les offres</button>
+      </div>
+      <div class="p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-sm">🚂</span>
+          <h3 class="font-black text-gray-800 text-sm">Le train pairs / impairs</h3>
+        </div>
+        <p class="text-xs text-gray-500 mb-3">Trie les chiffres dans le bon wagon</p>
+        <div class="flex gap-1">
+          <span class="bg-blue-100 text-blue-700 text-xs font-bold px-2 py-0.5 rounded-full">Tri</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">4-6 ans</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- BANNIÈRE CTA -->
+  <div class="rounded-3xl p-8 text-center mb-10" style="background:linear-gradient(135deg,#a1c4fd,#c2e9fb)">
+    <h3 class="text-xl font-black text-gray-800 mb-2">Accédez à toutes les fiches Chiffres & Maths</h3>
+    <p class="text-sm text-gray-600 mb-5 max-w-lg mx-auto">Frise numérique, additions, soustractions, comparaisons… Tout le programme maths de la maternelle en illimité.</p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <button class="bg-gradient-to-r from-amber-400 to-orange-500 text-white font-black px-8 py-3 rounded-2xl shadow-lg hover:shadow-xl transition-shadow text-sm">Voir les offres Premium</button>
+      <button class="bg-white text-gray-700 font-bold px-8 py-3 rounded-2xl text-sm hover:bg-gray-50 transition-colors">Retour à la bibliothèque</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-gray-100 py-8 px-6 mt-4">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-gradient-to-br from-violet-500 to-purple-700 rounded-xl flex items-center justify-center"><span class="text-lg">🎨</span></div>
+      <span class="font-black text-gray-800">Kido<span class="text-violet-600">Print</span></span>
+    </div>
+    <p class="text-xs text-gray-400">© 2025 KidoPrint — Activités imprimables pour enfants</p>
+    <div class="flex gap-5 text-xs font-medium text-gray-400">
+      <a href="#" class="hover:text-violet-600 transition-colors">Confidentialité</a>
+      <a href="#" class="hover:text-violet-600 transition-colors">CGU</a>
+      <a href="contact.html" class="hover:text-violet-600 transition-colors">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
